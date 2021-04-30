@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>寶來36咖啡愛玉（愛玉、咖啡、梅子）</h1>
+    <img class="rounded" src="寶來/寶來36咖啡愛玉.jpg" style="width: 500px;height: 500px;">
+<p>
+來寶來一定要品嚐的咖啡愛玉，在寶來溫泉街上，寶來小吃部的隔壁。
+</p>
+<p>牆面上貼滿許多木製的圓木簽名、塗鴉，形成商店的特色。</p>
+<p>採用六龜當記得高山愛玉，手工製作，與一般愛玉口味完全不同，帶有果凍的口感，調配加入當地特產的梅子提昇酸V甘甜風味。</p>
+
+<p>地址：高雄市六龜區寶來里中正路36號
+</p>
+<p>連絡電話：(07) 688-1149
+</p>
+<p>營業時間：09:00-18:00
+
+</p>
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

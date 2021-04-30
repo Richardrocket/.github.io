@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>李林烤肉之家</h1>
+    
+    <img class="rounded" src="寶來/李林烤肉之家-1.jpg" style="width: 500px;height: 500px;">
+<p>
+是台中北區相當有名的宵夜店家，平日和假日的晚上生意都很好，主打一串佛心價14元的價格，難怪無論內用或外帶的人潮總是特別多！
+</p>
+<p>除此之外他的選擇相當豐富，蔬菜、蕈菇類與牛、羊、豬、雞肉串，另外還有培根捲、蔥肉捲、豆腐、雞皮、蘿蔔糕……等食材，架上看到的每串均一價14元，真的非常佛心，一個不小心就會默默夾了一大盤!</p>
+<img class="rounded" src="寶來/李林烤肉之家.jpg" style="width: 500px;height: 500px;">
+
+<p>地址:高雄市六龜區寶來里中正路40號
+</p>
+<p>營業時間:平日15:00~23:00  假日12:00~23:00
+</p>
+<p>連絡電話: (07)688-3792
+
+</p>
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

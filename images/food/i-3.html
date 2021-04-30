@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>知本山上有家麵包店</h1>
+    
+    <img class="rounded" src="知本/知本山上有家麵包店-1.jpg"  style="width: 500px;height: 500px;">
+<p>
+「知本山上有家麵包店」完全不像「一家店」，招牌不起眼，外觀更像某個鄉下親友的家。
+</p>
+<p>知本山上麵包店的兩位靈魂人物，一位是很有個性的麵包師Neo，一位是聰慧的占卜師兼咖啡師Iris，他們態度安然、神情自在，沒有做作的商業氣息。</p>
+<p>如果有經過的話可以來這裡買看看~</p>
+   <img class="rounded" src="知本/知本山上有家麵包店.jpg"  style="width: 500px;height: 500px;">
+
+<p>地址:台東縣卑南鄉溫泉村鎮樂路38號
+</p>
+<p>電話: (09)7032-8176
+</p>
+<p>營業時間:12:00~16:00
+
+</p>
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

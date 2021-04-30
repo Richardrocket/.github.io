@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>金山美食 大碗螃蟹</h1>
+    
+    <img class="rounded" src="大碗螃蟹-1.jpg" style="width: 500px;height: 500px;">
+<p>
+
+位於金包里街上的金山美食 大碗螃蟹可是繼金山鴨肉之後，超人氣必吃金山美食。他們家的招牌必點就是萬里三點蟹粥，雖然一碗要價要300元，但份量可是大碗公等級，可以兩個人分食還都能吃飽飽！
+</p>
+<p>裡面有好幾隻三點蟹，還有幾隻蝦仁跟小卷還有蚵仔，CP值頗高，如果不想吃粥的話，也可以換成麵呦～</p>
+    <img class="rounded" src="大碗螃蟹-2.jpg" style="width: 500px;height: 500px;">
+    <img class="rounded" src="大碗螃蟹.jpg" style="width: 500px;height: 500px;">
+    
+<p>
+【店家資訊】
+      </p>
+<p>
+地址：新北市金山區金包里街44號
+      </p>
+<p>
+電話：0913-316-825
+
+</p>
+
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

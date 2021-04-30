@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>大頭目野食館</h1>
+     <img class="rounded" src="知本/大頭目野食館-1.png"  style="width: 500px;height: 500px;">
+<p>
+大頭目野食館座落於臺東知本溫泉村，餐廳提供當地當令的特色原住民風味餐，有多樣化的山產及海產，製作特殊的原住民風味餐，讓顧客大快朵頤。是當地歷史最久的料理老店之一。</p>
+<p>店內料理以山產食材為主，提供現場歌舞表演、宵夜小酌及歡唱場地，口味精緻、空間充滿傳統原住民風味，不論是毛蟹料理、飛魚爐、山班鳩或情人的眼淚，是知本地區首屈一指的原住民風味餐廳。
+</p>
+ <img class="rounded" src="知本/大頭目野食館-2.png"  style="width: 500px;height: 500px;">
+ <img class="rounded" src="知本/大頭目野食館.png"  style="width: 500px;height: 500px;">
+<p>地址:台東縣卑南鄉龍泉路45號
+</p>
+<p>營業時間:16:00~23:00
+</p>
+<p>連絡電話: (08)951-2080
+
+</p>
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

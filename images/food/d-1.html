@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>泰雅婆婆美食店</h1>
+    
+    <img class="rounded" src="烏來/泰雅婆婆美食店-1.jpg"  style="width: 500px;height: 500px;">
+<p>
+
+
+道地原住民風味有著炸溪魚溪蝦、炒山豬肉、炒珠蔥、竹筒飯、桂竹筍、泰雅小米露等等...
+
+</p>
+<p>
+口感黏Q內餡豐富竹筒飯、酥酥脆脆小蝦小魚，涮嘴又獨特的美食，推薦大家來品嘗。
+</p>
+    <img class="rounded" src="烏來/泰雅婆婆美食店.jpg" style="width: 500px;height: 500px;">
+    
+<p>
+地址：新北市烏來區烏來街14號 (地圖)
+    </p>
+<p>
+營業時間：10:00–21:00 (周一公休)
+
+</p>
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>

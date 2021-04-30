@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style>
+<!--
+body{ margin:0; padding:0; font-family:"微軟正黑體", "新細明體", "標楷體", Arial;}
+.p_txt{ width:96%; font-size:1.1em; line-height:1.5; padding:1em 2%;}
+.p_txt img{ width:100%; height:auto;}
+.p_txt h6{ font-size:1.2em; margin:0; padding:1em 0;}
+-->
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+<div class="p_txt" align="center">
+    <h1>清安豆腐店</h1>
+    <img class="rounded" src="泰安/清安豆腐店-1.jpg" style="width: 500px;height: 500px;">
+    
+<p>
+
+
+位於老街上的這家清安豆腐店專賣手工豆腐，當然還有一些麵類或是粿仔條，假日顧客盈門，經常是生意滿座。
+
+</p>
+<p>要做好的豆腐，當然要有好的水質，像洗水坑的水和台北石碇一樣，都能做出香嫩好吃的豆腐。</p>
+<p>所以這裡的老街才被冠上豆腐街美名。不管是豆腐或是麵食，便宜大碗，而且美味誘人，藥燉豆腐湯、黑豆腐令人印象深刻。</p>
+    <img class="rounded" src="泰安/清安豆腐店.jpg" style="width: 500px;height: 500px;">
+<p>
+地址：苗栗縣泰安鄉清安村洗水坑49號
+    </p>
+<p>
+電話： 03 794 1066
+    </p>
+<p>
+營業時間：08:00~17:00
+
+</p>
+
+
+</div>
+<script>
+	$(function() {
+	$(".p_txt img").each(function() {//控制文字編輯器的圖不隨RWD變大變小的問題
+		var width_txt=($(this).css("width")=="")?"":$(this).css("width");
+		var height_txt=($(this).css("height")=="")?"":$(this).css("height");
+		$(this).css({"width":"100%","height":"auto","max-width":width_txt,"max-height":height_txt});
+		
+	});
+});
+</script>
+</body>
+</html>
