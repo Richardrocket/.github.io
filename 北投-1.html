@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 150px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        
+        <div class="row featurette">
+          <div class="col-md-12">
+                
+				
+            <div class="container-fluid">
+               <div class="row" style="width: 1300px;">
+			    <h2><b>星空草原→四四南村→象山夜景→北投圖書館→地熱谷→北投市場→水月道場→泡湯</b>
+                </h2>
+               </div>
+            </div>
+				<hr>
+			  
+				
+				<h4 class="container"><b>星空草原</b></h4>
+                <img src="images/travel/北投隱藏景點/星空草原.jpg" style="width:800px;height:450px;">
+                <p class="container">2016年開幕的星空草原，重現梵谷名畫Starry Night，在草地上用近百萬個廢棄膠樽打造大型地景藝術，絕對是話題之作。今年園區大改造，將膠樽換成廢棄光碟，效果一樣突出，光碟在陽光照射下產生偏光反射，夜晚則有燈光秀。無論日頭定夜晚去都別具特色！</p>
+
+                <p>☞交通：行李不多的話，由桃園機場到達台北車站，即可搭火車前往八堵站再轉乘免費接駁車前往。</p>
+			    
+				
+				
+				<h4 class="container"><b>四四南村</b></h4>
+                <img src="images/travel/北投隱藏景點/四四南村.jpg" style="width:800px;height:450px;">
+                <p class="container">眷村是早期國民政府遷台後興建的建築群。「四四南村」經過一系列整修，住宅內部被改建成文物館同展演空間，成為台灣第一個眷村古蹟。穿梭係復古風平房之間，會有種返左去50年代的感覺。</p>
+
+                <p>☞交通：搭乘捷運紅色線往象山方向，於台北101/世貿站落車步行約15分鐘即到達。</p>
+				
+				<h4 class="container"><b>象山</b></h4>
+                <img src="images/travel/北投隱藏景點/象山夜景.jpg" style="width:800px;height:450px;">
+                <p class="container">位於市區、交通便利的象山可算觀賞台北夜景最佳地點，更是台劇《我可能不會愛你》大仁哥同又青姊約會的地方。一出捷運象山站就到達象山親山步道。步道主要由階梯組成，有多條路線，其中信義路五段的登山路線最快，到山頂只需約30分鐘，沿途有好多觀景平台，望下景休息下，話咁快就到！</p>
+
+                <p>☞交通：由四四南村步行約15分鐘即到達登山口。</p>
+				<h4 class="container"><b>北投圖書館</b></h4>
+                <img src="images/travel/北投隱藏景點/北投圖書館.jpg" style="width:800px;height:450px;">
+                <p class="container">2012年獲為「全球最美25座公立圖書館」之一，是全台灣首座綠建築圖書館，建築材料以木材為主，四周被林木包圍，相當有特色，唔睇書都可以去行下影下相，相當寫意。</p>
+                
+                <h4 class="container"><b>地熱谷</b></h4>
+                <img src="images/travel/北投隱藏景點/地熱谷.JPG" style="width:800px;height:450px;">
+                <p class="container">北投溫泉源頭之一，長年彌漫硫磺煙霧，睇落似地獄，甚至有「地獄谷」之稱，是日據時代台灣八勝十二景之一。地熱谷水質屬鹽酸酸性泉，PH值約1.6，又俗稱「青磺泉」，溫泉口水溫達98℃，水溫極高。早年有民眾失足燙傷，現時設有欄杆，大家遊覽時都記得小心！</p>
+
+                <h4 class="container"><b>北投市場</b></h4>
+                <img src="images/travel/北投隱藏景點/北投市場.jpg" style="width:800px;height:450px;">
+                <p class="container">其實除左夜市，好多人忽略左，其實市場亦有好多地道平民美食的地方！雖然環境可能唔似餐廳咁靚，但絕對可以食到最local既野！北投市場可能好多人未聽過，但絕對是極多平民小食的聚集地。行到攰攰地，都差唔多食晏，就等小編同大家推薦四間市場附近必食的古早味小店啦！</p>
+                
+                <h4 class="container"><b>矮仔財魯肉飯、黃家酸菜滷肉飯</b></h4>
+                <img src="images/travel/北投隱藏景點/北投市場 矮仔財魯肉飯、黃家酸菜滷肉飯.jpg" style="width:800px;height:450px;">
+                <p>矮仔財魯肉飯號稱全台最好食的魯肉飯，經常都大排長龍，除左好食之外，全因佢CP值極高！肥瘦均衡的手剁肉燥，加上濃郁醬汁，再配少少酸菜，一碗只需$25，即港幣6蚊雞！雖則份量不大，但加個小菜啱啱好。小菜價錢由港幣3蚊到15蚊不等，嗌多幾味都完全無負擔！</p>
+
+                <p>☞地址：台北市北投區新市街30號</p>
+
+                <p>☞營業時間：6:30AM-1:30PM，逢周一公休</p>
+
+                <p>另外一間黃家酸菜滷肉飯則是當地人熱捧的隱藏美食，主打酸菜飯，酸酸甜甜的酸菜搭配滷肉，啱啱好解到豬肉的咸膩，簡直超開胃。唔夠飽的話，仲可以嗌多碗小菜或湯。價錢一樣好接受，細滷肉飯一樣港幣6蚊雞，大嘅港紙9蚊有找。住慣港澳，可以用咁嘅價錢食到一餐，都咪話唔幸福！</p>
+                
+                <h4 class="container"><b>水月道場</b></h4>
+				<img src="images/travel/北投隱藏景點/水月道場.jpg" style="width:800px;height:450px;">
+                <p>食飽飽最啱就係散散步，促進消化。位於北投法鼓山農禪寺的水月道場，是近年新興的拍照熱點。道場由著名建築師姚仁喜設計，概念來源於聖嚴法師之言. ：「空中花，水中月」。道場建於一面大湖之上，景物倒影互相映襯，無論是朝早或夜晚去，景色都相當優美。</p>
+                <p>☞地址：台北市北投區大業路65巷89號</p>
+                <p>☞開放時間：9:00AM-4:00PM</p>
+                <p>交通：由北投市場出發的話，可搭乘302或821號公車，於大業路落車，步行4分鐘即達。</p>
+                <h4 class="container"><b>✔️放鬆好選擇 ✔️CP值超高 ✔️平價北投溫泉推推</b></h4>
+                <h4 class="container"><b>【北投溫泉會館】京都溫泉行館</b></h4>
+                <img src="images/hot spring/北投/1.jpeg" style="width:800px;height:450px;">
+                <img src="images/hot spring/北投/2.jpeg" style="width:800px;height:450px;">
+                <p>房間資訊：兩人房</p>
+                <p>房間價格：每晚價格2,100起</p>
+                <p>旅宿周邊景點：距離 北投溫泉博物館 約 0.51 公里、距離 捷運新北投站 約 0.97 公里</p>
+                <p>旅宿設施：行李寄放(免費)、停車場(免費)、早餐(免費)</p>
+                <h4 class="container"><b>【北投溫泉飯店】熱海北投溫泉飯店</b></h4>
+                <img src="images/hot spring/北投/3.jpeg" style="width:800px;height:450px;">
+                <img src="images/hot spring/北投/4.jpeg" style="width:800px;height:450px;">
+                <p>房間資訊：兩人房、四人房</p>
+                <p>房間價格：每晚價格2,300起</p>
+                <p>旅宿周邊景點：距離 北投溫泉博物館 0.22 公里、捷運新北投站 0.69 公里</p>
+                <p>旅宿設施：行李寄放(免費)、早餐(免費)</p>
+	</div>
+</div>
+</div>
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

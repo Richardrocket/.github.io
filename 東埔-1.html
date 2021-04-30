@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+				
+			
+                
+				<h3 id="dongpu"class="container"> 東埔 </h3>
+				<h4 id="沙里仙溫泉渡假村" class="container">
+				1.沙里仙溫泉度假村
+				</h4>
+				&nbsp;
+				<p class="container">位於玉山群峰下美麗的東埔溫泉區，為2006年新完工的建築。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0487937068806!2d120.9163963120041!3d23.56669098468022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f27bd487caaf1%3A0x7cc2eda89525fb0b!2z5p2x5Z-U5rKZ6YeM5LuZ5rih5YGH5p2R!5e0!3m2!1szh-TW!2stw!4v1599886467354!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/沙里仙溫泉渡假村-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/沙里仙溫泉渡假村-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;質樸溫馨的小木屋，以及隱密舒適的私人泡湯空間結合而成專屬於您的露天的湯屋，早晨的陽光透過窗喚醒一夜安眠的休憩者，新鮮的空氣與美麗的視野陪伴著悠閒渡假的觀光看前來參訪。
+	</p>
+				<img src="images/附近景點/東埔溫泉/沙里仙溫泉渡假村-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/沙里仙溫泉渡假村-4.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="東埔日、月雙橋" class="container">
+				2.東埔日月雙橋
+				</h4>
+				&nbsp;
+				<p class="container">東埔日月雙橋採用兩座造型、長度相同的提籃式鋼拱橋，全長420公尺，宛如玉山山腳下美麗的彩虹臥波。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.47125988268!2d120.92060695242104!3d23.564211773424855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f27a4bb2ff9d7%3A0x58ccafa5c60ee2ac!2z5b2p6Jm554CR5biD!5e0!3m2!1szh-TW!2stw!4v1599886612604!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔日、月雙橋-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;橋面「觀景台」可眺望東北亞最高的玉山主峰和北北峰，橋端融入布農文化圖騰及射日傳說的文化語彙，兼具景觀與文化特色，成為遊客到信義鄉旅遊必造訪的觀光景點。
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔日、月雙橋-2.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="東埔溫泉" class="container">
+				3.東埔溫泉
+				</h4>
+				&nbsp;
+				<p class="container">東埔是一處以溫泉與山巒美景而著名的布農族部落，位於陳有蘭溪畔，八通關古道起點。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.780003585609!2d120.92221726977536!3d23.56143900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f27af89cc1807%3A0xc2b5115b6e7c1d0d!2z5p2x5Z-U5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1599886706689!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;溫泉水屬於弱鹼性碳酸泉，酸鹼值7.7，溫度約53度，水質清澈，泉水自溪谷湧出，從岩縫、砂石層自然湧現，呈現出熱氣沸騰的景觀，泉水再引流至旅館、飯店，提供遊客溫泉享受。
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔溫泉-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;說這邊的溫泉具有養顏美容的療效，所以常見許多愛美女性相約來訪。
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔溫泉-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔溫泉-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;目前本區已發展出豐富的泡湯服務，有著養生水療、SPA水療設施、美容護膚浴、烤箱浴、露天洞窟場浴、碳酸蒸氣浴、沖擊保養泉、有氧溫泉、精油檜木桶浴…等，均能滿足遊客不同的選擇。
+	</p>
+				<img src="images/附近景點/東埔溫泉/東埔溫泉-4.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="風櫃斗" class="container">
+				4.風櫃斗
+				</h4>
+				&nbsp;
+				<p class="container">信義鄉是梅的故鄉，乃臺灣最大的青梅產區。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.192127343433!2d120.85440681323799!3d23.66908629779848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed65993e481dd%3A0xb4f8ad2dedcddadc!2z6aKo5quD5paX!5e0!3m2!1szh-TW!2stw!4v1599886758002!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;每年歲末冬初至清明時節梅果成熟時，賞梅與採梅便成了梅鄉最詩情畫意的事。
+	</p>
+				<img src="images/附近景點/東埔溫泉/風櫃斗-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/風櫃斗-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/風櫃斗-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;風櫃斗梅樹的特色是表皮粗黑，枝幹盤繞，姿態蒼勁挺拔，頗富美感，大部分梅樹為30年左右的老樹，其中自強國小附近的老梅王，樹齡高達70歲，老而彌堅，生機盎然。
+	</p>
+				<img src="images/附近景點/東埔溫泉/風櫃斗-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/風櫃斗-5.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="彩虹瀑布" class="container">
+				5.彩虹瀑布
+				</h4>
+				&nbsp;
+				<p class="container">彩虹瀑布位於東埔溫泉區東北方山谷間，距東埔溫泉旅館區約有3公里，彩虹瀑布是東埔溫泉的源頭，步行大約三十~四十分鐘就可到達。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.47125988268!2d120.92060695242104!3d23.564211773424855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f27a4bb2ff9d7%3A0x58ccafa5c60ee2ac!2z5b2p6Jm554CR5biD!5e0!3m2!1szh-TW!2stw!4v1599886612604!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/彩虹瀑布-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/彩虹瀑布-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;只要天氣良好，每到中午1點至2點時分，瀑布清泉奔放地宣洩與太陽熱情地照射，五彩繽紛的彩虹就會立即出現，而形成了一道絢麗地彩虹瀑布。
+	</p>
+				<img src="images/附近景點/東埔溫泉/彩虹瀑布-3.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="望鄉部落" class="container">
+				6.望鄉部落
+				</h4>
+				&nbsp;
+				<p class="container">望鄉是一名日據時代的日警為了懷念日本老鄉而取。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1480989836723!2d120.881951313236!3d23.59902100046306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed81b4c7b66c9%3A0x379f8b2eb98fd41d!2z5pyb6YSJ5biD6L6y5rih5YGH6YOo6JC9!5e0!3m2!1szh-TW!2stw!4v1599886805717!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp;buki意指抬起頭就能望見故鄉，但這故鄉對布農族人來說，指的就是孕育了部落多采多姿的人文與自然生態的玉山。
+	</p>
+				<img src="images/附近景點/東埔溫泉/望鄉部落-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;布農族人稱部落為kalibuan，因為在日據時代族人被遷至本部落時發現部落長滿了一種被稱為卡里布(kalibu)的植物，所以就以此為名。
+	</p>
+				<img src="images/附近景點/東埔溫泉/望鄉部落-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/東埔溫泉/望鄉部落-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;kalibu有很長一段時間消失蹤影，現在族人開始積極復育的工作，希望藉以找回部落的生命力。
+	</p>
+				<img src="images/附近景點/東埔溫泉/望鄉部落-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;當地原住民的風俗文化活動。
+	</p>
+				<img src="images/附近景點/東埔溫泉/望鄉部落-5.jpg" width="800"   alt=""/><br><br>
+				
+				
+            </div>
+       </div>     
+	</div>	
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

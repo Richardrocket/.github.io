@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+				
+			
+                
+				<h3 id="dongpu"class="container"> 知本 </h3>
+				<h4 id="三和海濱公園" class="container">
+				1.三和海濱公園
+				</h4>
+				&nbsp;
+				<p>看到顯眼的水藍色海馬造型入口立碑，就知道來到了三和海濱公園。
+
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.567059000046!2d121.03353811196766!3d22.669925085132764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fc8fdd7e69c91%3A0xacdaa658bc9010b4!2z5LiJ5ZKM5rW35r-x5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1599978986585!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;看到顯眼的水藍色海馬造型入口立碑，就知道來到了三和海濱公園。
+	</p>
+				<img src="images/附近景點/知本溫泉/三和海濱公園-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/三和海濱公園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;海濱公園內採用先進的太陽能及風力發電設施，供應夜間公園照明、或部落重要慶典使用。
+	</p>
+				<img src="images/附近景點/知本溫泉/三和海濱公園-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;風力發電的風車非常具有特色，陣陣海風吹來，風車就如歌行板地轉動起來，再加上椰影婆娑、舟影點點，眼前景致充滿異國風情。
+	</p>
+				<img src="images/附近景點/知本溫泉/三和海濱公園-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/三和海濱公園-5.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="小野柳" class="container">
+				2.小野柳
+				</h4>
+				&nbsp;
+				<p>
+					小野柳位於富岡漁港北方的海域，是東部海岸最南端的風景據點，因地形和岩石在種類上，與北關的野柳外貌相似，因此被稱為「小野柳」。
+
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.2073762421396!2d121.19599151321381!3d22.794778530527154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb9b1d4d42d81%3A0x8057635daf53e11a!2z5bCP6YeO5p-z!5e0!3m2!1szh-TW!2stw!4v1599979031138!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;園區內設有遊客中心、賣店、露營區與海邊步道等，來到這裡除了欣賞不同類型的奇岩怪石、觀海聽浪、賞魚戲水之外，天氣晴朗時更能眺望約33公里外的綠島。
+	</p>
+				<img src="images/附近景點/知本溫泉/小野柳-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;在此露營體驗在夜色下聽著海聲入睡的新奇感受。經過地殼抬升與海洋千年侵蝕沖刷下，造就了壯觀吸引旅人眼光的豆腐岩、蜂窩岩，而因岩層風化打造出各種奇岩怪石。
+	</p>
+				<img src="images/附近景點/知本溫泉/小野柳-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;其中以大眼蛙、駱駝石、龜陣岩最為著名，是來小野柳必拍的地景之一。
+	</p>
+				<img src="images/附近景點/知本溫泉/小野柳-3.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="太麻里金針山" class="container">
+				3.太麻里金針山
+				</h4>
+				&nbsp;
+				<p>
+					位於太麻里的金針山是座名聞遐邇的賞花名勝，除了金針花季之外，四季造訪皆能觀賞到滿山遍野的美景。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.287393720456!2d120.95043901320965!3d22.643070936090556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fcdea22b0d4d9%3A0xc8675f689237bddb!2z5aSq6bq76YeM6YeR6Yed5bGx5LyR6ZaS6L6y5qWt5Y2A!5e0!3m2!1szh-TW!2stw!4v1599979077876!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;為了方便遊客觀覽金針山，整個農業區規畫出了三條主要的登山步道。
+	</p>
+				<img src="images/附近景點/知本溫泉/太麻里金針山-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/太麻里金針山-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;經過迎曦樓、湛藍若洗、孟宗竹道、遊客中心。讓您在觀景台眺望太平洋也能觀看壯闊日出，金針山一年四季的不同美景與自然生態就等你來細細體會。
+	</p>
+				<img src="images/附近景點/知本溫泉/太麻里金針山-3.jfif" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/太麻里金針山-4.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="卡地布文化園區" class="container">
+				4.卡地布文化園區
+				</h4>
+				&nbsp;
+				<p>
+					離知本火車站不遠的地方，卡地布部落傳統文化園區就坐落在附近。
+
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.5493651851816!2d121.05233271321141!3d22.707813533720508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fc8223b088da3%3A0x9e14ae8a6cc5ad3d!2z5Y2h5Zyw5biD5paH5YyW5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1599979112577!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+				</p>
+				<img src="images/附近景點/知本溫泉/卡地布部落-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;園區內設置有瞭望台、巴拉冠(卡地布青年會所)、三大氏族祖靈屋(Mavaliw瑪法琉、Pakaruku巴卡魯固、Ruvaniaw羅法尼耀)、達古範(青少年聚會所)等傳統建築。要留意巴拉冠嚴禁婦女和小孩進入，達古範則女賓止步。
+	</p>
+				<img src="images/附近景點/知本溫泉/卡地布部落-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;除了傳統建築外，也有活動中心，作為部落的辦公場所，傳統屋是準備讓遊客體驗傳統文化的地方。
+	</p>
+				<img src="images/附近景點/知本溫泉/卡地布部落-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;園區設有導覽人員可為遊客做解說，帶領大家深入認識卑南族的歷史人文，走訪融入原住民生活的不同宗教聖地
+	</p>
+				<img src="images/附近景點/知本溫泉/卡地布部落-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;也可品嚐當地的釋迦，或是前往當地的餐飲店，豐富新鮮自然的原住民佳餚，美味的料理配上熱鬧的原住民音樂和舞蹈，都令人口齒留香、難以忘懷。
+	</p>
+				<img src="images/附近景點/知本溫泉/卡地布部落-5.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="白玉瀑布" class="container">
+				5.白玉瀑布
+				</h4>
+				&nbsp;
+				<p>  
+				白玉瀑布位於知本溫泉區域內，原名白玉瓏，是一個十分容易到達欣賞的瀑布，只要由忠義堂附近的產業道路往樂山方向前進約50公尺就可看見停車場及步道。 
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.0984331833597!2d121.01485891321086!3d22.687379334469245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fc9a48807e815%3A0x1211d49cc650b163!2z55m9546J54CR5biD!5e0!3m2!1szh-TW!2stw!4v1599979150639!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/白玉瀑布-1.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;白玉瀑布雖然規模不大，但因其位於知本溫泉區附近，秀麗且容易前往的特色，也吸引不少遊客前來觀光。
+	</p>
+				<img src="images/附近景點/知本溫泉/白玉瀑布-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/白玉瀑布-3.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="知本森林遊樂區" class="container">
+				6.知本森林遊樂區
+				</h4>
+				&nbsp;
+				<p>
+					知本森林遊樂區位於知本溪的中游，若從知本火車站出發，可以自台九線開始銜接194縣道，走龍泉路之後越過一座橋就會抵達。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1480989836723!2d120.881951313236!3d23.59902100046306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ed81b4c7b66c9%3A0x379f8b2eb98fd41d!2z5pyb6YSJ5biD6L6y5rih5YGH6YOo6JC9!5e0!3m2!1szh-TW!2stw!4v1599886805717!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+		
+				<p class="container"> &nbsp;知本森林遊樂區宛如一間生態教室，沿著區內的林蔭步道行走，可以隨著沿路的解說牌了解各種動植物，尤以鳥類資源最豐富，是臺東市郊賞鳥的最佳地點。
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;野營活動場適合露營，與三五好友來個輕鬆的野餐，也是親近自然的好選擇。在這裡，吸一口充滿芬多精的新鮮空氣，聆聽鳥叫蟲鳴，絕對是最美好的享受。
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;知本森林遊樂區面積大約110公頃，海拔高度大約於110-650公尺之間，全年氣候溫暖濕潤，園區內主要景觀為常綠闊葉次生林。
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;遊樂區三面環山，園內設施有觀林吊橋、森林步道、水流腳底按摩步道、溫泉泡腳池、藥用植物園、遊客服務中心等，步道沿線皆設有解說牌，提供各種動植物介紹。
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-6.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-7.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;因位於臺東市郊區並鄰近知本溫泉區，是登山、健行、賞鳥、賞蝶、學術研究、遊憩及森林浴的最佳場所，亦為假日郊遊的好去處。
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-8.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/知本森林遊樂區-9.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="國立臺灣史前文化博物館" class="container">
+				7.國立臺灣史前文化博物館
+				</h4>
+				&nbsp;
+				<p>
+					國立臺灣史前文化博物館，一個兼具理性與感性，又不失自然美景的地方，它是國內第一座以史前和原住民文化為主題的博物館，也是第一座包含博物館、考古遺址和自然生態公園的博物館，更是東海岸第一座國家級的博物館。
+
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7358.267826189218!2d121.08679836796253!3d22.760411083772674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb9b1d4d42d81%3A0x7d0af14712755402!2z5ZyL56uL6Ie654Gj5Y-y5YmN5paH5YyW5Y2a54mp6aSo77yI5LyR6aSo5Lit77yJ!5e0!3m2!1szh-TW!2stw!4v1599979228221!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;史前館建築略呈長方形，由世界知名的後現代主義建築大師Michael Graves設計，造型融合閩南、客家、原住民文化，風格獨具一樹。
+	</p>
+				<img src="images/附近景點/知本溫泉/國立臺灣史前文化博物館-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;從史前文化的人形意示圖了解到當時的生活是靠什麼工具如何生存的。
+	</p>
+				<img src="images/附近景點/知本溫泉/國立臺灣史前文化博物館-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;而這個展覽區是在講當下那個年代的動物是有哪幾隻，如何跟人類一起共生共存的。
+	</p>
+				<img src="images/附近景點/知本溫泉/國立臺灣史前文化博物館-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;這個史前博物館不僅能讓大人及小孩了解到史前文化，還能讓彼此之間的親子互動教學更有意義。
+	</p>
+				<img src="images/附近景點/知本溫泉/國立臺灣史前文化博物館-4.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="深山亞都渡假會館" class="container">
+				8.深山亞都渡假會館
+				</h4>
+				&nbsp;
+				<p>
+					
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.389795544821!2d120.96875091320952!3d22.639250936230166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fcc0e9c0e1607%3A0xcf6e229c92c06466!2z5rex5bGx5Lqe6YO95rih5YGH5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1599979278423!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;坐落於太麻里金針山海拔1000公尺處，當初園主想圓一個夢，夢想有一天能離群索居、歸隱深山，在機緣之下來到金針山，即為環境動容，無法言表深刻又驚愛的心情，便放棄都市生活、放下一切，從此定居下來享受深山的幽靜、清新。
+	</p>
+				<img src="images/附近景點/知本溫泉/深山亞都渡假會館-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;愛戀在1000公尺的相約，深山亞都得天獨厚的環境從觀海亭可觀賞『日出』從太平洋海面緩緩升起，四季變化的花海令人著迷，起霧的午後，山嵐從眼前飄過，讓人彷彿踩在雲端，當夜晚來臨時一輪明月又從海平面升起『月升』的畫面叫人永生難忘，自在人生、享受生活，就從這裡開始吧!
+	</p>
+				<img src="images/附近景點/知本溫泉/深山亞都渡假會館-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/深山亞都渡假會館-3.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="鐵花村" class="container">
+				9.鐵花村
+				</h4>
+				&nbsp;
+				<p>
+					台東火車站舊址對面的「鐵花村」原是鐵路局舊倉庫，在2010年由台東音樂人和藝術工作者改建成音樂聚落，每逢假日就會假日市集可以逛逛
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.321961268565!2d121.1427613132127!3d22.753429932046892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb9142bdaab8d%3A0x39098507d793b00d!2z6ZC16Iqx5p2R!5e0!3m2!1szh-TW!2stw!4v1599979325761!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;鐵花村裡每週四～六的晚上8點至10點，星期天的下午4點至6點，都有常態性的表演，其實非常適合到台東慢活旅程中的中繼站，可以來到這裡點上一杯飲料聽著現場演唱，享受大自然與音樂的結合感！
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;鐵花村以原住民音樂、歌聲與在地特色共同打造的音樂聚落
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-6.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;大草坪旁的慢市集販賣了許多道地的或手工小物，店鋪小小卻應有盡有蜂蜜、茶及米...等
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;台東知名農作土產還網羅眾多台東藝術工作者的創意作品像以漂流木製成的飾品擺設、創意樂器及原住民樂者的的唱片等等，重點是老闆也都相當熱情唷！
+	</p>
+				<img src="images/附近景點/知本溫泉/鐵花村-4.jpg" width="800"   alt=""/><br><br>
+				
+
+            </div>
+         </div>   
+		</div>
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

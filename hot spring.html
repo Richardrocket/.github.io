@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color: #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+        .bg-green li a:hover{
+			background-color: #c8c8c8;
+		}
+        .site-footer {
+			margin-top: 50px;
+			color: #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color: #10cfc9
+		}		
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color: #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color: #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+		.site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+		.fixed {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 100px;
+			}
+			
+    </style>
+
+</head>
+<body style="padding-top: 130px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                       
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--容器-->
+    <div class="container marketing" style="line-height:50px;" >
+        <!--格線系統, 縮圖元件-->
+        <div align="center">
+        <br>
+		<h2 ><b>溫泉的功效</b></h2>
+        <br>
+        <img src="images/hotspring6.jpg">
+		<div class=" m-1 p-3">
+            
+			<div class="media-body ml-2" >
+                
+                <p class="lead">溫泉有「神水」、「神泉」之美譽，
+				除可促進血液循環，
+				又有去病、療養、復健和美容的效果；
+				時值寒冬，更是享受泡湯之樂的季節，
+				煙氣蒸騰下，專家帶您走一趟溫泉健康之行，
+				透視溫泉的療效與健康認知</p>
+            </div> 
+			
+        </div >
+        </div >
+        <div align="center">
+        <h2><b>泡湯好處多</b></h2>
+        <br>
+        <img src="images/hotspring11.jpg" >
+        </div >
+		<div class=" m-1 p-3">
+            
+                
+                <p class="lead">溫泉是指地下水在一定的地質條件下，受地球內部熱能影響，形成有溫度的地下熱水，當它從地層湧出，就稱為溫泉。
+
+　由於溫泉對人體健康具有下列特性，因此被視為保健與醫療的珍品。
+
+
+<ol><li>溫熱作用：溫度能刺激皮膚末梢神經，進而傳達至中樞神經，加強全身各系統機能；並且溫熱可影響身體的新陳代謝、血液循環和肌肉活動力。對風濕病、關節炎及肌肉疼痛患者來說，溫泉的溫熱作用更是具有療效。</li>
+
+<li>水壓力作用：在水中承受的壓力有助於呼吸系統的改善，如浸泡溫泉對氣喘、肺氣腫等就有良好的影響。</li>
+
+<li>水浮力作用：水中的浮力使身體變輕，適用於復健治療。</li>
+
+<li>鬆弛作用：溫泉浴能使身心鬆弛，達到輕鬆舒適，尤其是溫泉大多位於風景區及旅館渡假休閑區，因此放鬆效果更強。</li>
+
+<li>化學作用：溫泉中的化學物質能通過皮膚進入人體起作用，例如硫磺泉具解毒作用。</li>
+
+<li>調節作用：溫泉能使人體各項機能正常化，例如溫泉能使高血壓患者血管擴張，降低血壓，也能使低血壓者血壓上升；而一般人則維持在正常範圍，原因就在其具有調節作用。</li></ol></p>
+             
+			
+           
+			
+        </div>
+        
+        <div align="center">
+         <h2 ><b>泡湯步驟一把罩</b></h2> 
+         <br>
+         <img src="images/hot spring/body.jpg" class="mr-3" style="width: 550px;">
+         
+        </div><br>
+		<div class="row featurette">
+        
+     	<div class="col">
+                
+                <p class="lead">泡湯這項活動源自於日本，日本人對於泡湯的步驟是想當的講究。從入浴前的前置動作，一直到泡完湯的後續行為都有一定的步驟。經過多年的演進，成為現在我們遵循的泡湯技巧。</p>
+        </div> 
+    
+        
+        <div class="container ">
+        <div class=" p-3">
+            
+            <div class=" mt-2">
+                <h4>
+                    1.泡湯前先喝一杯開水補充水份：
+
+                </h4>
+                <br>
+                        <div class=" mt-2"><div align="center">
+                    <img src="images/drinkwater.jpg" style="width: 500px;" > 
+                    </div>
+                <br>
+                <p>入浴後流汗是一定的，但在泡湯及三溫暖的過程中流失的水分更多。為了避免泡湯後水分流失過多，泡湯/入浴前15分鐘前先喝一杯開水，當然茶也可以但寶礦力等含有鹽份的運動飲料就更沒話說了。<br>
+
+				*有帶小朋友的也一樣，切忘讓小鬼補充水份。除此之外大家應該清楚小朋友要憋尿不簡單，請在泡湯前讓他們先上廁所哦。</p>
+                <!--在具有.media-body類別的<div>容器中放入第2組媒體物件，代表第2層媒體物件-->
+                
+            </div>
+        </div>
+        <div class=" p-3">
+                    
+                      
+                        <h4>
+                            2.泡湯前充分的溫熱身體：泡湯前溫熱身體有兩種說法
+
+                        </h4><br>
+                        <p>                          
+				          第一種說法是讓身體習慣溫泉成分以及避免讓高溫導致血壓急速上昇
+				          第一種說法則是日本人所謂的禮貌，先將身體污垢去除勿帶入浴池
+				          方法：大約用洗面器沖洗身體約10次
+                        </p>
+                        <!--在具有.media-body類別的第2組<div>容器中放入第3組媒體物件，代表第3層媒體物件-->
+                     </div>        
+                </div>
+  
+    
+        <div class=" p-3">
+            
+            <div class=" mt-2">
+                <h4>3.將毛巾放在頭上</h4><br>
+                <div align="center">
+            <img src="images/hot spring/head.jpg" class="mr-3">
+            </div><br>
+            
+                <p>
+                基本(禮貌)上是不能將自己的毛巾帶進大眾浴池裡之外，由於水壓會導致血液上衝到腦部，將毛巾放在頭上聽說能避免血壓上昇。
+                </p>
+            </div>
+        </div>  
+    
+  
+        <div class=" p-3">
+            
+            <div class=" mt-2">
+                <h4>
+                    4.先從半身浴開始：
+
+                </h4><div align="center"><br>
+            <img src="images/hot spring/half.jpg" class="mr-3" style="width: 550px;"></div><br>
+                <p>通常我們都沒有發現, 但當在泡湯時如果浸泡到脖子部分，身體所受的水壓約500公斤。除了對心臟的負擔大以外血液容易集中在腦部，為了讓身體習慣水壓應於先從半身浴慢慢讓身體習慣。
+                <br>
+				*有帶小朋友的也一樣，切忘讓小朋友補充水份。除此之外大家應該清楚小朋友要憋尿不簡單，請在泡湯前讓他們先上廁所哦。</p>
+                <!--在具有.media-body類別的<div>容器中放入第2組媒體物件，代表第2層媒體物件-->
+                
+            </div>
+        </div>
+      
+   <div class=" p-3">
+                    
+                    <div class=" mt-2">
+                        <h4>
+                            5.一次的泡湯時間不宜過長, 分次入浴：
+                        </h4><br>
+                        <div align="center">
+            <img src="images/hot spring/goods.jpg" class="mr-3" >
+            </div><br>
+                        <p>                          
+				         比如說泡湯10分鐘, 一次泡10分鐘和分三次泡哪一個方法較好呢？
+				         答案是分開泡。這樣對身體的負擔較少之外，大家知道嗎？這溫泉標示 ♨️ 上的三根煙是意思是為了減少身體的負擔一次的泡湯時間不宜太長，請分三次：5分/7分/3分
+                        </p>                      
+                    </div>        
+                </div>
+    
+    
+        <div class=" p-3">
+            
+            <div class=" mt-2">
+                <h4>
+                   6.恢復疲勞冷熱交替泡湯/入浴法：
+                </h4><br>
+                <p>先進入熱水浴充分暖身後在入冷水浴降低體溫，這方式稱為冷熱交替入浴法。
+				只要做這入浴法能將血管擴大促進新陳代謝。冷熱入浴法重複兩到三次效果會更好，不妨在累的時候試試看呢？
+                </p>
+                
+            </div>
+        </div>
+        <div class=" p-3">
+            
+                    <div class=" mt-2">
+                        <h4>
+                           7.泡湯後請提早補充水份:
+                        </h4><br>
+                        <div align="center">
+                    <img src="images/hot spring/milk.jpg" class="" >
+                </div><br>
+                        <p>                          
+				        日本人在洗完澡後的第一杯不是啤酒而是牛奶。當然不一定要喝牛奶茶水也一樣可以。主要是補充泡澡中等被流失的水份。
+                        </p>                      
+                    </div>        
+                </div>
+      
+    
+
+				
+				
+				
+				<div>
+                <p>補充：為什麼日本人喜歡在泡澡後喝牛奶呢。聽說在昭和３０年代冰箱還未在一般家庭普及時，剛好公眾澡堂有最新的冰箱，賣牛奶的看到商機請澡堂擺放牛奶而開始。另外牛奶能攝取鈣質／維他命Ｂ２等良質蛋白質避免骨質疏鬆並加強免疫力及穩定精神作用，泡湯後等喝一杯也能得到安眠效果。</p>
+	
+				</div>
+   </div> 	
+                
+     </div>     
+    </div>
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+</body>
+</html>

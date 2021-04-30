@@ -1,0 +1,699 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/isotope-docs.css?6" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/isotope-docs.min.js?6"></script>
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <script src="js/jquery.fancybox.min.js"></script>
+    
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color: #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color: #c8c8c8;
+		}
+        .site-footer {
+	margin-top: 50px;
+	color: #10cfc9;
+	padding: 25px 0;
+	border-top: 1px solid rgba(182,182,182,1.00);
+	background-color: #10cfc9;
+}
+		
+		.social {
+    text-align: right;
+	margin: 0px;
+	padding: 0px;
+}
+.social li {
+    list-style-type: none;
+	margin-right: 5px;
+	display: inline-block;
+}
+.social li a {
+	color: white;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #10cfc9;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+				
+.site-footer span {
+	margin-top: 12px;
+	display: block;
+	text-align: left;
+}
+@media (max-width:768px){
+.site-footer span{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+.social{
+	text-align: center;
+	}
+}
+
+               
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}        
+     
+.fancybox-slide--iframe .fancybox-content {
+    width  : 900px;
+    height : 700px;
+    max-width  : 60%;
+    max-height : 80%;
+    margin: 0;
+}
+        
+.imghover figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.imghover figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+    </style>
+</head>
+  <body style="padding-top: 200px" >
+<header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing" >
+        <div class="row">
+          <div class="col-md-12">
+                <h1 class="ml6" align="center" style="color: #c8c8c8">
+                <span class="text-wrapper">
+                   <span class="letters">好吃美食專區</span>
+                </span>
+                </h1>
+				<hr>
+				</div>
+				</div>
+                 <div class="row">
+                  <div class="col-md-12">
+					<div class="big-demo go-wide" data-js="filtering-demo" >
+                    
+                    <select class="form-control filters-select" >
+                        
+                        <option value="*" >地區選擇</option>
+                        <option value=".aaa">北投</option>
+                        <option value=".bbb">陽明山</option>
+                        <option value=".ccc">金山</option>                       
+                        <option value=".ddd">烏來</option>
+                        <option value=".eee">泰安</option>
+                        <option value=".fff">谷關</option>
+                        <option value=".ggg">東埔</option>
+                        <option value=".hhh">礁溪</option>
+                        <option value=".iii">知本</option>
+                        <option value=".jjj">花東縱谷</option>
+                        <option value=".kkk">寶來</option>
+                    
+                    </select>
+                    <hr>
+                        <div class="grid ">
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+   
+						<figure><a data-fancybox data-type="iframe" data-src="images/food/a-1.html"><img class="rounded-circle" src="images/food/滿來溫泉拉麵.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">滿來溫泉拉麵</p>
+										
+  </div>
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" data-src="images/food/a-2.html"><img class="rounded-circle" src="images/food/湧蓮古早味現烤蛋糕.jpg" style="max-width:100%"></a><p style="text-align:center;">湧蓮古早味現烤蛋糕</p></figure>
+						
+										
+  </div>
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/a-3.html"><img class="rounded-circle" src="images/food/明泉紅茶.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">明泉紅茶</p>
+										
+  </div>
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/a-4.html"><img class="rounded-circle" src="images/food/阿宗蚵仔煎＆春九份紅糟肉圓-2.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">阿宗蚵仔煎＆春九份紅糟肉圓</p>
+										
+  </div>
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/a-5.html"><img class="rounded-circle" src="images/food/簡記排骨酥麵.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">簡記排骨酥麵</p>
+										
+  </div>   
+  <div class="element-item aaa imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/a-6.html"><img class="rounded-circle" src="images/food/蔡元益紅茶.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">蔡元益紅茶</p>
+										
+  </div> 
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-1.html"><img class="rounded-circle" src="images/food/陽明山/The cafe’ by 想陽明山.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">The cafe’ by 想陽明山</p>
+										
+  </div>
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-2.html"><img class="rounded-circle" src="images/food/陽明山/青菜園.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">青菜園</p>
+										
+  </div> 
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-3.html"><img class="rounded-circle" src="images/food/陽明山/頂湖小鎮.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">陽明山餐廳！頂湖小鎮</p>
+										
+  </div> 
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-4.html"><img class="rounded-circle" src="images/food/陽明山/想啟手工小饅頭包子.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">想啟手工小饅頭包子</p>
+										
+  </div>
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-5.html"><img class="rounded-circle" src="images/food/陽明山/白房子Yang Ming Caf’e.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">白房子Yang Ming Caf’e</p>
+										
+  </div>
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-6.html"><img class="rounded-circle" src="images/food/陽明山/大樹下小饅頭.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">大樹下小饅頭</p>
+										
+  </div>
+  <div class="element-item bbb imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/b-7.html"><img class="rounded-circle" src="images/food/陽明山/草山夜未眠.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">草山夜未眠</p>
+										
+  </div>
+  <div class="element-item ccc imghover"  style="width: 200px;height: 170px;margin-bottom: 50px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/c-1.html"><img class="rounded-circle" src="images/food/龜吼漁港大啖萬里蟹.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">龜吼漁港大啖萬里蟹</p>
+										
+  </div> 
+  <div class="element-item ccc imghover"  style="width: 200px;height: 170px;margin-bottom: 50px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/c-2.html"><img class="rounded-circle" src="images/food/大碗螃蟹.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">金山美食 大碗螃蟹</p>
+										
+  </div> 
+  <div class="element-item ccc imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/c-3.html"><img class="rounded-circle" src="images/food/兄弟食堂.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">兄弟食堂</p>
+										
+  </div> 
+  <div class="element-item ccc imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/c-4.html"><img class="rounded-circle" src="images/food/金山鴨肉.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">金包里金山鴨肉</p>
+										
+  </div> 	
+  <div class="element-item ccc imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/c-5.html"><img class="rounded-circle" src="images/food/金山芋圓王.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">金山芋圓王</p>
+										
+  </div> 
+  
+  <div class="element-item ddd imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/d-1.html"><img class="rounded-circle" src="images/food/烏來/泰雅婆婆美食店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">泰雅婆婆美食店</p>
+</div>
+<div class="element-item ddd imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/d-2.html"><img class="rounded-circle" src="images/food/烏來/阿春美食.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">阿春美食</p>
+										
+  </div>
+<div class="element-item ddd imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/d-3.html"><img class="rounded-circle" src="images/food/烏來/雅各原住民山豬肉香腸.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">雅各原住民山豬肉香腸</p>
+</div>
+ <div class="element-item ddd imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/d-4.html"><img class="rounded-circle" src="images/food/烏來/高家溫泉蛋.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">高家溫泉蛋</p>
+  </div>
+<div class="element-item ddd imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/d-5.html"><img class="rounded-circle" src="images/food/烏來/水芙蓉現烤小米麻糬-2.jpg" style="max-width:100%"></a></figure>
+						<p style="text-align:center;">水芙蓉現烤小米麻糬</p>
+										
+  </div>
+<div class="element-item eee imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/e-1.html"><img class="rounded-circle" src="images/food/泰安/清安豆腐店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">清安豆腐店</p>
+										
+  </div>
+<div class="element-item eee imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/e-2.html"><img class="rounded-circle" src="images/food/泰安/秋菊麻糬--2.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">秋菊麻糬</p>
+										
+  </div>
+<div class="element-item eee imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/e-3.html"><img class="rounded-circle" src="images/food/泰安/尚紅ㄟ臭豆腐.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">尚紅ㄟ臭豆腐</p>
+										
+  </div>
+						
+  
+  
+  <div class="element-item fff imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/f-1.html"><img class="rounded-circle" src="images/food/谷關/白冷冰棒.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">白冷冰棒</p>
+										
+  </div>
+  <div class="element-item fff imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/f-2.html"><img class="rounded-circle" src="images/food/谷關/古拉斯 天園 泰雅風味餐廳.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">古拉斯 天園 泰雅風味餐廳</p>
+										
+  </div>
+  <div class="element-item fff imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/f-3.html"><img class="rounded-circle" src="images/food/谷關/阿嬌姨的店-1.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">阿嬌姨的店</p>
+										
+  </div>
+  <div class="element-item fff imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/f-4.html"><img class="rounded-circle" src="images/food/谷關/山東開心小館.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">山東開心小館</p>
+										
+  </div>                      
+  <div class="element-item fff imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/f-5.html"><img class="rounded-circle" src="images/food/谷關/魚之鄉鱘龍魚休閒魚場.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">魚之鄉鱘龍魚休閒魚場</p>
+										
+  </div>
+  <div class="element-item ggg imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/g-1.html"><img class="rounded-circle" src="images/food/東埔/伊拿谷景觀餐廳.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">伊拿谷景觀餐廳</p>
+										
+  </div>
+  <div class="element-item ggg imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/g-2.html"><img class="rounded-circle" src="images/food/東埔/望鄉部落 慢午廚房 Mal-u Kitchen.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">望鄉部落 慢午廚房 Mal-u Kitchen</p>
+										
+  </div>
+  <div class="element-item ggg imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/g-3.html"><img class="rounded-circle" src="images/food/東埔/喜覺支梅園梅宴工作室.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">喜覺支梅園梅宴工作室</p>
+										
+  </div>
+  <div class="element-item ggg imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/g-4.html"><img class="rounded-circle" src="images/food/東埔/玉山樓.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">玉山樓</p>
+										
+  </div>
+  <div class="element-item ggg imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/g-5.html"><img class="rounded-circle" src="images/food/東埔/日月潭富園小吃餐廳.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">日月潭富園小吃餐廳</p>
+										
+  </div>  
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-1.html"><img class="rounded-circle" src="images/food/礁溪/三友(山友)拉麵.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">三友(山友)拉麵</p>
+										
+  </div> 
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-2.html"><img class="rounded-circle" src="images/food/礁溪/阿萬之家礁溪店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">阿萬之家礁溪店</p>
+										
+  </div>
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-3.html"><img class="rounded-circle" src="images/food/礁溪/奕順軒礁溪店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">奕順軒礁溪店</p>
+										
+  </div>
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-4.html"><img class="rounded-circle" src="images/food/礁溪/堯川創藝料理日式居酒屋.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">堯川創藝料理日式居酒屋</p>
+										
+  </div>
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-5.html"><img class="rounded-circle" src="images/food/礁溪/礁溪頂好蔥油餅.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">礁溪頂好蔥油餅</p>
+										
+  </div>
+  <div class="element-item hhh imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/h-6.html"><img class="rounded-circle" src="images/food/礁溪/跑馬咖啡.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">跑馬咖啡</p>
+										
+  </div>
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-1.html"><img class="rounded-circle" src="images/food/知本/黑松羊肉爐.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">黑松羊肉爐</p>
+										
+  </div> 
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-2.html"><img class="rounded-circle" src="images/food/知本/開喜小吃部.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">開喜小吃部</p>
+										
+  </div>
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-3.html"><img class="rounded-circle" src="images/food/知本/知本山上有家麵包店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">知本山上有家麵包店</p>
+										
+  </div>
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-4.html"><img class="rounded-circle" src="images/food/知本/林道客棧咖啡工作室.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">林道客棧咖啡工作室</p>
+										
+  </div>
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-5.html"><img class="rounded-circle" src="images/food/知本/大頭目野食館.png" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">大頭目野食館</p>
+										
+  </div>
+  <div class="element-item iii imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/i-6.html"><img class="rounded-circle" src="images/food/知本/龍泉鄉茶藝館.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">龍泉鄉茶藝館</p>
+										
+  </div>
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-1.html"><img class="rounded-circle" src="images/food/花東/愛嬌姨茶餐.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">愛嬌姨茶餐</p>
+										
+  </div>   
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-2.html"><img class="rounded-circle" src="images/food/花東/春一枝鹿野76.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">春一枝鹿野76</p>
+										
+  </div>
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-3.html"><img class="rounded-circle" src="images/food/花東/李伯伯食堂.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">李伯伯食堂</p>
+										
+  </div>
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-4.html"><img class="rounded-circle" src="images/food/花東/鹿野小館.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">鹿野小館</p>
+										
+  </div>      
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-5.html"><img class="rounded-circle" src="images/food/花東/紅茶食堂.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">紅茶食堂</p>
+										
+  </div>
+  <div class="element-item jjj imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/j-6.html"><img class="rounded-circle" src="images/food/花東/關山老店臭豆腐.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">關山老店臭豆腐</p>
+										
+  </div>
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-1.html"><img class="rounded-circle" src="images/food/寶來/山之戀風味餐廳.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">山之戀風味餐廳</p>
+										
+  </div> 
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-2.html"><img class="rounded-circle" src="images/food/寶來/寶來山海產飯店.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">寶來山海產飯店</p>
+										
+  </div>
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-3.html"><img class="rounded-circle" src="images/food/寶來/聚寶來景觀休憩餐飲.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">聚寶來景觀休憩餐飲</p>
+										
+  </div>         
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-4.html"><img class="rounded-circle" src="images/food/寶來/寶來36咖啡愛玉.jpg" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">寶來36咖啡愛玉</p>
+										
+  </div>
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-5.html"><img class="rounded-circle" src="images/food/寶來/寶來旺來客碳烤.PNG" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">寶來旺來客碳烤</p>
+										
+  </div>
+  <div class="element-item kkk imghover"  style="width: 200px;height: 170px;">
+    
+						<figure><a data-fancybox data-type="iframe" href="images/food/k-6.html"><img class="rounded-circle" src="images/food/寶來/李林烤肉之家.JPG" style="width: 200px;height: 200px;"></a></figure>
+						<p style="text-align:center;">李林烤肉之家</p>
+										
+  </div>                          
+                </div>
+				</div>
+                </div>
+                </div>
+				
+			
+			
+                
+			 
+
+
+
+				
+
+			
+				
+  
+            
+            
+        </div>
+        
+		 
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>		
+<script>var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script>	
+
+
+<script>
+    var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows'
+});
+// filter functions
+var filterFns = {
+  // show if number is greater than 50
+  numberGreaterThan50: function() {
+    var number = $(this).find('.number').text();
+    return parseInt( number, 10 ) > 50;
+  },
+  // show if name ends with -ium
+  ggg: function() {
+    var name = $(this).find('.name').text();
+    return name.match( /zzz$/ );
+  }
+};
+// bind filter on select change
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+});</script>
+
+<script type="text/javascript">
+$('[data-fancybox]').fancybox({
+	toolbar  : false,
+	smallBtn : true,
+	iframe : {
+		preload : false
+	}
+})
+
+</script> 
+    
+</body>
+</html>

@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 金山 </h3>
+				<h4 id="北基飛行場"class="container">
+				1.北基飛行場
+				</h4>
+				&nbsp;
+			  <p class="container"> &nbsp;從萬里鄉北基社區的馬路蜿蜒上山，可抵達一處吸引眾多飛行愛好者的場地。
+
+</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14442.952887803038!2d121.67558488382933!3d25.178315542474888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4d0ff294e59f%3A0xddfcf17b99e8dd67!2z54ax5rCj5rWB6aOb6KGM5YKY5L-x5qiC6YOo!5e0!3m2!1szh-TW!2stw!4v1600657188340!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;這個飛行場位於北基社區上方的突出山頭，海拔約185公尺，面向遼闊的東海，視野超過180度，右邊萬里漁港、左方翡翠灣彷彿被踩在腳下。
+	</p>
+			    <img alt="" src="images/附近景點/金山/北基飛行場-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;夏、秋季為最佳飛行時節，每到週末假日，總聚集不少飛行傘愛好者在此一展身手。
+	</p>
+				<img alt="" src="images/附近景點/金山/北基飛行場-2.jpg" width="800"  ></br></br>
+				
+				<h4 id="朱銘美術館" class="container">
+				2.朱銘美術館
+				</h4>
+				&nbsp;
+				<p class="container"> 
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.7672947006968!2d121.60856911328416!3d25.244761685967962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b4bb5ea72c1f%3A0x8668d422c37fa64a!2z5pyx6YqY576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1600657233178!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;朱銘美術館位於新北市金山區。在1999年9月成立，依山傍水，館區開放8甲。
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;最初朱銘先生是為了解決大型作品的存放問題。後來藝術家的性情讓他從大自然中找到靈感，他決定興建一處展現他畢生傑作，以及供藝術家發揮創意的園地。
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;朱銘美術館園區規劃有服務中心、第一展覽室、會議室、藝術表演區、藝術交流區、朱雋區、戲水區、太極廣場、美術館本館、人間廣場、慈母碑、天鵝池、藝術長廊、運動廣場。
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/朱銘美術館-6.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="金山鴨肉" class="container">
+				3.金山鴨肉
+				</h4>
+				&nbsp;
+				<p class="container">
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4445054107487!2d121.63614461328349!3d25.221949236889095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b35d43c61aff%3A0xf6f362bd7ccfa662!2z6YeR5bGx6bSo6IKJ!5e0!3m2!1szh-TW!2stw!4v1600657271034!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;到過北海岸旅遊的遊客，都會想到金山區金包里街漳聖王廟前的鴨肉店。
+	</p>
+				<img src="images/附近景點/金山/金山鴨肉-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;名聞遐邇，許多饕饕客遠道慕名而來，地方人士稱李光雄為「鴨肉ㄜˋ」，金山廟口因「鴨肉ㄜˋ」經營的攤子，烹煮的鮮美鴨肉吸引不少觀光客，一到假日食客湧往，老街人潮滿滿。
+	</p>
+				<img src="images/附近景點/金山/金山鴨肉-2.jpg" width="800"   alt=""/><br><br>
+				
+					
+				<h4 id="金包里老街" class="container">
+				4.金包里老街
+				</h4>
+				&nbsp;
+				<p class="container">
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4480632523355!2d121.6360782132835!3d25.221829336893933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b57c2217c89%3A0xd443b8997e3afc65!2z6YeR5bGx6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1600657315988!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;金山老街即是金包里老街，清朝時曾是繁華的商業大街，已有三百多年的歷史，是金山最古老的一條街。
+	</p>
+				<img src="images/附近景點/金山/金包里老街-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;位於金山老街尾端廣安宮前的鴨肉小吃攤，獨步全臺，人氣十足，老街各式特色小吃如卜肉、蚵仔酥、芋餅與烤紅心蕃薯等都相當有名。必買伴手禮有一口酥、阿玉蔴粩等。
+	</p>
+				<img src="images/附近景點/金山/金包里老街-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/金包里老街-3.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="野柳海洋公園" class="container">
+				5.野柳海洋公園
+				</h4>
+				&nbsp;
+				<p class="container">
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9416606055142!2d121.68917131328296!3d25.205189837565307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4c74299775fd%3A0xb4fafb8bea6a131d!2z6YeO5p-z5rW35rSL5LiW55WM!5e0!3m2!1szh-TW!2stw!4v1600657388602!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;野柳海洋世界位於新北市萬里區，緊鄰野柳風景區。
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;全年開放的海洋世界，廣大的觀眾席可容納3000人，每到假日吸引無數遊客前來觀賞。
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;野柳海洋世界其實除了可愛的海豚外，這兒還有擬虎鯨、海獅表演及不定期更新的外國表演節目，如高空跳水、水上芭蕾、特技秀等，樣樣精彩可期，每場表演約60分鐘。
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-5.jfif" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/野柳海洋公園-6.jfif" width="800"   alt=""/><br><br>
+					
+				<h4  id="魚路古道"class="container">
+				6.魚路古道
+				</h4>
+				&nbsp;
+				<p class="container">
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7222.056278046781!2d121.57591661823886!3d25.16852769592363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442addaaaaaaaab%3A0x2e6f539ed584d328!2z6YeR5YyF6YeM5aSn6Lev772c6a2a6Lev5Y-k6YGT!5e0!3m2!1szh-TW!2stw!4v1600657426665!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;金包里大路又稱魚路古道，是早期金包里(金山)往來士林之間的要道，也是陽明山國家公園內最具代表性的歷史步道。
+	</p>
+				<img src="images/附近景點/金山/魚路古道-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;金包里大路由擎天崗至天籟，全長5.6公里，惟上磺溪至八煙路段因坍方未整修完成，暫不開放通行。
+	</p>
+				<img src="images/附近景點/金山/魚路古道-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;是個假日可以出來踏青的好地方。
+	</p>
+				<img src="images/附近景點/金山/魚路古道-3.jpeg" width="800"   alt=""/><br><br>
+				
+				<h4 id="獅頭山公園" class="container">
+				7.獅頭山公園
+				</h4>
+				&nbsp;
+				<p class="container">位於金山海岬的獅頭山，望東可見野柳岬，西邊則是磺港漁港與中角的山海景。
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3443047824876!2d121.64355161744386!3d25.2253258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b5c72449969%3A0x85a4a14c1ac3833!2z542F6aCt5bGx5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1600657465368!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;長期在軍事管制的保護下，獅頭山的生態資源完整豐富，林相十分多元，近年更因復育有成，不同季節時，還可在步道上偶遇臺灣百合或金花石蒜怒放美景。
+	</p>
+				<img src="images/附近景點/金山/獅頭山公園-1.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;春天是遇見臺灣百合的最佳時機，山崖上綻放素雅清香的雪白花朵，是獅頭山上另一幅生態美景。
+	</p>
+				<img src="images/附近景點/金山/獅頭山公園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;另外，由於此地為沿海地帶，海岸植物更是豐富，包括海檬果、草海桐、林投樹等；大約九至十月之際可於中正亭附近的植栽區可觀賞到北海岸秋季開花的原生物種──金花石蒜開花，「見花不見葉，見葉不見花」為其最明顯的生態特色。
+	</p>
+				<img src="images/附近景點/金山/獅頭山公園-3.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="翡翠灣" class="container">
+				8.翡翠灣
+				</h4>
+				&nbsp;
+				<p class="container">
+
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14442.131039881571!2d121.68070520317939!3d25.18524996040554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4c42a7ffed27%3A0xe902c4c7f8c34ded!2z57-h57-g54Gj5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1600657506443!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/金山/翡翠灣(福華飯店)-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;翡翠灣水域遊憩區，是北海岸規劃最完整的多元性水域遊憩區，適合海上滑水及衝浪等休閒活動。
+	</p>
+				<img src="images/附近景點/金山/翡翠灣(福華飯店)-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;夏天堪稱是玩樂天堂，不論游泳、日光浴、海灘活動，都讓翡翠灣充滿朝氣﹔冬天的翡翠灣則相當安靜。據說東北季風的強勁讓人驚訝，不過天氣好的時候，在此散步反而是一種恬靜，海風徐徐，很有日劇場景的味道。
+	</p>
+				<img src="images/附近景點/金山/翡翠灣-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;如果想避開人潮，享受一天的安寧，傾聽大自然的濤浪迴聲，沉心靜慮，體驗悠閒自在感，不妨趁著東北風的季節，到此一遊，別有一番風味。
+	</p>
+				<img src="images/附近景點/金山/翡翠灣-4.jpg" width="800"   alt=""/><br><br>
+				
+			
+		</div>
+   </div>
+</div>
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>  
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

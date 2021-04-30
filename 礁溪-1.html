@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 170px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h4 class="container"><b>阿宗芋冰城→礁溪溫泉公園→梅花湖→豆腐乳烤香雞→明池森林園區→北門牛乳大王→羅東夜市→泡湯</b>
+                </h4>
+				<hr>
+			  
+				
+				<h4 class="container">阿宗芋冰城</h4>
+                <img src="images/travel/礁溪隱藏景點/阿宗芋冰城.jpg" style="width:800px;height:450px;">
+                
+                <p class="container">炎炎夏日，太陽高高掛，出遊都熱得不得了，這時候最需要冰品來解解悶熱拉～頭城美食之一，阿宗芋冰城，綿密又扎實，真材實料，還能吃到果肉唷！價位又親民，是啾啾到宜蘭旅遊，沁涼解渴的美食之一呢</p>
+
+				<h4 class="container">礁溪溫泉公園</h4>
+                <img src="images/travel/礁溪隱藏景點/礁溪溫泉公園.jpg" style="width:800px;height:450px;">
+                <p class="container">森林中的泡湯區，是個放鬆心靈的宜蘭景點唷～這裡每池水溫都不同，水是會流動的，所以水質不會太差，又能享受大自然的寧靜，更重要的是，免費的溫泉泡腳區，怎麼能不去踏踏呢！附近更有物超所值風呂及溫泉魚吃腳皮的場所，啾啾覺得很值得一去唷～</p>
+			    <p>地址：宜蘭縣礁溪鄉公園路70巷60號</p>
+                <p>收費方式：免費</p>
+                <p>附近宜蘭景點：礁溪火車站、林美石磐步道</p>
+                <h4 class="container">梅花湖</h4>
+                <img src="images/travel/礁溪隱藏景點/梅花湖.jpg" style="width:800px;height:450px;">
+                <p class="container">這裡有許多自行車出租店，來這裡就是要騎腳踏車遊玩梅花湖拉～優閒騎著車，呼吸著新鮮空氣，享受綠意盎然的氛圍。沿路也有許多攤販小吃，讓你不愁玩、不愁吃，不自覺會待很久XD，啾啾來宜蘭旅遊很喜歡這裡唷！</p>
+				<p>地址：宜蘭縣冬山鄉</p>
+                <p>收費方式：免費</p>
+                <p>附近宜蘭景點：道教總廟三清宮、斑比山丘</p>
+                <h4 class="container">豆腐乳烤香雞</h4>
+                <img src="images/travel/礁溪隱藏景點/豆腐乳烤香雞.jpg" style="width:800px;height:450px;">
+                <p class="container">鮮嫩多汁的豆腐乳烤雞全餐，除了主餐烤雞之外，還有沙拉、吐司、湯品、甜點，足夠讓一家大小吃飽飽唷！啾啾實在懷念這套宜蘭美食啊</p>
+                <h4 class="container">明池森林園區</h4>
+                <img src="images/travel/礁溪隱藏景點/明池森林園區.JPG" style="width:800px;height:450px;">
+                <a class="container">https://lingyun.tw/2015-11-30-176/</a>
+                <h4 class="container">北門牛乳大王</h4>
+                <img src="images/travel/礁溪隱藏景點/北門牛乳大王.png" style="width:800px;height:450px;">
+                <p class="container">他的綠豆沙牛奶濃稠度剛剛好，綠豆和牛奶的口感融合為一，啾啾上次不小心連續喝了兩杯拉，因為太好喝又解渴，馬上再續一杯！其他像是木瓜牛奶、芋頭沙牛奶也都很好喝唷，滿滿的排隊人潮，也可以說是宜蘭景點之一呢XD</p>
+                <h4 class="container">羅東夜市</h4>
+                <img src="images/travel/礁溪隱藏景點/羅東夜市.jpg" style="width:800px;height:450px;">
+                <p class="container">晚餐時間來拉～啾啾最喜歡夜市了❣，三星蔥餅、阿灶伯當歸羊肉、包心粉圓…等，好逛又好吃，買到民宿享用還可以邊看電視邊大快朵頤，太像受拉～來宜蘭旅遊一定要來羅東夜市吃吃吃！
+
+地址：宜蘭縣羅東鎮興東路與民權路口</p>
+               <p>收費方式：免費</p>
+               <p>附近宜蘭景點：羅東林業文化園區、羅東運動公園</p>
+			</div>
+		</div>
+		</div>
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

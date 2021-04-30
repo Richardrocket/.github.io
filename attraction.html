@@ -1,0 +1,1053 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color: #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color: #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+    text-align: right;
+	margin: 0px;
+	padding: 0px;
+}
+.social li {
+    list-style-type: none;
+	margin-right: 5px;
+	display: inline-block;
+}
+.social li a {
+	color: white;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #FCDAAE;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+				.site-footer {
+	margin-top: 50px;
+	color: #10cfc9;
+	padding: 25px 0;
+	background-color: #10cfc9;
+}
+.site-footer span {
+	margin-top: 12px;
+	display: block;
+	text-align: left;
+}
+@media (max-width:768px){
+.site-footer span{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+.social{
+	text-align: center;
+	}
+}
+
+        
+
+button {
+  --borderWidth: 3;
+  --boxShadowDepth: 8;
+  --buttonColor: #f00;
+  --fontSize: 1.6;
+  --horizontalPadding: 16;
+  --verticalPadding: 8;
+  background: transparent;
+  border: calc(var(--borderWidth) * 1px) solid var(--buttonColor);
+  box-shadow: calc(var(--boxShadowDepth) * 1px) calc(var(--boxShadowDepth) * 1px) 0 #c8c8c8;
+  color: var(--buttonColor);
+  cursor: pointer;
+  font-size: calc(var(--fontSize) * 1rem);
+  font-weight: bold;
+  outline: transparent;
+  padding: calc(var(--verticalPadding) * 1px) calc(var(--horizontalPadding) * 1px);
+  position: relative;
+  -webkit-transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease;
+  border-radius:10px;
+}
+button:hover {
+  box-shadow: calc(var(--boxShadowDepth) / 2 * 1px) calc(var(--boxShadowDepth) / 2 * 1px) 0 #c8c8c8;
+}
+button:active {
+  box-shadow: 0 0 0 #c8c8c8;
+}
+button span {
+  -webkit-clip-path: var(--clip);
+  bottom: calc(var(--borderWidth) * -1px);
+  clip-path: var(--clip);
+  left: calc(var(--borderWidth) * -1px);
+  position: absolute;
+  right: calc(var(--borderWidth) * -1px);
+  top: calc(var(--borderWidth) * -1px);
+  z-index: 1;
+}
+button span:nth-of-type(1):hover,
+button span:nth-of-type(2):hover,
+button span:nth-of-type(3):hover,
+button span:nth-of-type(4):hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+button span:nth-of-type(1):hover ~ b:nth-of-type(1),
+button span:nth-of-type(2):hover ~ b:nth-of-type(2),
+button span:nth-of-type(3):hover ~ b:nth-of-type(3),
+button span:nth-of-type(4):hover ~ b:nth-of-type(4) {
+  --clip: inset(0 0 0 0);
+}
+button span:nth-of-type(1) {
+  --clip: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+}
+button span:nth-of-type(2) {
+  --clip: polygon(100% 0, 100% 100%, 50% 50%);
+}
+button span:nth-of-type(3) {
+  --clip: polygon(0 100%, 100% 100%, 50% 50%);
+}
+button span:nth-of-type(4) {
+  --clip: polygon(0 0, 0 100%, 50% 50%);
+}
+button b {
+  -webkit-clip-path: var(--clip);
+  background: var(--buttonColor);
+  border: calc(var(--borderWidth) * 1px) solid var(--buttonColor);
+  border-radius:10px;
+  bottom: calc(var(--borderWidth) * -1px);
+  font-weight: bold;
+  clip-path: var(--clip);
+  color: var(--bg, #fafafa);
+  left: calc(var(--borderWidth) * -1px);
+  padding: calc(var(--verticalPadding) * 1px) calc(var(--horizontalPadding) * 1px);
+  position: absolute;
+  right: calc(var(--borderWidth) * -1px);
+  top: calc(var(--borderWidth) * -1px);
+  -webkit-transition: -webkit-clip-path 0.25s ease;
+  transition: -webkit-clip-path 0.25s ease;
+  transition: clip-path 0.25s ease;
+  transition: clip-path 0.25s ease, -webkit-clip-path 0.25s ease;
+}
+button b:nth-of-type(1) {
+  --clip: inset(0 0 100% 0);
+}
+button b:nth-of-type(2) {
+  --clip: inset(0 0 0 100%);
+}
+button b:nth-of-type(3) {
+  --clip: inset(100% 0 0 0);
+}
+button b:nth-of-type(4) {
+  --clip: inset(0 100% 0 0);
+}
+    </style>
+</head>
+<body style="padding-top: 150px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="padding: 10px;color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01; box-shadow: 0 0 0 #888;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <div align="center" >
+            <button role="button" href="#北投" tabindex="0" style="--buttonColor: #Eb5c01;" ><a href="#北投" style="color:#c8c8c8;">北投<span></span><span></span><span></span><span></span><b aria-hidden="true">北投</b><b aria-hidden="true">北投</b><b aria-hidden="true">北投</b><b aria-hidden="true">北投</b></a></button>
+            <button role="button" href="" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#陽明山" style="color:#c8c8c8;">陽明山<span></span><span></span><span></span><span></span><b aria-hidden="true">陽明山</b><b aria-hidden="true">陽明山</b><b aria-hidden="true">陽明山</b><b aria-hidden="true">陽明山</b></a></button>
+            <button role="button" href="#金山" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#金山" style="color:#c8c8c8;">金山<span></span><span></span><span></span><span></span><b aria-hidden="true">金山</b><b aria-hidden="true">金山</b><b aria-hidden="true">金山</b><b aria-hidden="true">金山</b></a></button>
+            <button role="button" href="#烏來"tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#烏來" style="color:#c8c8c8;">烏來<span></span><span></span><span></span><span></span><b aria-hidden="true">烏來</b><b aria-hidden="true">烏來</b><b aria-hidden="true">烏來</b><b aria-hidden="true">烏來</b></a></button>
+            <button role="button" href="#泰安" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#泰安" style="color:#c8c8c8;">泰安<span></span><span></span><span></span><span></span><b aria-hidden="true">泰安</b><b aria-hidden="true">泰安</b><b aria-hidden="true">泰安</b><b aria-hidden="true">泰安</b></a></button>
+            <button role="button" href="#谷關" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#谷關" style="color:#c8c8c8;">谷關<span></span><span></span><span></span><span></span><b aria-hidden="true">谷關</b><b aria-hidden="true">谷關</b><b aria-hidden="true">谷關</b><b aria-hidden="true">谷關</b></a></button>
+            <button role="button" href="#東埔" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#東埔" style="color:#c8c8c8;">東埔<span></span><span></span><span></span><span></span><b aria-hidden="true">東埔</b><b aria-hidden="true">東埔</b><b aria-hidden="true">東埔</b><b aria-hidden="true">東埔</b></a></button>
+            <button role="button" href="#礁溪" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#礁溪" style="color:#c8c8c8;">礁溪<span></span><span></span><span></span><span></span><b aria-hidden="true">礁溪</b><b aria-hidden="true">礁溪</b><b aria-hidden="true">礁溪</b><b aria-hidden="true">礁溪</b></a></button>
+            <button role="button" href="#知本" tabindex="0" style="--buttonColor:#Eb5c01;"><a href="#知本" style="color:#c8c8c8;">知本<span></span><span></span><span></span><span></span><b aria-hidden="true">知本</b><b aria-hidden="true">知本</b><b aria-hidden="true">知本</b><b aria-hidden="true">知本</b></a></button>
+            <button role="button" href="#花東縱谷" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#花東縱谷" style="color:#c8c8c8;">花東縱谷<span></span><span></span><span></span><span></span><b aria-hidden="true">花東縱谷</b><b aria-hidden="true">花東縱谷</b><b aria-hidden="true">花東縱谷</b><b aria-hidden="true">花東縱谷</b></a></button>
+            <button role="button" href="#寶來" tabindex="0" style="--buttonColor: #Eb5c01;"><a href="#寶來" style="color:#c8c8c8;">寶來<span></span><span></span><span></span><span></span><b aria-hidden="true">寶來</b><b aria-hidden="true">寶來</b><b aria-hidden="true">寶來</b><b aria-hidden="true">寶來</b></a></button>
+            <hr>
+        </div>
+		<div class="container marketing">      
+        <div class="row featurette">
+          <div class="col-md-12">
+                <br>
+				<hr>
+				<br>
+				<div id="北投" style="text-align:center;background-color: #10cfc9;"><h1>北投</h1></div>
+				<div class="row">
+				<div class="col-12 col-sm-4">
+					
+						<img class="rounded" src="images/附近景點/北投/土雞山產料理(松竹園-2).jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						
+					
+                    <p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#土雞山產料理" style="width: 350px;">松竹園土雞城 &raquo;</a></p>
+				</div>
+				<div class="col-12 col-sm-4">
+					
+						<img class="rounded" src="images/附近景點/北投/水都會館煮溫泉蛋-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#水都會館煮溫泉蛋" style="width: 350px;">水都會館溫泉蛋 &raquo;</a></p>
+					
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/地熱谷-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#地熱谷" style="width: 350px;">地熱谷 &raquo;</a></p>
+					
+				 
+			    </div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/草山行館-1.PNG" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#草山行館" style="width: 350px;">草山行館 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/硫磺谷地熱景觀區-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#硫磺谷地熱景觀區" style="width: 350px;">硫磺谷 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/溫泉博物館-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#溫泉博物館" style="width: 350px;">北投溫泉博物館 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/溫泉親水公園-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#溫泉親水公園" style="width: 350px;">北投溫泉親水公園 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/北投/圖書館-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="北投.html#圖書館" style="width: 350px;">北投圖書館 &raquo;</a></p>
+					 
+				</div>
+			</div>
+			<br><br>
+			<div id="陽明山" style="text-align:center;background-color: #10cfc9"><h1>陽明山</h1></div>
+				<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/七星山主東峰步道-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#七星山主東峰步道" style="width: 350px;">七星山主東峰步道 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/大屯自然公園-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#大屯自然公園" style="width: 350px;">大屯自然公園 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/小油坑-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#小油坑" style="width: 350px;">小油坑 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/日月滿休閒農場-1.png" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#日月滿休閒農場" style="width: 350px;">日月滿休閒農莊 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/紗帽山半嶺(橫嶺古道)-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#紗帽山半嶺" style="width: 350px;">紗帽山半嶺 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/竹子湖-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#竹子湖" style="width: 350px;">竹子湖 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/陽明山國家公園-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#陽明山國家公園" style="width: 350px;">陽明山國家公園 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/陽明山/馬槽花藝村-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="陽明山.html#馬槽花藝村" style="width: 350px;">馬槽花藝村 &raquo;</a></p>
+					 
+				</div>
+				
+			</div><br><br>
+			
+			<div id="金山" style="text-align:center;background-color: #10cfc9"><h1>金山</h1></div>
+				<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/北基飛行場-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#北基飛行場" style="width: 350px;">北基飛行場 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/朱銘美術館-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#朱銘美術館" style="width: 350px;">朱銘美術館 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/金山鴨肉-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#金山鴨肉"style="width: 350px;">金山鴨肉 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/金包里老街-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#金包里老街" style="width: 350px;">金包里老街 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 	
+						<img class="rounded" src="images/附近景點/金山/野柳海洋公園-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#野柳海洋公園"style="width: 350px;">野柳海洋公園 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/魚路古道-3.jpeg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#魚路古道"style="width: 350px;">魚路古道 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/獅頭山公園-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#獅頭山公園"style="width: 350px;">獅頭山公園 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/金山/翡翠灣-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="金山.html#翡翠灣"style="width: 350px;">翡翠灣 &raquo;</a></p>
+					 
+				</div>
+				
+			</div>
+			
+			<br><br>
+			<div id="烏來" style="text-align:center;background-color: #10cfc9"><h1>烏來</h1></div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/烏來/內洞森林遊樂區-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="烏來.html#內洞森林遊樂區"style="width: 350px;">內洞森林遊樂區 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/烏來/烏來老街-1.jpeg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="烏來.html#烏來老街"style="width: 350px;">烏來老街 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/烏來/烏來泰雅民族博物館-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="烏來.html#烏來泰雅民族博物館"style="width: 350px;">烏來泰雅民族博物館 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/烏來/烏來瀑布.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="烏來.html#烏來瀑布"style="width: 350px;">烏來瀑布 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 	
+						<img class="rounded" src="images/附近景點/烏來/啦卡路賞鳥步道-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="烏來.html#啦卡路賞鳥步道"style="width: 350px;">啦卡路賞鳥步道 &raquo;</a></p>
+					 
+				</div>
+			</div>
+			
+			<br><br>
+			
+			<div id="泰安" style="text-align:center;background-color: #10cfc9"><h1>泰安</h1></div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/泰安/大湖休閒農莊-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#大湖休閒農莊"style="width: 350px;">大湖酒莊 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/泰安/汶水老街-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#汶水老街"style="width: 350px;">汶水老街 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/泰安/虎山吊橋-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#虎山吊橋"style="width: 350px;">虎山吊橋 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/泰安/洗水坑豆腐美食街-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#洗水坑豆腐美食街"style="width: 350px;">洗水坑豆腐美食 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 	
+						<img class="rounded" src="images/附近景點/泰安/泰雅文物館-2.jfif" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#泰雅文物館"style="width: 350px;">泰雅文物館 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 	
+						<img class="rounded" src="images/附近景點/泰安/馬拉邦國家森林步道-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#馬拉邦國家森林步道"style="width: 350px;">馬拉邦國家森林步道 &raquo;</a></p>
+					 
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/泰安/橫龍古道-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="泰安.html#橫龍古道"style="width: 350px;">橫龍古道 &raquo;</a></p>
+					 
+				</div>
+				
+			</div><br><br>
+			
+			<div id="谷關" style="text-align:center;background-color: #10cfc9"><h1>谷關</h1></div>
+				<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/八仙山森林遊樂區-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#八仙山森林遊樂區"style="width: 350px;">八仙山森林遊樂區 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/大雪山森林遊樂區-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#大雪山森林遊樂區"style="width: 350px;">大雪山森林遊樂區 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/台中谷關溫泉文化館-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#台中谷關溫泉文化館"style="width: 350px;">谷關溫泉文化館 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/白冷冰棒-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#白冷冰棒"style="width: 350px;">白冷冰棒肉包 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/谷關古靈寺-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#谷關古靈寺"style="width: 350px;">谷關古靈寺 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/東勢林場-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#東勢林場"style="width: 350px;">東勢林場 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/東豐自行車綠廊-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#東豐自行車綠廊"style="width: 350px;">東豐自行車綠廊 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/松鶴部落-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#松鶴部落"style="width: 350px;">松鶴部落 &raquo;</a></p>
+					 
+				</div>
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/捎來步道-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#捎來步道"style="width: 350px;">捎來步道 &raquo;</a></p>
+					 
+				</div>
+			
+			</div>
+			<div class="row">
+				
+				<div class="col-12 col-sm-4">
+					 
+						<img class="rounded" src="images/附近景點/谷關/馬崙山步道-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+						 
+						<p style="text-align:center;"><a class="btn btn-secondary" href="谷關.html#馬崙山步道"style="width: 350px;">馬崙山步道 &raquo;</a></p>
+					 
+				</div>
+				
+			
+			</div>
+			<br><br>
+			<div id="東埔" style="text-align:center;background-color: #10cfc9"><h1>東埔</h1></div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/沙里仙溫泉渡假村-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#沙里仙溫泉渡假村"style="width: 350px;">沙里仙溫泉度假村 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/東埔日、月雙橋-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#東埔日、月雙橋"style="width: 350px;">東埔日月雙橋 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/東埔溫泉-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#東埔溫泉"style="width: 350px;">東埔溫泉 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/風櫃斗-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#風櫃斗"style="width: 350px;">風櫃斗 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/彩虹瀑布-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#彩虹瀑布"style="width: 350px;">彩虹瀑布 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/東埔溫泉/望鄉部落-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="東埔.html#望鄉部落"style="width: 350px;">望鄉部落 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br><br>
+			<div id="礁溪" style="text-align:center;background-color: #10cfc9"><h1>礁溪</h1></div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/龍潭湖風景區大碗公溜滑梯-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#龍潭湖風景區大碗公溜滑梯"style="width: 350px;">龍潭湖風景區大碗公溜滑梯 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/大樹下溫泉魚-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#大樹下溫泉魚"style="width: 350px;">大樹下溫泉魚 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/五峰旗風景區-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#五峰旗風景區"style="width: 350px;">五峰旗風景區 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/冬山河親水公園-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#冬山河親水公園"style="width: 350px;">冬山河親水公園 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/兔子迷宮礁溪浴場-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#兔子迷宮礁溪浴場"style="width: 350px;">兔子迷宮礁溪浴場 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/金車礁溪蘭花園-6.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#金車礁溪蘭花園"style="width: 350px;">金車礁溪蘭花園 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/珍珠社區-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#珍珠社區"style="width: 350px;">珍珠社區 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/國立傳統藝術中心-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#國立傳統藝術中心"style="width: 350px;">國立傳統藝術中心 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/礁溪溫泉/雙連埤-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="礁溪.html#雙連埤"style="width: 350px;">雙連埤 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br><br>
+			<div id="知本" style="text-align:center;background-color: #10cfc9"><h1>知本</h1></div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/三和海濱公園-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#三和海濱公園"style="width: 350px;">三和海濱公園 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/小野柳-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#小野柳"style="width: 350px;">小野柳 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/太麻里金針山-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#太麻里金針山"style="width: 350px;">太麻里金針山 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/卡地布部落-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#卡地布部落"style="width: 350px;">卡地布文化園區 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/白玉瀑布-1.jfif" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#白玉瀑布"style="width: 350px;">白玉瀑布 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/知本森林遊樂區-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#知本森林遊樂區"style="width: 350px;">知本森林遊樂區 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/國立臺灣史前文化博物館-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#國立臺灣史前文化博物館"style="width: 350px;">國立臺灣史前文化博物館 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/深山亞都渡假會館-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#深山亞都渡假會館"style="width: 350px;">深山亞都渡假會館 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/知本溫泉/鐵花村-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="知本.html#鐵花村"style="width: 350px;">鐵花村 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br><br>
+				
+				<div id="花東縱谷" style="text-align:center;background-color: #10cfc9"><h1>花東縱谷</h1></div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/六十石山-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#六十石山"style="width: 350px;">六十石山 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/吉利潭-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#吉利潭"style="width: 350px;">吉利潭 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/伯朗大道-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#伯朗大道"style="width: 350px;">伯朗大道 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/秀姑巒溪泛舟-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#秀姑巒溪泛舟"style="width: 350px;">秀姑巒溪泛舟 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/武陵綠色隧道-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#武陵綠色隧道"style="width: 350px;">武陵綠色隧道 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/花蓮觀光糖廠-3.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#花蓮觀光糖廠" style="width: 350px;">花蓮觀光糖廠 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/馬太鞍部落-4.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#馬太鞍部落" style="width: 350px;">馬太鞍部落 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/掃叭石柱公園-1.png" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#掃叭石柱公園" style="width: 350px;">掃叭石柱公園 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/鹿野高台-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#鹿野高台" style="width: 350px;">鹿野高台 &raquo;</a></p>
+						 
+					</div>
+			
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/瑞穗牧場-5.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#瑞穗牧場" style="width: 350px;">瑞穗牧場 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/花東溫泉/舞鶴觀光茶園-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="花東縱谷.html#舞鶴觀光茶園" style="width: 350px;">舞鶴觀光茶園 &raquo;</a></p>
+						 
+					</div>
+					
+			
+				</div><br><br>
+				
+				<div id="寶來" style="text-align:center;background-color: #10cfc9"><h1>寶來</h1></div>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/甲仙化石館-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#甲仙化石館" style="width: 350px;">甲仙化石館 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/甲仙芋冰-2.png" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#甲仙芋冰" style="width: 350px;">甲仙芋冰 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/石洞溫泉山莊-1.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#石洞溫泉山莊" style="width: 350px;">石洞溫泉山莊 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/花賞溫泉公園-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#花賞溫泉公園" style="width: 350px;">花賞溫泉公園 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/美濃民俗村 擂茶DIY體驗-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#美濃民俗村" style="width: 350px;">美濃民俗擂茶 &raquo;</a></p>
+						 
+					</div>
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/荖濃溪泛舟-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#荖濃溪泛舟" style="width: 350px;">荖濃溪泛舟 &raquo;</a></p>
+						 
+					</div>
+			
+				</div><br>
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						 
+							<img class="rounded" src="images/附近景點/寶來溫泉/彩虹山大佛-2.jpg" style="max-width:100%;margin:0px;padding:0px;border:0px;">
+							 
+							<p style="text-align:center;"><a class="btn btn-secondary" href="寶來.html#彩虹山大佛" style="width: 350px;">彩虹山大佛 &raquo;</a></p>
+						 
+					</div>
+					
+			
+				</div>
+			
+               </div>  
+
+            </div>
+            
+        </div>
+        <hr>
+		
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="55">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="55">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/icons/gmail.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

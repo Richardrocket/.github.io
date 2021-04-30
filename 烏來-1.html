@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 烏來 </h3>
+				<h4 id="內洞森林遊樂區"class="container">
+				1.內洞國家森林遊樂區
+				</h4>
+				&nbsp;
+			  <p class="container">&nbsp; 
+</p>
+				
+			  
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7242.100330994129!2d121.5219516348877!3d24.827958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346805f9f0a28847%3A0xf577ee3b38f7a921!2z5YWn5rSe5ZyL5a625qOu5p6X6YGK5qiC5Y2A!5e0!3m2!1szh-TW!2stw!4v1600655293795!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;內洞國家森林遊樂區位於台灣新北市烏來區信賢里內，面積約有1,191.34公頃，標高約在230－800公尺。
+	</p>
+			    <img alt="" src="images/附近景點/烏來/內洞森林遊樂區-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;相傳是該谷多有青蛙叫聲，故舊稱娃娃谷，乃「哇哇」音變而來。特點為林相豐富且多變化，步道內頗多生態變化。
+	</p>
+				<img alt="" src="images/附近景點/烏來/內洞森林遊樂區-2.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;區內最著名之內洞瀑布，因河床坡降連續變形而成，並以每階梯三層瀑布拾級而下。因為蘇迪勒颱風而嚴重毀損，於2018年9月15日重新開放。
+	</p>
+				<img alt="" src="images/附近景點/烏來/內洞森林遊樂區-3.jpg" width="800"  ></br><br>
+				<h4 id="烏來老街" class="container">
+				2.烏來老街
+				</h4>
+				&nbsp;
+				<p class="container"> 
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9901046695786!2d121.54944231327283!3d24.864187551235467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468066411848c71%3A0x2aeb12aeb8a7507a!2z54OP5L6G6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1600655336131!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/烏來/烏來老街-1.jpeg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;烏來老街指的就是烏來街、瀑布路與環山道路一帶，店家招牌樣式統一，看起相當整齊，而且大部分的商店都以原住民特色來發揮，所以遊客可以品嚐到原住民風味的山產美食，像是碳烤山豬肉、溫泉蛋、月桃飯、竹筒飯、馬告料理、山蘇、珠蔥等，都是其他地方少見的原住民風味料理。
+	</p>
+				<img src="images/附近景點/烏來/烏來老街-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;另外還有小米酒、小米麻糬等特產，也都很適合送給親朋好友當伴手禮。同時在這裡也可以觀賞到山地歌舞表演，感受原住民的熱情活力。
+	</p>
+				<img src="images/附近景點/烏來/烏來老街-3.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;泰雅文化也是老街的旅遊重點，走一趟泰雅民族博物館可以了解族人豐富的編織、建築、信仰文化，還可品嘗老街上眾多原住民美食。
+	</p>
+				<img src="images/附近景點/烏來/烏來老街-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;若想親近自然風光，不妨搭乘烏來臺車，欣賞體驗沿途山林風光，或是登上高空纜車，近距離欣賞瀑布與山嵐。
+	</p>
+				<img src="images/附近景點/烏來/烏來老街-5.jpg" width="800"   alt=""/><br><br>
+				<h4 id="烏來泰雅民族博物館" class="container">
+				3.新北市烏來泰雅民族博物館
+				</h4>
+				&nbsp;
+				<p class="container">
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.9928188780955!2d121.54931861327275!3d24.864094851239216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468068928b6b457%3A0x8dd39b9368b2c51b!2z54OP5L6G5rOw6ZuF5rCR5peP5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1600655376171!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;新北市烏來泰雅民族博物館即是展現此地原住民族歷史曾經的最佳舞臺。
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;座落於烏來商圈入口處，地上3層建築物，以泰雅原住民族的歷史淵源、傳統人文風貌、生活習俗、宗教信仰及祭典節慶等內容，將烏來泰雅族的歷史、自然生態、文化風華一網打盡。
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;讓人看完後更加了解泰雅民族的生活及文化。
+	</p>
+				<img src="images/附近景點/烏來/烏來泰雅民族博物館-6.jfif" width="800"   alt=""/><br><br>
+				
+					
+				<h4 id="烏來瀑布" class="container">
+				4.烏來瀑布
+				</h4>
+				&nbsp;
+				<p class="container">烏來瀑布位於新北市烏來區烏來風景特定區內，是烏來風景特定區的代表景觀之一。
+				
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.4800925648665!2d121.54975721327224!3d24.847447451902113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468066fa745fad9%3A0xef2707fed49edfdc!2z54OP5L6G54CR5biD!5e0!3m2!1szh-TW!2stw!4v1600655428087!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;烏來瀑布高達80公尺、寬約10公尺，在日據時代舊稱為「雲來之瀧」的美譽。
+遠望瀑布有如白鍊一樣，當雨量充沛時烏來瀑布會分成兩道飛泉，自山谷撲簌而下，形成烏來天空雲霧瀰漫，增添浪漫的氣息，若在炎炎夏日來到烏來瀑布欣賞水景，讓人心情舒暢。
+
+	</p>
+				<img src="images/附近景點/烏來/烏來瀑布.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="啦卡路賞鳥步道" class="container">
+				5.啦卡路賞鳥步道
+				</h4>
+				&nbsp;
+				<p class="container">
+
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.192391175162!2d121.55354931327258!3d24.8572778515107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680661bf784187%3A0x34b30faba2319eeb!2z5ZWm5Y2h!5e0!3m2!1szh-TW!2stw!4v1600655474844!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/烏來/啦卡路賞鳥步道-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;啦卡路位於烏來桶後溪沿岸，啦卡(Laga)之名，是泰雅語楓樹的意思。
+	</p>
+				<img src="images/附近景點/烏來/啦卡路賞鳥步道-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;當年在此山林間生長著許多的楓樹森林，因此泰雅族人稱此區域為Laga。
+	</p>
+				<img src="images/附近景點/烏來/啦卡路賞鳥步道-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;烏來啦卡步道，為從烏來啦卡路9巷通往內洞林道的登山步道，屬於前往內洞林道的道路，也是觀光局評選的台灣十大國際級賞鳥區之一的賞鳥步道。
+	</p>
+				<img src="images/附近景點/烏來/啦卡路賞鳥步道-4.jpg" width="800"   alt=""/><br><br>
+					
+					
+		</div>	
+	</div>	
+</div>		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>查詢密碼</title>
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script> 
+    <script src="js/js/bootstrap.min.js"></script>
+	<style>
+    .bg-green {
+              background-color: #10cfc9;
+              box-shadow: 0px 3px 8px 0px #000;
+     }
+    .bg-green li a:hover{
+			  background-color: #c8c8c8;
+		}
+	</style>	
+  </head>
+  <body style="padding-top: 150px" id="page-top">
+  <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <p align="center"><img src="images/inquire.png" style="width:364px; height:130px;"></p>
+    <form method="post" action="search.php" >
+      <table align="center">
+        <tr><td>帳號：</td>
+          <td><input type="text" name="account" size="10"></td>
+        </tr>
+        <tr><td>電子郵件帳號：</td>
+          <td><input type="text" name="email" size="30"></td>
+        </tr>
+        <tr><td>顯示方式：</td>
+          <td>
+            <select name="show_method">
+              <option value="網頁顯示">網頁顯示</option>
+              <option value="E-mail 傳送">E-mail 傳送</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"> 
+            <input type="submit" value="查詢">　
+            <input type="reset" value="重填">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

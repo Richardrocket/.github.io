@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>會員管理系統</title>
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script> 
+    <script src="js/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function check_data()
+      {
+        if (document.myForm.account.value.length == 0)
+        {
+          alert("「使用者帳號」一定要填寫哦...");
+          return false;
+        }
+        if (document.myForm.account.value.length > 10)
+        {
+          alert("「使用者帳號」不可以超過 10 個字元哦...");
+          return false;
+        }
+        if (document.myForm.password.value.length == 0)
+        {
+          alert("「使用者密碼」一定要填寫哦...");
+          return false;
+        }
+        if (document.myForm.password.value.length > 10)
+        {
+          alert("「使用者密碼」不可以超過 10 個字元哦...");
+          return false;
+        }
+        if (document.myForm.re_password.value.length == 0)
+        {
+          alert("「密碼確認」欄位忘了填哦...");
+          return false;
+        }
+        if (document.myForm.password.value != document.myForm.re_password.value)
+        {
+          alert("「密碼確認」欄位與「使用者密碼」欄位一定要相同...");
+          return false;
+        }
+        if (document.myForm.name.value.length == 0)
+        {
+          alert("您一定要留下真實姓名哦！");
+          return false;
+        }	
+        if (document.myForm.year.value.length == 0)
+        {
+          alert("您忘了填「出生年」欄位了...");
+          return false;
+        }
+        if (document.myForm.month.value.length == 0)
+        {
+          alert("您忘了填「出生月」欄位了...");
+          return false;
+        }	
+        if (document.myForm.month.value > 12 | document.myForm.month.value < 1)
+        {
+          alert("「出生月」應該介於 1-12 之間哦！");
+          return false;
+        }
+        if (document.myForm.day.value.length == 0)
+        {
+          alert("您忘了填「出生日」欄位了...");
+          return false;
+        }
+        if (document.myForm.month.value == 2 & document.myForm.day.value > 29)
+        {
+          alert("二月只有 28 天，最多 29 天");
+          return false;
+        }	
+        if (document.myForm.month.value == 4 | document.myForm.month.value == 6
+          | document.myForm.month.value == 9 | document.myForm.month.value == 11)
+        {
+          if (document.myForm.day.value > 30)
+          {
+            alert("4 月、6 月、9 月、11 月只有 30 天哦！");
+            return false;					
+          }
+        }	
+        else
+        {
+          if (document.myForm.day.value > 31)
+          {
+            alert("1 月、3 月、5 月、7 月、8 月、10 月、12 月只有 31 天哦！");
+            return false;					
+          }				
+        }
+        if (document.myForm.day.value > 31 | document.myForm.day.value < 1)
+        {
+          alert("出生日應該在 1-31 之間");
+          return false;
+        }	
+        myForm.submit();					
+      }
+    </script>
+    <script type="text/javascript">
+      function login_data()
+      {
+        if (document.loginForm.account.value.length == 0)
+          alert("帳號欄位不可以空白哦！");
+        else if (document.loginForm.password.value.length == 0)
+          alert("密碼欄位不可以空白哦！");
+        else 
+          loginForm.submit();
+      }
+    </script>
+	<style>
+    .bg-green {
+              background-color: #10cfc9;
+              box-shadow: 0px 3px 8px 0px #000;
+     }
+    .bg-green li a:hover{
+			  background-color: #c8c8c8;
+		}
+	.social {
+    text-align: right;
+	margin: 0px;
+	padding: 0px;
+}
+.social li {
+    list-style-type: none;
+	margin-right: 5px;
+	display: inline-block;
+}
+.social li a {
+			color: #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color: #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+.site-footer {
+	margin-top: 50px;
+	color: #10cfc9;
+	padding: 25px 0;
+	border-top: 1px solid rgba(182,182,182,1.00);
+	background-color: #10cfc9
+}
+.site-footer span {
+	margin-top: 12px;
+	display: block;
+	text-align: left;
+}
+@media (max-width:768px){
+.site-footer span{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+.social{
+	text-align: center;
+	}
+}
+        button input:hover {
+       
+  box-shadow: 4px 4px 10px 0px #c8c8c8;
+}
+button input{
+   
+ box-shadow: 7px 7px 10px 0px #c8c8c8;
+    
+}
+	</style>	
+  </head>
+  <body style="padding-top: 150px" id="page-top">
+<header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    
+      　
+      
+	
+      
+      <div class="container mt-3">
+        <!--格線系統-->
+        
+
+<!--分頁標籤導覽-->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab"
+                       href="#swVideo">
+                        <b>登入會員</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab"
+                       href="#swCharacter">
+                        <b>註冊帳號</b>
+                    </a>
+                </li>
+            </ul>
+			</div>
+            <!--tab區塊-->
+            <div class="tab-content">
+                <div id="swVideo" class="container tab-pane active">
+                    <div class="row">
+                        <div class="col-md-12 text-center" style="padding:30px 0 30px;">
+                            <img src="images/member.png" style="width:374px; height:138px;">
+                            <form action="checkpwd.php" method="post" name="loginForm">
+      <table width="40%" align="center">
+        <tr> 
+          <td align="center" style="padding: 10px"> 
+            <font color="#3333FF">帳號：</font> 
+            <input name="account" type="text" size="15">
+              
+          </td>
+            
+        </tr>
+        <tr> 
+          <td align="center" style="padding: 10px"> 
+            <font color="#3333FF">密碼：</font> 
+            <input name="password" type="password" size="15">
+              <br>
+          </td>
+        </tr>
+          
+        <tr>
+          <td align="center" style="margin: 5px px 5px 7px;"> 
+            <font color="#FFFFFF">&absp;</font><button style="margin:0px;padding:0px;border:0px;border-radius:10px;"><input type="button" value="登入" onClick="login_data()" style="width:150px; height:40px;background-color: #c8c8c8"></button>
+            
+          </td>
+        </tr>
+        <tr>
+          <td align="right">
+           <a href="search_pwd.html"><b>忘記密碼</b></a>
+          </td>
+        </tr>
+      </table>
+    </form>
+                        </div>
+                        <div class="col-md-6 align-self-center"
+                             style="padding:30px 15px 10px;">
+                            
+                        </div>
+                    </div>
+					
+					
+                </div>
+				
+                <div id="swCharacter" class="container tab-pane fade">
+                    <div class="row">
+                        <div class="col-md-12 text-center" style="padding:30px 15px 10px;">
+                            <img src="images/join.png" style="width:358px; height:138px;">
+                            <form action="addmember.php" method="post" name="myForm">
+      <table class="table">
+        <tr> 
+          <td colspan="2" bgcolor="#6666FF" align="center"> 
+            <font color="#FFFFFF">請填入下列資料 (標示「*」欄位請務必填寫)</font>
+          </td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">*使用者帳號：</td>
+          <td><input class="form-control" placeholder="(請使用英文或數字鍵)" name="account" type="text" size="15">
+          </td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">*使用者密碼：</td>
+          <td><input class="form-control" placeholder="(請使用英文或數字鍵)" name="password" type="password" size="15">
+          </td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">*密碼確認：</td>
+          <td><input class="form-control" placeholder="(再輸入一次密碼)" name="re_password" type="password" size="15">
+          </td>
+        </tr>
+        <tr bgcolor="#fff">
+          <td align="right">*姓名：</td>
+          <td><input class="form-control" name="name" type="text" size="8"></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">*性別：</td>
+          <td> 
+            <input type="radio" name="sex" value="男" checked>男 
+            <input type="radio" name="sex" value="女">女
+          </td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">*生日：</td>
+          <td >民國
+            <input name="year" type="TEXT"  size="2">年 
+            <input name="month" type="TEXT"  size="2">月 
+            <input name="day" type="TEXT"  size="2">日
+          </td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">電話：</td>
+          <td ><input class="form-control" name="telephone" type="text" size="20"></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">行動電話：</td>
+          <td><input class="form-control" name="cellphone" type="text" size="20"></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">地址：</td>
+          <td><input class="form-control" name="address" type="text" size="45"></td>
+        </tr>
+        <tr bgcolor="#fff">
+          <td align="right">E-mail 帳號：</td>
+          <td><input class="form-control" name="email" type="text" size="30"></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">個人網站：</td>
+          <td><input class="form-control" name="url" type="text" value="http://" size="40"></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="right">備註：</td>
+          <td><textarea class="form-control" name="comment" cols="45" rows="4" ></textarea></td>
+        </tr>
+        <tr bgcolor="#fff"> 
+          <td align="center" colspan="2"> 
+            <button style="margin:0px;padding:0px;border:0px;border-radius:10px;">
+            <input type="button" value="加入會員" onClick="check_data()">
+            </button>
+            <button style="margin:0px;padding:0px;border:0px;border-radius:10px;">
+            <input type="reset" value="重新填寫">
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+				
+                
+				 
+            </div>
+      
+      
+  
+      
+      
+      
+      <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+      
+  </body>
+</html>

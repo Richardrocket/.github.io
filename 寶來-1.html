@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 寶來 </h3>
+				<h4 id="甲仙化石館"class="container">
+				1.甲仙化石館
+				</h4>
+				&nbsp;
+			  <p class="container"> &nbsp;甲仙化石館位於高雄市甲仙鄉的和安村四德巷，以陳列甲仙鄉出土之化石為主。 
+</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.134260953554!2d120.5860780148021!3d23.092180484917797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e5eed21951f95%3A0x46f64262c505100a!2z55Sy5LuZ5YyW55-z6aSo!5e0!3m2!1szh-TW!2stw!4v1600338342204!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>
+				<p class="container"> &nbsp;館藏六千餘件的化石，出土化石主要屬於中新世晚期。
+	</p>
+			    <img alt="" src="images/附近景點/寶來溫泉/甲仙化石館-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;因蓬萊造山運動將台灣桂竹林內海的海底沉積岩推擠隆起，因此有大量當時的貝類化石在甲仙出土。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/甲仙化石館-2.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;是台灣最重要、產量最豐富的古海化石區，為指標性地方專業博物館深具學術及觀光價值。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/甲仙化石館-3.jpg" width="800"  ></br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/甲仙化石館-4.jpg" width="800"  ></br><br>
+				
+				
+				<h4 id="甲仙芋冰" class="container">
+				2.甲仙芋冰
+				</h4>
+				&nbsp;
+				<p class="container"> &nbsp;甲仙小奇芋冰老店在地經營超過40年，販售各式芋頭製品，是在地人極推的甲仙芋冰創始店。
+</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.4169004157734!2d120.58655221480193!3d23.08182968492312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e5e908eccaf61%3A0xd8de3e77ad2dd268!2z55Sy5LuZ5bCP5aWH6IqL5Yaw!5e0!3m2!1szh-TW!2stw!4v1600338614773!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>
+<p class="container"> &nbsp;同時是花蓮近期新興景點，擁有戲水道、生態浮島等設施，為炎炎夏日親子戲水、踏青與認識自然生態的好去處。
+</p>
+
+			    <img alt="" src="images/附近景點/寶來溫泉/甲仙芋冰-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;芋冰的話2球40元超便宜，完全真材實料還吃的到芋頭塊，口感綿密又不會過甜，吃過保證你一定會懷念的!!
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/甲仙芋冰-2.png" width="800"  ></br></br>
+				
+				<h4 id="石洞溫泉" class="container">
+				3.石洞溫泉
+				</h4>
+				&nbsp;
+				<p class="container"> &nbsp;石洞溫泉行政區屬高雄市桃源區，遊客必須由六龜的寶來溫泉區進入經過六公里的產業道路才可到達。
+</p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14681.200095671114!2d120.71902302749234!3d23.086110458732943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e579c4a870bf3%3A0xbbd812e0398605ab!2z55-z5rSe5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1600338983300!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>
+	<p class="container"> &nbsp;溫泉位於寶來溪上游，群山環抱，遺世獨立，使得這裡充滿著原始幽靜的氣息。
+	<p></p>
+			    <img alt="" src="images/附近景點/寶來溫泉/石洞溫泉山莊-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;石洞溫泉為台灣罕見的洞穴溫泉，屬鹼性碳酸泉，水溫約44度，泉質澄澈，可飲可浴。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/石洞溫泉山莊-2.jpg" width="800"  ></br></br>
+					
+				<h4 id="花賞溫泉公園" class="container">
+				4.花賞溫泉公園
+				</h4>
+				&nbsp;
+				<p class="container">
+
+				</p>
+				<p class="container">&nbsp;  
+	</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234479.29977547962!2d121.20251364048991!3d23.325224533745363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f6a6d5f66b3cd%3A0xadc5174cf9ed1c5b!2z56eA5aeR5beS5rqq!5e0!3m2!1szh-TW!2stw!4v1600332664593!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>
+				<p></p>
+				<img alt="" src="images/附近景點/寶來溫泉/花賞溫泉公園-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;花賞溫泉公園於2017年12月1日至17日開放入園體驗手足湯，同年12月18日至22日休園，12月23日盛大開園。
+	</p>
+
+				<img alt="" src="images/附近景點/寶來溫泉/花賞溫泉公園-2.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;溫泉井水溫達52度、PH值約7.2、水質屬於弱鹼性，為優質的碳酸氫鹽泉。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/花賞溫泉公園-3.jpg" width="800"  ></br><br>
+				<p class="container"> &nbsp;其特色無色透明、泉質溫和；並因能軟化皮膚表層，洗後肌膚觸感嫩滑，故有「美肌之湯」的別名。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/花賞溫泉公園-4.jpg" width="800"  ></br></br>
+				
+				<h4 id="美濃民俗村擂茶" class="container">
+				5.美濃民俗村擂茶
+				</h4>
+				&nbsp;
+				<p class="container">所謂擂茶，這個"擂"字，有"磨"的亦稱，其實跟台語的擂有著相同的意思。
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5482333517684!2d120.51179861479818!3d22.89314118501876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e6a6d2b0cb93d%3A0xb8779fbe7ac9317b!2z576O5r-D5rCR5L-X5p2R5a6i5a625pOC6Iy26aSo!5e0!3m2!1szh-TW!2stw!4v1600339628316!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>				<p class="container"> &nbsp;但不要把全部倒進去，一次擂完。必須是一道道工法慢慢擂才行!
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/美濃民俗村 擂茶DIY體驗-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;要擂的材料有黑白芝麻+茶葉+米粒>花生+紅豆>抹茶粉依序加進去裡面攪拌。
+	</p>
+
+				<img alt="" src="images/附近景點/寶來溫泉/美濃民俗村 擂茶DIY體驗-2.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;差不多磨好後，服務員就會端著一壺熱水來了，可以開始沖泡剛剛我們所製作的擂茶囉！
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/美濃民俗村 擂茶DIY體驗-3.jpg" width="800"  ></br><br>
+				
+					
+				<h4 id="荖濃溪泛舟" class="container">
+				6.荖濃溪泛舟
+				</h4>
+				&nbsp;
+				<p class="container">荖濃溪始於民國75年，源於玉山東峰，是莫拉克風災前經觀光局評定為東亞最刺激好玩的泛舟河道。
+</p>
+				
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4641980593588!2d120.64703321480044!3d23.006722284961068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e59844c414513%3A0x4a5ceea727d43332!2z6auY6ZuE6I2W5r-D5rqq5rOb6Iif!5e0!3m2!1szh-TW!2stw!4v1600339741202!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>			
+				<p></p>
+				<p class="container"> &nbsp;
+			    <img alt="" src="images/附近景點/寶來溫泉/荖濃溪泛舟-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;沿著中央山脈蜿蜒流向西南，流經高雄市六龜區，在六龜區境內造就了縱谷、台地沖積扇等地形，並形成了激流、溫泉、瀑布、斷崖等獨特的特殊景觀，因而帶動了高雄荖濃溪泛舟活動的崛起。
+	</p>
+				<img alt="" src="images/附近景點/寶來溫泉/荖濃溪泛舟-2.jpg" width="800"  ></br></br>
+				
+				<h4 id="彩虹山大佛" class="container">
+				7.彩虹山大佛【六龜大佛】
+				</h4>
+				&nbsp;
+				<p class="container">位於不老溫泉區附近有座「彩虹山大佛(六龜大佛)」，由彩虹山宗教基金會設立，自2000開始便開始興建，經過15年的興建過程，終於在2015年12月完工並開放自由參觀。
+				</p>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.14515164763!2d120.67645541480151!3d23.055139484936603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e5988bfa027c1%3A0x2cdda8b61f55875!2z5YWt6b6c5aSn5L2b!5e0!3m2!1szh-TW!2stw!4v1600339893385!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br><br>			
+				<p class="container"> &nbsp;共使用了167噸銅雕鑄造而成的大佛鑄像，採閉眼坐像，高20公尺(約七層樓)。
+	</p>
+				<img src="images/附近景點/寶來溫泉/彩虹山大佛-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;莊嚴慈目聳立於山林間，居高臨下俯瞰眾生，充滿寧靜祥和的氣度。
+	</p>
+				<img src="images/附近景點/寶來溫泉/彩虹山大佛-2.jpg" width="800"   alt=""/><br><br>
+	</div>	
+</div>
+</div>
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

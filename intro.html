@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>台灣溫泉旅遊介紹網</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+<script src="js/js/jquery-3.3.1.min.js"></script> 
+<script src="js/js/bootstrap.min.js"></script>
+<style>
+.bg-green {
+    background-color: #10cfc9;
+    box-shadow: 0px 3px 8px 0px #000;
+}
+.bg-green-1 {
+    background-color: #4CAF50;
+}
+.bg-green li a:hover{
+			background-color: #c8c8c8;
+		}
+.bg-red {
+    background-color: #F4A8A8;
+}
+.bg-blue{
+    background-color: #B1DEEC;
+}
+.bg-gray{
+    background-color: rgb(255, 136, 0);;
+}
+.social {
+    text-align: right;
+	margin: 0px;
+	padding: 0px;
+}
+.social li {
+    list-style-type: none;
+	margin-right: 5px;
+	display: inline-block;
+}
+.social li a {
+			color: #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color: #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+}
+.site-footer {
+	margin-top: 50px;
+	color: #10cfc9;
+	padding: 25px 0;
+	border-top: 1px solid rgba(182,182,182,1.00);
+	background-color: #10cfc9
+}
+.site-footer span {
+	margin-top: 12px;
+	display: block;
+	text-align: left;
+}
+@media (max-width:768px){
+.site-footer span{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+.social{
+	text-align: center;
+	}
+}
+.btn-bubble {
+  color: white;
+  width:300px;
+  background-color: #77b11c;
+  background-repeat: no-repeat;
+}
+.btn-bubble:hover, .btn-bubble:focus {
+  -webkit-animation: bubbles 1s forwards ease-out;
+          animation: bubbles 1s forwards ease-out;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 52% 143% / 0.8em 0.8em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 50% 131% / 0.96em 0.96em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 8% 129% / 0.88em 0.88em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 29% 146% / 0.54em 0.54em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 1% 110% / 1.04em 1.04em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 5% 123% / 0.51em 0.51em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 56% 124% / 0.92em 0.92em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 48% 133% / 1.08em 1.08em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 4% 109% / 0.7em 0.7em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 47% 116% / 1.2em 1.2em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 38% 88% / 0.8em 0.8em;
+  background-color: #77b11c;
+  background-repeat: no-repeat;
+}
+
+@-webkit-keyframes bubbles {
+  100% {
+    background-position: 46% -107%, 42% -246%, 16% -203%, 34% 40%, -5% -347%, 15% -102%, 61% -9%, 49% 32%, 11% -33%, 53% -14%, 32% -343%;
+    box-shadow: inset 0 -6.5em 0 #0072c4;
+  }
+}
+
+@keyframes bubbles {
+  100% {
+    background-position: 46% -107%, 42% -246%, 16% -203%, 34% 40%, -5% -347%, 15% -102%, 61% -9%, 49% 32%, 11% -33%, 53% -14%, 32% -343%;
+    box-shadow: inset 0 -6.5em 0 #0072c4;
+  }
+}
+
+
+
+</style>
+</head>
+<body style="padding-top: 70px;" id="page-top">
+<!--頁首-->
+<header> 
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green"> <a class="navbar-brand" href="index.html"> <img src="images/logo1.png" style="width:60px;" /> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="springnav">
+                        <ul class="navbar-nav mx-auto">
+                                <li class="nav-item active" > <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a> </li>
+                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;"> 🏖旅遊資訊 </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+											<a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a> 
+											<a class="dropdown-item" href="food.html">🍴各地美食</a> 
+											<a class="dropdown-item" href="hot spring.html">📃泡湯須知</a> 
+											<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+										</div>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a> </li>
+                                <li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                                <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                        </ul>
+                        <div class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px; color:#Eb5c01;color:#Eb5c01;">搜尋</button>
+                        </div>
+                </div>
+        </nav>
+</header>
+<div class="container marketing" style="line-height:50px;">
+        <hr>
+        <div class="row featurette">
+                <div class="col-md-3">
+                        <h2 class="title2"><b>各地溫泉推薦</b></h2>
+                        <div class="container"  style="width: 400px;"> <a class="btn btn-outline-danger" href="#north" role="button"> 北部 </a> <a class="btn btn-outline-warning" href="#central" role="button"> 中部 </a> <a class="btn btn-outline-primary" href="#south" role="button"> 南部 </a> <a class="btn btn-outline-success" href="#east" role="button"> 東部 </a> </div>
+                        
+                        
+                </div>
+                <div class="col-md-5" style="width:  500px;"> 
+                    <img src="images/taiwan.png" width="484" height="572" usemap="#ImageMap01"> 
+                    <map name="ImageMap01">
+　                   <area shape="polygon" coords="332,29,388,73,369,175,221,105" href="#north">
+                     <area shape="polygon" coords="233,114,315,173,262,306,140,286" href="#central">
+                     <area shape="polygon" coords="137,280,256,307,240,530,154,435" href="#south">
+                     <area shape="polygon" coords="316,170,357,178,312,363,240,486,216,433" href="#east">
+                     
+                    </map>
+                    
+                </div>
+            
+                <div class="col-md-2"></br></br></br></br></br></br></br></br><h5 class="container" style="text-align:left;width: 290px;">左方地圖可以點擊對應的地區</h5>
+                </div>
+                <div class="container" id="north">
+                        <div class="jumbotron" style="background: #ffffff">
+                                <h1 class="display-4 text-center" style="text-shadow:8px 10px 8px #cccccc;"> <b>北部</b> </h1>
+                        </div>
+                </div>
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-red" style="width:270px">台北｜北投溫泉｜</h2>
+                                <h3  >酸性硫磺鹽泉（白磺）、酸性鹽酸泉（青磺）、 碳酸鹽泉（鐵磺）</h3>
+								<p class="lead">交通極為方便的北投為台灣開發極早的溫泉聖地，是台灣四大溫泉之一。日治時期因為經營有成，形成溫泉、酒家共存共榮的商業圈。</p>
+								<p class="lead">至今在北投也能吃到超棒的台式酒家菜，和欣賞傳統的那卡西文化，是北投區最多遊客的區域。大多集中在北投溫泉親水公園附近的中山路、光明路、新民路、泉源路等。多樣化的泉質與泡湯場所，從懷舊復古的風呂到時尚流行的湯屋，提供觀光客選擇多元的泡湯環境。</p>
+								<p class="lead">溫泉會館推薦:水美溫泉會館</p>
+								<a href="http://www.sweetme.com.tw/" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9621050480373!2d121.50889061280256!3d25.1369719839242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae4300ba41a3%3A0x781dbbc3c6754793!2z5YyX5oqV5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595592583613!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+				
+                <img src="images/beitou2.jpg" style="width: 600px;">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-red" style="width:300px">台北｜陽明山溫泉｜</h2>
+								<h3  >酸性硫酸鹽泉</h3>
+                                <p class="lead">位於大屯山的陽明山溫泉原稱草山溫泉，是台灣四大溫泉之一，並且分為前山溫泉和後山溫泉。前山溫泉水溫在攝氏70度以上，水質清澈微透乳白，呈弱鹼性，水量終年不竭；後山溫泉源頭則在後山花園的陽明書屋。</p>
+								<p class="lead">陽明山前山公園蓮花池畔有兩座免費的公共溫泉浴室，總是擠滿泡湯的人群。因為交通便利，自然景觀優美，也是北部人假日出遊的首選。</p>
+								<p class="lead">溫泉會館推薦:雲頂VILLA</p>
+								
+								<a href="https://www.yundingvilla.com.tw/map.php" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28895.697574611615!2d121.4935695138569!3d25.13696888120602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae0d6a3c302d%3A0xed9652f104069300!2z6Zm95piO5bGx5rqr5rOJ5Y2A!5e0!3m2!1szh-TW!2stw!4v1595592691261!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/ymmountai.jpg" style="width: 600px;">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-red" style="width:300px">新北市｜烏來溫泉｜</h2>
+								<h3  >弱鹼性碳酸氫鈉泉</h3>
+                                <p class="lead">位於新北市的烏來溫泉。早期泰雅族人發現從南勢溪冒出滾滾的泉水，無色無味的泉質有讓皮膚光滑細緻、養顏美容的功效。所以烏來便有美人湯之稱。</p>
+								<p class="lead">來到烏來還可以享受在鳥語花香的環境中泡湯，也可以充分感受這裡的原住民文化、特色小店、原住民小吃。</p>
+								<p class="lead">溫泉會館推薦:烏來璞石麗緻會館</p>
+								
+								<a href="http://www.pauselandis.com.tw/food" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14479.73236565707!2d121.5430887882828!3d24.866134684448383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468068ed5d86df9%3A0x2c939b8e9bc7ffae!2z54OP5L6G5rC05bK45rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595592843463!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/wulai.jpg" style="width: 600px;"> 
+            <a class="btn fixed" href="#top" role="button"> 
+                <img src="images/icons/top.png" width="50" height="50"> </a>
+                <div class="container" id="central">
+                        <div class="jumbotron" style="background: #ffffff">
+                                <h1 class="display-4 text-center" style="text-shadow:8px 10px 8px #cccccc;"> <b>中部</b> </h1>
+                        </div>
+                </div>
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-gray" style="width:270px">台中｜谷關溫泉｜</h2>
+								<h3  >中性碳酸氫鈉泉</h3>
+                                <p class="lead">位於大甲溪上游的谷關溫泉，起源於日本明治時代，又稱為「明治溫泉」，是中台灣最古老的溫泉。這裡的溫泉水質清澈無味，可飲用，水溫約48℃-60℃。</p>
+								<p class="lead">結合當地景觀，來到這除了可以享受溫泉和著名的鱒魚料理外，也可以至谷關溫泉公園悠游散步。-60℃。結合當地景觀，來到這除了可以享受溫泉和著名的鱒魚料理外，也可以至谷關溫泉公園悠游散步。</p>
+								<p class="lead">溫泉會館推薦:麗池山水溫泉會館</p>
+							
+								<a href="https://www.li-chih.com.tw/product.php?_path=list&upid=2" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29112.787472219265!2d120.99165694014674!3d24.20333189952333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e469eab14baf%3A0x6a85ff21ec219b05!2z6LC36Zec5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593487663!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/guguan.jpg">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-gray" style="width:270px">南投｜東埔溫泉｜</h2>
+								<h3  >中性碳酸氫鈉泉</h3>
+                                <p class="lead">是往返阿里山國家風景區與日月潭國家風景區之中點風景區，或是登山客經八通關通往玉山的歇腳處。</p>
+								<p class="lead">因緊鄰玉山國家公園西北側，風景據點多，遊憩區遼闊。彩虹瀑布、雲龍瀑布、乙女瀑布、溪谷、父子斷崖、清朝八通關古道／日治越嶺古道、雲海，森林遍布，動植物生態豐富，蝴蝶多達177種。台灣特有種的鳥類、兩棲類、植物類常見於此區。</p>
+								<p class="lead">溫泉會館推薦:沙里仙溫泉度假村</p>
+								
+								<a href="https://www.sls-villa.com.tw/" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29257.13006311552!2d120.9077733722661!3d23.563369658874546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f27af89cc1807%3A0xc2b5115b6e7c1d0d!2z5p2x5Z-U5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1596572676281!5m2!1szh-TW!2stw" width="600" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/hot spring/東埔/東埔溫泉-1.jpg" style="width: 600px;">
+                <div class="container" id="south">
+                        <div class="jumbotron" style="background: #ffffff">
+                                <h1 class="display-4 text-center" style="text-shadow:8px 10px 8px #cccccc;"><b>南部</b> </h1>
+                        </div>
+                </div>
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-blue" style="width:290px">台南｜關子嶺溫泉｜</h2>
+								<h3  >鹼性碳酸泉</h3>
+                                <p class="lead">與陽明山、北投、四重溪並列臺灣四大名湯。關子嶺溫泉以「黑色溫泉」聞名，泉溫約75度，富含泥岩微粒和各種礦物鹽類，泉色略帶黑且味道濃烈，具有滑嫩肌膚、養顏美容、養身保健等功效，更對胃腸慢性病及風濕關節炎有相當療效。</p>
+								<p class="lead">史誌還記載關子嶺溫泉有「天下第一靈泉」之譽。與日本鹿兒島、義大利西西里島同屬世界稀有的泥漿溫泉。快來關子嶺享受全台唯一的泥漿溫泉吧!</p>
+								<p class="lead">溫泉會館推薦:關子嶺統茂溫泉會館</p>
+								
+								<a href="網址:http://guanziling-uniongo.toongmao.com.tw/" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.341816017954!2d120.50221246273651!3d23.339627734793417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e8d9d8c65f349%3A0xc92a0af1d5ce932a!2z6Zec5a2Q5ba65rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593619518!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+				<img src="images/關子嶺溫泉.jpg">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-blue" style="width:270px">高雄｜寶來溫泉｜</h2>
+                                <h3  >中性碳酸氫鈉泉</h3>
+								<p class="lead">由兩大斷層地熱帶，位於南橫公路要衝上，大部分溫泉皆在寶來溪上游為自然湧泉，可飲、可浴。
+                                </p>
+								<p class="lead">來到南部泡湯，寶來、不老溫泉區是大家最好的選擇，這區塊除了冬季的溫泉，還有夏季的泛舟與溯溪，更能親近荖濃溪之美。四季的農特產品如金煌芒果、黑鑽石蓮霧、梅子、愛玉、咖啡…等。除了泡湯以外，更能讓你享受四季採果之樂。</p>
+								<p class="lead">溫泉會館推薦:國蘭花園Villa會館</p>
+								
+								<a href="http://www.grand-orchid.com.tw/" class="btn btn-bubble">網址連結</a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29358.577117523528!2d120.69195976231649!3d23.1036058717869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e5820c8dc8b95%3A0xb737e44a53e6e98c!2z5a-25L6G5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1596573131749!5m2!1szh-TW!2stw" width="600" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/hot spring/寶來/寶來溫泉.jpg" style="width: 600px;">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-blue"  style="width:300px">屏東｜四重溪溫泉｜</h2>
+								<h3 >鹼性碳酸氫鈉泉</h3>
+                                <p class="lead">位於本鄉溫泉村內，台灣四大溫泉之一。泉水湧自山麓，水質透明澄淨，水溫平均在50-80度之間，清澈、無色、無臭，除供沐浴外，還可飲用，對慢性消化器官、關節炎、神經等疾病，具有相當的療效。</p>
+								<p class="lead">近年導入日式風格建造溫泉公園，營造溫泉鄉氛圍，2018年的四重溪溫泉季以紫色、櫻花為元素佈置燈飾，大家泡湯後可以再到溫泉公園漫步在紫色櫻花林中。</p>
+								<p class="lead">溫泉會館推薦:四重溪清泉日式溫泉館</p>
+								
+								<a href="https://www.since100hotspring.com.tw/" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29574.320739276365!2d120.73276803538045!3d22.09583196750039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471c829b976954d%3A0xb3e9507391e932b3!2z5Zub6YeN5rqq5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593668108!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/四重溪溫泉.jpg" style="width: 600px;">
+                <div class="container" id="east">
+                        <div class="jumbotron" style="background: #ffffff">
+                                <h1 class="display-4 text-center" style="text-shadow:8px 10px 8px #cccccc;"><b>東部</b> </h1>
+                        </div>
+                </div>
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-green-1" style="width:270px">宜蘭｜礁溪溫泉｜</h2>
+								<h3  >中性碳酸泉</h3>
+                                <p class="lead">俗稱台北後花園的宜蘭，是台灣非常罕有的平地溫泉。因為雪山隧道的便捷，台北到宜蘭開車不到一小時即可抵達。</p>
+								<p class="lead">色清無臭，富含鈉、鎂、鈣、鉀、碳酸離子等礦物質，浸泡後皮膚光滑柔細不黏膩，對身體健康、養顏治病有幫助，被譽為「溫泉中的溫泉」。礁溪車站附近有很多平價、cp值又高的溫泉飯店和百元湯屋跟食物可以做選擇。</p>
+								<p class="lead">溫泉會館推薦:誠闊礁溪渡假飯店</p>
+								
+								<a href="http://www.vasty-hotels.com/" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.913956017158!2d121.77442431279096!3d24.832615984067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467fa3753f888e3%3A0xebda5d1e5140d68a!2z56SB5rqq5rqr5rOJ5YWs5ZySLeajruael-miqOWRgg!5e0!3m2!1szh-TW!2stw!4v1595593726957!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/jiaoxi.jpg" class="container">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-green-1" style="width:270px">花蓮｜瑞穗溫泉｜</h2>
+								<h3  >中性碳酸鹽泉</h3>
+                                <p class="lead">花蓮溫泉區分為「內」、「外」兩區，紅葉溪的上游流經「紅葉溫泉」，為「內溫泉」；下游則流經「瑞穗溫泉」，稱為「外溫泉」，瑞穗溫泉、紅葉溫泉、安通溫泉號稱為花東縱谷三大知名溫泉區。</p>
+								<p class="lead">因含豐富的鐵、鋇等礦質，水質呈現鏽黃或鏽紅色，上面還漂著一層厚厚的礦物質，可浴但不可飲，許多人為此專程到瑞穗泡湯。當地人又稱瑞穗溫泉為生男泉，當地傳說常浸泡瑞穗溫泉，生孕男孩的機率較高。</p>
+								<p class="lead">溫泉會館推薦:花蓮瑞雄溫泉山莊</p>
+								
+								<a href="https://ruixiong.hlbnb.net/news.php?id=24" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.998487159693!2d121.34141831274205!3d23.496563984715046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f45f08803a0cd%3A0xce257fca46c44a0a!2z55Ge56mX5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593772424!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img class="container" src="images/ruisui.png">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-green-1" style="width:270px">台東｜知本溫泉｜</h2>
+								<h3  >弱鹼性碳酸氫鈉泉</h3>
+                                <p class="lead">有東台灣第一美景的「知本溫泉」，是台灣規模完善的溫泉鄉。東部的好山好水，造就了知本溫泉的好水質。這邊的泉質清澈無色，富含礦物質，具有美白、保濕、促進血液循環等效果。</p>
+								<p class="lead">當地流傳知本溫泉可治療皮膚病，飲泉可促進腸胃消化和改善痛風、糖尿病、呼吸道疾病的症狀。除了享受「美人湯」之外，溫泉區內的森林遊樂區，景觀壯闊，峽谷、瀑布一覽眼福。</p>
+								<p class="lead">溫泉會館推薦:知本老爺酒店</p>
+								
+								<a href="https://m.hotelroyal.com.tw/chihpen/index.aspx" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.946273316354!2d121.01593531271381!3d22.69304388512089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fc9de3fee20ef%3A0xd7ee2ce68cb3f9af!2z55-l5pys5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593815232!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/hot spring/知本/知本溫泉-1.jpg">
+                <div class="media border m-1 p-3">
+                        <div class="media-body ml-2">
+                                <h2 class="bg-green-1" style="width:270px">綠島｜朝日溫泉｜</h2>
+								<h3  >弱鹼性硫酸鹽氯化物泉</h3>
+								
+                                <p class="lead">是非常罕見的海底溫泉，因朝日出方向而取名為朝日溫泉，日治時期則稱為「旭溫泉」，與義大利北方、日本九州，共為世界上僅有的三大海底溫泉之一。
+朝日溫泉為海水滲入岩層之中，經地熱加溫後受高壓湧出，帶有海水的鹹味，屬於硫磺泉，對人類皮膚無刺激性，洗後也不黏澀。
+</p>
+								<p class="lead">露天的朝日溫泉，建於在大海上，潮間帶上遍佈珊瑚、海蝕溝，一邊泡湯，一邊抬頭仰望天空，伴隨著海浪打到礁石的海濤聲，人間享受!</p>
+								<p class="lead">溫泉會館推薦:星月屋渡假山莊</p>
+								
+						        <a href="https://www.easytravel.com.tw/ehotel/default.aspx?n=7989&utm_source=%E7%86%B1%E6%83%85%E6%8E%A8%E8%96%A6&utm_medium=%E8%A8%82%E6%88%BF%E6%90%9C%E5%B0%8B%E7%B5%90%E6%9E%9C%E9%A0%81&utm_campaign=7989" class="btn btn-bubble">網址連結</a>
+						</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.449313804574!2d121.50199141271192!3d22.63703038514962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f8cfe334241e1%3A0x23a9f6b34bd0e12e!2z5pyd5pel5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1595593858949!5m2!1szh-TW!2stw" width="400" height="450" frameborder="1" style="border-width:3px;border-style:dashed;border-color:#FFAC55;padding:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <img src="images/hot spring/知本/朝日溫泉.jpg" style="width: 600px;">  </div>
+				
+	</div>
+	<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>
+</body>
+</html>

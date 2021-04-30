@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        .title2 {
+            padding-left:5px;
+            margin-top:10px;
+            border-left-style:solid;
+            border-left-color:mediumturquoise;
+            border-left-width:40px;
+        }
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+					
+				<h3 id="guguan" class="container"> 谷關 </h3>
+				<h4 id="八仙山森林遊樂區" class="container">
+				1.八仙山森林遊樂區
+				</h4>
+				&nbsp;
+				<p class="container">八仙山森林遊樂區位於台中市和平區，主峰海拔2366公尺，約為八千台尺，因而得名「八仙」。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.424413155379!2d121.01300461203034!3d24.191911084373572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e43ef8fad7ef%3A0x70955e0f0b2aa41d!2z5YWr5LuZ5bGx5ZyL5a625qOu5p6X6YGK5qiC5Y2A!5e0!3m2!1szh-TW!2stw!4v1599825920910!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;區內森林蒼翠，氣候清爽宜人，十文溪與佳保溪匯流其間，溪水源自深山森林，水質清澈，溪中大小岩石遍佈，處處潺流。
+	</p>
+			    <img alt="" src="images/附近景點/谷關/八仙山森林遊樂區-1.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;自然生態資源豐富且在日治時期為台灣三大林場之一，擁有濃郁的林業人文風情，是假日休閒體驗大自然最佳的去處！
+	</p>
+				<img alt="" src="images/附近景點/谷關/八仙山森林遊樂區-2.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;
+
+				</p>
+				<img alt="" src="images/附近景點/谷關/八仙山森林遊樂區-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+
+	</p>
+				<img alt="" src="images/附近景點/谷關/八仙山森林遊樂區-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+
+				</p>
+				<img alt="" src="images/附近景點/谷關/八仙山森林遊樂區-5.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="大雪山森林遊樂區" class="container">
+				2.大雪山森林遊樂區
+				</h4>
+				&nbsp;
+				<p class="container">台灣擁有全世界最大面積的高山巨木林，座落在雪山山脈西南向主稜後段的大雪山國家森林遊樂區擁有最完整的高山巨木林相。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.4209521120993!2d120.89188301325406!3d24.227051576320758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e3686081f2a3%3A0x966ff04cb7dce501!2z5aSn6Zuq5bGx5ZyL5a625qOu5p6X6YGK5qiC5Y2A!5e0!3m2!1szh-TW!2stw!4v1599826011585!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;涵蓋了鐵杉林、檜木林及殼斗科植物為主的暖溫帶闊葉林等，每一生態帶均有代表性的巨木留存，是林務局所轄的森林中林相變化最為細膩的遊樂區。
+	</p>
+			    <img alt="" src="images/附近景點/谷關/大雪山森林遊樂區-1.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;地表起伏變化大，海拔高度由最高的小雪山(高度為2,997公尺)走向西南的鞍馬山、船型山及稍來山延伸至約1,000公尺的稍來溪溪谷。
+	</p>
+				<img alt="" src="images/附近景點/谷關/大雪山森林遊樂區-2.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;
+
+				</p>
+				<img alt="" src="images/附近景點/谷關/大雪山森林遊樂區-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+
+	</p>
+				<img alt="" src="images/附近景點/谷關/大雪山森林遊樂區-4.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="台中谷關溫泉文化館" class="container">
+				3.谷關溫泉文化館
+				</h4>
+				&nbsp;
+				<p class="container">溫泉文化館是全國第一座以溫泉為主題的展示館。
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.095008790619!2d121.00462531325338!3d24.203451877238464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e469934b2865%3A0x89e9cf26632098ab!2z6LC36Zec5rqr5rOJ5paH5YyW6aSo!5e0!3m2!1szh-TW!2stw!4v1599826097432!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;
+	</p>
+			    <img alt="" src="images/附近景點/谷關/台中谷關溫泉文化館-1.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;館內除了介紹溫泉相關資訊外，並提供遊客諮詢服務，帶你更認識谷關、認識溫泉的文化，附設互動式多媒體生動介紹谷關當地地形、環境、溫泉生態等服務....
+	</p>
+				<img alt="" src="images/附近景點/谷關/台中谷關溫泉文化館-2.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp;戶外規劃有表演廣場、休閒步道、生態教育池、公園綠地等區域可以參觀~
+
+				</p>
+				<img alt="" src="images/附近景點/谷關/台中谷關溫泉文化館-3.png" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+
+	</p>
+				<img alt="" src="images/附近景點/谷關/台中谷關溫泉文化館-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+
+				</p>
+				<img alt="" src="images/附近景點/谷關/台中谷關溫泉文化館-5.jpg" width="800"   alt=""/><br><br>
+				<h4 id="白冷冰棒" class="container">
+				4.白冷冰棒肉包
+				</h4>
+				&nbsp;
+				<p class="container">
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.682201339062!2d120.92286771325274!3d24.182875778037907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e191f061927d%3A0xeabe3a7999b53a47!2z55m95Ya35Yaw5qOS!5e0!3m2!1szh-TW!2stw!4v1599826146221!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;來到谷關，不管天熱天冷，路經電廠的遊客們，必買口味多款價格便宜的白冷冰棒，冰棒對面的熱豆干，假日生意也很好。可以消消暑解熱~~
+	</p>
+				<img src="images/附近景點/谷關/白冷冰棒-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;這家白冷肉包隱身在小雜貨店裡，就在台電大甲溪發電廠往谷關方向，過白冷冰棒路口靠左邊直直走，白冷派出所對面。好在招牌、路標都頗為明顯，車速慢一點就會發現得到它。
+	</p>
+				<img src="images/附近景點/谷關/白冷肉包-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/白冷肉包-2.png" width="800"   alt=""/><br><br>
+				
+				<h4 id="谷關古靈寺" class="container">
+				5.谷關古靈寺
+				</h4>
+				&nbsp;
+				<p class="container">古靈寺是谷關地區唯一的寺廟，也是當地居民的信仰重心。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.071224228159!2d121.00808441325346!3d24.204284977206132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e44278d4887d%3A0x881439d68b9e8a53!2z5Y-k6Z2I5a-6!5e0!3m2!1szh-TW!2stw!4v1599826208243!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;建於昭和25年，在八七水災之時曾被沖走、在民國86年時因電線走火而遭祝融燒毀、在九二一大地震時被損毀，歷經這麼多風雨災難，觀音菩薩卻始終安然無恙，繼續保佑著谷關地區的人民。
+	</p>
+				<img src="images/附近景點/谷關/谷關古靈寺-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;在谷關遇到大事情或祭典活動一定會盛大的請示觀音，當地的業者對於古靈寺更是倍感尊崇。
+	</p>
+				<img src="images/附近景點/谷關/谷關古靈寺-2.jfif" width="800"   alt=""/><br><br>
+				
+				<h4 id="東勢林場" class="container">
+				6.東勢林場
+				</h4>
+				&nbsp;
+				<p class="container">東勢林場，台灣最美的森林生態花園，土地面積212公頃，在彰化縣農會精心擘劃下，秉持「親切、自然」的理念，採森林多角化經營，將東勢林場建設成自然生態的遊憩重鎮。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14547.975582762207!2d120.87013412787744!3d24.276943749317386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691d45d4175f95%3A0xea28d465eec5fa11!2sDongshi%20Linchang!5e0!3m2!1szh-TW!2stw!4v1600410815885!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>			
+				<p class="container">&nbsp;位在台中市東勢區東方的大安溪畔，海拔500-700公尺，平均溫度在20-25度之間，氣候宜人，是渡假納涼的好去處。
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;林場距東勢區上僅八公里，有勢林街相通，由南北而來，沿高速公路接國道4號而下，至林場僅30分鐘車程，也有豐原客運班車行駛，相當便利。
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-2.jpg" width="800"   alt=""/><br><br>
+			<p class="container">&nbsp;東勢林場一年四季有看不完的花卉：春櫻、夏油桐、秋楓、冬梅，舉凡梅花、櫻花、杜鵑花、油桐花、紫薇、聖誕紅、楓葉…等，多采多姿的花花世界，值得大家欣賞，還有豐富的生態，螢火蟲、獨角仙、鍬形蟲、蛙類、鳥類…等。
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;森林浴場是林場的主題特色，SPA健康步道讓你恣意徜佯於山林芳香中，沿途並有各種植物解說牌，提供遊客享受知性與感性的森林之旅。
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;還能在這邊體驗森林之中的樂趣，供小孩子玩樂去處~
+	</p>
+				<img src="images/附近景點/谷關/東勢林場-6.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="東豐自行車綠廊" class="container">
+				7.東豐自行車綠廊
+				</h4>
+				&nbsp;
+				<p class="container">東豐自行車綠廊的舊名是東豐鐵路，又叫做東勢支線，建於民國四十七年，是台灣山線鐵道的支線之一，貫穿豐原、石岡、東勢三地。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.9690290079793!2d120.80760331325551!3d24.277812274344093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a595dd725fb%3A0x4a3e7cf81a9e4c27!2z5p2x6LGQ6Ieq6KGM6LuK57ag5buK!5e0!3m2!1szh-TW!2stw!4v1599826325313!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;當時東勢地區的紅檜、扁柏和杉木要運送，加上修建石岡水壩工程材料上的運輸，還有十萬公噸的農特產品貨運，東豐鐵路因此應運而生
+	</p>
+				<img src="images/附近景點/谷關/東豐自行車綠廊-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;對鐵路沿線的居民來說，東豐鐵路是一段過去生活的回憶。
+	</p>
+				<img src="images/附近景點/谷關/東豐自行車綠廊-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/東豐自行車綠廊-3.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="松鶴部落" class="container">
+				8.松鶴部落
+				</h4>
+				&nbsp;
+				<p class="container">德芙蘭部落源也和裡冷一樣居住在南投縣境內，由頭目帶領族人先遷徙到今八仙，於民國三年時再遷到今松鶴現址。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.92756832148!2d120.97338331325257!3d24.17427287837198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e15a8532b637%3A0xaf2abab57149976d!2z5p2-6ba06YOo6JC9!5e0!3m2!1szh-TW!2stw!4v1599826368281!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;日據時代，德芙蘭部落被稱為「久良栖」社，譯音為「古拉斯」，據說是以開山頭目的名字命名。頭目叫Kurasu‧Watan，Kurasu日語譯音漢字就是久良栖。
+	</p>
+				<img src="images/附近景點/谷關/松鶴部落-1.jpg" width="800"   alt=""/>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/松鶴部落-2.jpeg" width="800"   alt=""/>
+				<p class="container">&nbsp;直到民國 50 幾年時，一位鄉長有感於此地盛產松樹，且常有鶴來棲息，遂逕自改名為「松鶴」。
+	</p>
+				<img src="images/附近景點/谷關/松鶴部落-3.jpg" width="800"   alt=""/>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/松鶴部落-4.jpg" width="800"   alt=""/>
+				
+				<h4 id="捎來步道" class="container">
+				9.捎來步道
+				</h4>
+				&nbsp;
+				<p class="container">捎來吊橋，吊橋附近是大甲溪及捎來溪的匯流處，「捎來」是昔日捎來溪附近泰雅族部落頭目的名字。
+
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1819.5163343694487!2d121.00463275872193!3d24.205635400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e4699dc8d035%3A0x1769e5e8babeede7!2z5o2O5L6G5q2l6YGT!5e0!3m2!1szh-TW!2stw!4v1599826414163!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/捎來步道-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;遠眺谷關溫泉飯店及龍谷吊橋，通往昔日的龍谷天然樂園(已封閉)。
+	</p>
+				<img src="images/附近景點/谷關/捎來步道-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;谷關捎來步道全長約1300公尺，是谷關七雄老四-波津加山步道的暖身路段，步道500 - 800公尺是陡上坡，1000 - 1200公尺是陡降坡。
+	</p>
+				<img src="images/附近景點/谷關/捎來步道-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;但通行這個步道有人數限制，所以要來這邊的時候要注意一下。
+	</p>
+				<img src="images/附近景點/谷關/捎來步道-4.jpeg" width="800"   alt=""/><br><br>
+				
+				<h4 id="馬崙山步道" class="container">
+				10.馬崙山步道
+				</h4>
+				&nbsp;
+				<p class="container">馬崙山為雪山山脈白姑大山向西延伸之山岳，「谷關七雄」中排行老二，是中部著名的中級山。
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29115.703347741055!2d121.01010603955075!3d24.1905617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468e44a733040ed%3A0x6242784daf610b15!2z6aas5bSZ5bGx55m75bGx5q2l6YGT!5e0!3m2!1szh-TW!2stw!4v1599826471207!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp;山徑早年是為新山分場員工運補生活用品修築的步道，蔣公視察後將登山步道重新整修拓寬，保留了伐木歷史遺跡，建有涼亭、觀景台等設施。
+	</p>
+				<img src="images/附近景點/谷關/馬崙山步道-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;
+	</p>
+				<img src="images/附近景點/谷關/馬崙山步道-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp;沿途林相優美、生態豐富、自然景觀原始，踏在舖滿松針的步道上，腳感柔軟有彈性，路徑寬明，指標清楚，可謂是五星級的登山步道，為谷關七雄中最優美的一條路線。
+	</p>
+				<img src="images/附近景點/谷關/馬崙山步道-3.jpg" width="800"   alt=""/><br><br>
+				
+		</div>		
+   </div>         
+	</div>	
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>  
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 陽明山 </h3>
+				<h4 id="七星山主東峰步道"class="container">
+				1.七星山主峰
+				</h4>
+				&nbsp;
+			  <p class="container"> &nbsp;七星山主峰高1120公尺，是台北市的最高峰。
+在台北市區朝北邊往上望，經常也可以望見它獨立偉岸的山影，尤其是山頂上因侵蝕而形成的七個大小不一的山頭，猶如北斗「七星」般聳立在台北上頭，山也因此得名。
+			  
+			  
+
+</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9626348399497!2d121.55124041207273!3d25.170739483908484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b21167e169a3%3A0x64faeeeb40125de!2z5LiD5pif5bGx5Li75bOw6aCC!5e0!3m2!1szh-TW!2stw!4v1600658583921!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;由於受冬季東北季風影響，山南山北呈現全然不同的自然景觀。山北受強風吹拂，植物生長不易，白背芒與包籜矢竹成為優勢植物，每年秋季芒花開花時，甚是壯觀；山南則因有山頭遮去烈風，因此呈現典型的亞熱帶林相，林下豐富的多樣性生物，和山北截然不同。而七星山主、東峰步道貫穿山南北，走過步道，正好可以體驗兩種不同的生態景觀。七星山還是天然的地質教室，小油坑、大油坑、夢幻湖、冷水坑，都是認識火山地形的絕佳處所。
+
+	</p>
+			    <img alt="" src="images/附近景點/陽明山/七星山主東峰步道-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;還有七星主峰上的展望，可以360度的全覽北市、北海岸等地，「登七星而小台北」，登臨的快意也使七星山備受山客喜愛。
+	</p>
+				<img alt="" src="images/附近景點/陽明山/七星山主東峰步道-2.jpg" width="800"  ></br></br>
+				
+				<h4 id="大屯自然公園" class="container">
+				2.大屯山溫泉
+				</h4>
+				&nbsp;
+				<p class="container"> 台灣位於歐亞板塊與菲律賓海板塊碰撞地帶，地質構造特殊，溫泉資源非常豐富，但其中袛有大屯山火山群、綠島等少數溫泉屬於火山溫泉。
+				
+				
+				
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57758.21723879127!2d121.55882537910153!3d25.206979800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b312767fbd11%3A0x1bd09fa0de430168!2z6Zm95piO5bGx5rC05rqr5rOJ5pyD6aSoLemHkeWxsea6q-azieacg-mkqOaOqOiWpg!5e0!3m2!1szh-TW!2stw!4v1600658646988!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;其中臺北市範圍內大屯山系的陽明山、北投、馬槽等。是開發已久的知名溫泉區，近年來隨著泡湯人口激增，溫泉觀光成為重要產業。
+	</p>
+				<img src="images/附近景點/陽明山/大屯自然公園-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;冬季寒流來臨時，各溫泉浴室人山人海，溫泉水供不應求，循環使用或滲入其他成分的新聞時有所聞，溫泉水資源的估算成為開發本區溫泉時的重要考慮項目。
+	</p>
+				<img src="images/附近景點/陽明山/大屯自然公園-2.png" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;以溫泉形成的三個要素條件：熱源、水源、及溫泉通路，大屯火山區的熱源及裂隙通路都不成問題，但因地形及地質關係，地下水在進入深層地層前多已回流地面成為回歸水或湧泉，淺層地下水成為溫泉水的補注關鍵
+	</p>
+				<img src="images/附近景點/陽明山/大屯山主峰觀景平台夜景-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;如果能在這邊待到晚上的話，還可以看到美美的夜景，享受著絕然不同的大屯山景色。
+	</p>
+				<img src="images/附近景點/陽明山/大屯山主峰觀景平台夜景-2.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="小油坑" class="container">
+				3.小油坑溫泉
+				</h4>
+				&nbsp;
+				<p class="container">
+				
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57776.777591258!2d121.52762967910154!3d25.167836800000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442add71d38c089%3A0x4a50baa64cd1dccc!2z5Ya35rC05Z2R5YWs5YWx5rW05rGg!5e0!3m2!1szh-TW!2stw!4v1600658689951!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/陽明山/小油坑-1.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;小油坑位於七星山西北麓，海拔高度約 805 公尺。
+	</p>
+				<img src="images/附近景點/陽明山/小油坑-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;小油坑這個名子的由來，是因為此地盛產硫磺，而以前的人採硫後需要煮硫，硫磺溶解後就像油一樣黃黃，所以出產這種黃油的坑洞就叫油坑。
+	</p>
+				<img src="images/附近景點/陽明山/小油坑-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;七星山東北側有一處國家公園內最大的硫氣孔叫大油坑，這裡的規模較小就叫小油坑。也因為這樣使許多觀光客來這邊看此景色。
+	</p>
+				<img src="images/附近景點/陽明山/小油坑-4.jpg" width="800"   alt=""/><br><br>
+				
+					
+				<h4 id="日月滿休閒農場" class="container">
+				4.日月滿休閒農場
+				</h4>
+				&nbsp;
+				<p class="container">
+				
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.414081628029!2d121.5694993132805!3d25.121687840928473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ada536bf1709%3A0x8e57d72871bc0c!2z5pel5pyI5ru_6L6y6I6K!5e0!3m2!1szh-TW!2stw!4v1600658718588!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;日月滿休閒農場坐落在臺北市的後花園－陽明山上。
+	</p>
+				<img src="images/附近景點/陽明山/日月滿休閒農場-1.png" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;擁有得天獨厚的自然環境，有著農村的自然風味，又能遠離城市的喧囂，晴空下大冠鳩的翱翔；傍晚時竹雞的雞狗乖；在徐徐的微風之中川流不息的百年古圳，在這相信你能找到兒時的記趣。
+	</p>
+				<img src="images/附近景點/陽明山/日月滿休閒農場-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;桶柑與紅蘿蔔是日月滿冬天的超人氣商品，此外農場還結合市民農園提供遊客可以親自耕作，感受另類的休閒生活樂趣。
+	</p>
+				<img src="images/附近景點/陽明山/日月滿休閒農場-3.png" width="800"   alt=""/><br><br>
+				
+				<h4 id="竹子湖" class="container">
+				5.竹子湖
+				</h4>
+				&nbsp;
+				<p class="container">
+				
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115597.11455713863!2d121.50164588636775!3d25.12183165848586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b21d8eb6b7ef%3A0xa72115cca66b7ff8!2z56u55a2Q5rmW!5e0!3m2!1szh-TW!2stw!4v1600658752285!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;竹子湖位於陽明山國家公園核心區，海拔約650-670公尺。
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;其北側為小觀音山、東依著七星山、西靠臨大屯山、向南則敞開一覽無遺地俯瞰臺北盆地。
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-2.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;其原是35萬年前火山噴發造成的「堰塞湖」，因侵蝕作用產生缺口，湖水逐漸流失枯竭形成一處窪地。其自古即劃分為東湖、頂湖及下湖三個封閉的地區，東湖係指湖田國小一帶，為竹子湖地名原點之所在
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;頂湖係指越過湖田橋後，沿右邊產業道路前行，一處面積約20公頃的小盆地，因位於東湖之上方高處，故名頂湖；下湖則指今海芋大道一帶的盆地，竹子湖溪穿流其間，因位於東湖相對低處，故外下湖。
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-4.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;除此之外，這邊最有名的就是五顏六色的繡球花以及海芋吸引著觀光客前來拍照，增進當地的地方特色。
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/陽明山/竹子湖-6.jpg" width="800"   alt=""/><br><br>
+					
+				<h4 id="紗帽山半嶺(橫嶺古道)" class="container">
+				6.紗帽山溫泉-(橫嶺古道)
+				</h4>
+				&nbsp;
+				<p class="container">
+				
+				
+
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.942081611825!2d121.52576841744386!3d25.13764890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adfa8a76ba29%3A0xbd9b2f5dcd98ae0e!2z57SX5bi95bGx5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1600658787745!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;紗帽山溫泉發展歷史上相當悠久，在日據時期時就是主要的硫磺礦產區，也留有許多採礦的遺跡與記載。
+	</p>
+				<img src="images/附近景點/陽明山/紗帽山半嶺(橫嶺古道)-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;溫泉水質上，因為受到火山活動影響，加上地質成分很多，因此在紗帽山溫泉區不但溫泉源頭多，溫泉水質的種類也多，不過相較於北投溫泉的硫礦泉比起來，少了濃厚又刺鼻的硫礦味。
+	</p>
+				<img src="images/附近景點/陽明山/紗帽山半嶺(橫嶺古道)-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;地理位置上，因為紗帽山溫泉區非常鄰近天母商圈，堪稱是最接近都會的溫泉山區，來到這裡遊玩的遊客大多都是當天往返，加上當地的氣溫較低、土壤肥沃，種植出來的蔬菜比平地甜美多汁，因此有別於一般的旅館住宿為主的溫泉區，當地的溫泉業者將經營的重心放在溫泉、美食上，各種的音樂餐廳、景觀餐廳林立，到了夜幕時分各餐廳的霓虹更將山林小徑點綴的熱鬧繽紛。
+	</p>
+				<img src="images/附近景點/陽明山/紗帽山半嶺(橫嶺古道)-3.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="馬槽花藝村" class="container">
+				7.馬槽花藝村
+				</h4>
+				&nbsp;
+				<p class="container">冬天來到濃濃硫磺味的陽明山馬槽，有機會一定要一訪頗負盛名的馬槽花藝村。這裡因為鄰近溫泉源頭，因此擁有極佳的泉質，讓你不用擔心花錢泡到參了一堆熱水、魚目混珠的稀釋溫泉。
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.427470181514!2d121.5671953132825!3d25.18880283822612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b24e6b3fa259%3A0x505b1e4cf7148715!2z6aas5qe96Iqx6Jed5p2RKOmZveaYjuWxsea6q-aziSk!5e0!3m2!1szh-TW!2stw!4v1600658821487!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;藝村這裡提供了多種的泡湯選擇。除了男、女湯的露天浴池外，也有室內的個人浴池，或是家庭式的半露天包廂，戶外的露天浴池不僅寬敞，同時也提供了泡湯、沖壓SPA、泥浴等不同的服務。
+	</p>
+				<img src="images/附近景點/陽明山/馬槽花藝村-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;對於純粹想要享受泡湯品質或是順道想要一併用餐的人來說，是個很划算、很不錯的選擇。
+	</p>
+				<img src="images/附近景點/陽明山/馬槽花藝村-2.jpg" width="800"   alt=""/><br><br>
+	
+				<h4 id="陽明山國家公園" class="container">
+				8.陽明山國家公園
+				</h4>
+				&nbsp;
+				<p class="container">
+				
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57773.44441916175!2d121.5187486626926!3d25.174870510162403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adf824cfc74b%3A0x5c0be3a34fc3b079!2z6Zm95piO5bGx5ZyL5a625YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1600658859372!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+				<p class="container"> &nbsp;陽明山國家公園是台灣離都會區最近的一座國家公園，泛指大屯山、七星山、紗帽山、小觀音山所構成的山區範圍相當廣大，包括台北市士林、北投部份山區以及新北市淡水、三芝、石門、金山、萬里等鄉鎮山區，海拔高度自200公尺至1120公尺範圍不等，總面積約11455公頃。
+	</p>
+				<img src="images/附近景點/陽明山/陽明山國家公園-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;陽明山國家公園因受到緯度及海拔之影響，季風型氣候非常明顯，且本區地質構造特殊的錐狀或鐘狀火山體和火口湖等，形成火山活動的特殊景觀。
+	</p>
+				<img src="images/附近景點/陽明山/陽明山國家公園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;區內三小油坑、馬槽及擎天崗等分佈於園區內的多處溫泉區也早已遠近馳名，成為陽明山國家公園重要的景觀資源。
+	</p>
+				<img src="images/附近景點/陽明山/陽明山國家公園-3.jpg" width="800"   alt=""/><br><br>
+				
+			</div>
+		</div>
+	</div>	
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

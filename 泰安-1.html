@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 泰安 </h3>
+				<h4 id="大湖休閒農莊"class="container">
+				1.大湖酒莊
+				</h4>
+				&nbsp;
+			  <p class="container">&nbsp;大湖草莓文化館(大湖酒莊)位於大湖觀光風景線上(省道台3線130.5K)，為大湖地區農會的硬體結構之一；旁邊則為大湖酒莊，酒莊內設有製酒中心及品酒中心(販售農特產品、酒品區)。
+			  </p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.6343786194934!2d120.86649071204047!3d24.42876648425929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34690048db5d50d1%3A0x5ec1b51b95148b93!2z5aSn5rmW6YWS6I6K!5e0!3m2!1szh-TW!2stw!4v1600338816106!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;大湖草莓文化館四面群山環繞，這兒的超大草莓模型及超大油桐花模型，總成為觀光客相爭拍照留念的最佳取景點。
+				</p>
+			    <img alt="" src="images/附近景點/泰安/大湖休閒農莊-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;文化館共有5層樓，一樓提供各式草莓紀念商品及農特產品。
+	</p>
+				<img alt="" src="images/附近景點/泰安/大湖休閒農莊-2.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;二、三樓介紹草莓的生態、發展史及食用方式
+	</p>
+				<img alt="" src="images/附近景點/泰安/大湖休閒農莊-3.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img alt="" src="images/附近景點/泰安/大湖休閒農莊-4.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;四、五樓設有餐廳及空中花園，玩家們可在此喝喝咖啡享用美食，並且欣賞大湖地區宜人的景緻。
+	</p>
+				<img alt="" src="images/附近景點/泰安/大湖休閒農莊-5.jpg" width="800"  ></br></br>
+				
+				<h4 id="汶水老街" class="container">
+				2.汶水老街
+				</h4>
+				&nbsp;
+				<p class="container"> 汶水老街是苗六線前往草莓故鄉－大湖的交通必經之地，也是早期獅潭、泰安、大湖地區前往苗栗的交通樞紐與貨物集散地。</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29055.657274693873!2d120.87274897169837!3d24.45227160855909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34690187ac3bab3d%3A0x4e616348ed0b0139!2z5rG25rC06ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1600338999906!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/汶水老街-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;台７２線東西向快速道路通車之後，大量車潮不再從此湧入，汶水老街逐漸蛻變成為具有人文、藝術氣息的街坊市集，提供遊客休閒遊憩的好去處。
+	</p>
+				<img src="images/附近景點/泰安/汶水老街-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;無論是造型別具巧思的招牌，還是賦有藝術質感的地磚，漫步在汶水老街，彷彿走入時光隧道，發掘客家歷史發展的痕跡，以及濃厚的鄉下人情味。
+	</p>
+				<img src="images/附近景點/泰安/汶水老街-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/汶水老街-4.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="虎山吊橋" class="container">
+				3.虎山吊橋
+				</h4>
+				&nbsp;
+				<p class="container"> 在早期，位在孤島上的虎山溫泉會館，虎山吊橋是前往島上唯一的聯絡通道，雖然吊橋有些窄，都還很安全做好，橋上還有日光燈供晚間照明，應是溫泉業者妥善管理的緣故。
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.9454679664354!2d121.03132131325854!3d24.383200370228007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468ff52a8156089%3A0x89f2aa4351158c8a!2z6JmO5bGx5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1600339203123!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;現在的話是從苗62縣道過來，往老字號川中島虎山溫泉的人行吊橋，位置在公路邊下層停車場旁。
+	</p>
+				<img src="images/附近景點/泰安/虎山吊橋-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;於汶水溪近幾年河道淤積，吊橋高度跟以往不大一樣，兩旁景觀也因爲近年來的開發遭到些微的破壞，過吊橋後經過一個小公園即可到虎山溫泉。
+	</p>
+				<img src="images/附近景點/泰安/虎山吊橋-2.jpg" width="800"   alt=""/><br><br>
+				
+				
+					
+				<h4 id="洗水坑豆腐美食街" class="container">
+				4.洗水坑豆腐美食
+				</h4>
+				&nbsp;
+				<p class="container">苗栗泰安鄉景點清安豆腐街(又名洗水坑豆腐街)。
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.126472756545!2d120.9033330632604!3d24.44639701775191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468ffecb6f155a9%3A0x9b514a1b2401000!2z5rSX5rC05Z2R6LGG6IWQ6KGXKOa4heWuieixhuiFkOiAgeihlyk!5e0!3m2!1szh-TW!2stw!4v1600339286389!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;老街上的道路是屬於石板的道路，可以看到的古早味招牌與古早味美食小吃，是這邊的特色
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;小吃又以豆腐美食最多，因此有其豆腐街的美名。
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;比如這邊的豆乾。
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;還有豆腐水粄是這邊最為特色又特別的點心。
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;以及在其他地方難以見到的黑色臭豆腐也可以來嘗試看看。
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-6.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/洗水坑豆腐美食街-7.jpg" width="800"   alt=""/><br><br>
+				
+				<h4 id="泰雅文物館" class="container">
+				5.泰雅文物館
+				</h4>
+				&nbsp;
+				<p class="container">為了積極保存和推廣泰雅文化，所以特別成立「泰雅原住民文化產業區」，園區占地約一點六七公頃，結合泰安溫泉區的觀光資源與泰雅文化，設置文物館、停車場、溫泉體驗區等。
+
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58113.98715002982!2d120.87050175680498!3d24.44647599170041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a0256e3c1%3A0x2bb86dacd11adbf1!2z6IuX5qCX5rOw6ZuF5paH5YyW6aSo!5e0!3m2!1szh-TW!2stw!4v1600339332056!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/泰雅文物館-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;泰雅文物館展示內容有泰安鄉部落分布及遷移、當地泰雅族文化歲時祭儀介紹及照片，並有木雕、藤編器具、織品服飾、口簧琴等文物展示
+	</p>
+				<img src="images/附近景點/泰安/泰雅文物館-2.jfif" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;設置夜間森林體驗區、傳統生活竹屋區等，使遊客共同參與歷身體驗，搭配生動活潑的解說導覽，將藉以提昇國人民族教育知識及拓展民族視野。
+	</p>
+				<img src="images/附近景點/泰安/泰雅文物館-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;除了靜態展示之外，戶外也設有溫泉體驗區、假日藝文表演及攤販區，讓來到這邊參觀的民眾也能享受原住民歌舞及部落美食，希望透過有效經營帶動原住民文化觀光發展，傳承泰雅傳統文化，以展現原住民族優厚的文化元素及觀光資源，提供給遊客遊憩，帶動原鄉觀光產業的發展。
+	</p>
+				<img src="images/附近景點/泰安/泰雅文物館-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;泰雅族風俗文化活動
+	</p>
+				<img src="images/附近景點/泰安/泰雅文物館-5.jpg" width="800"   alt=""/><br><br>
+					
+				<h4 id="馬拉邦國家森林步道" class="container">
+					6.馬拉邦國家森林步道
+				</h4>
+				&nbsp;
+				<p class="container">馬拉邦古道為早年泰雅族北勢群交通往來及狩獵的山徑，日治時代闢為隘勇路，曾發生泰雅族人抗日事件，立有紀念碑。
+
+
+				</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58150.46394857594!2d120.87880197910157!3d24.367245600000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468fe0a159d0d21%3A0xde5dec1635d5dcd3!2z6aas6YKj6YKm5bGx!5e0!3m2!1szh-TW!2stw!4v1600339390352!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;步道經杉木造林地、櫸木植群，四季各有特色，春天的桃花、夏季的綠竹、秋天的楓紅，冬日的寒梅。
+	</p>
+				<img src="images/附近景點/泰安/馬拉邦國家森林步道-1.jpg" width="800"   alt=""/>
+				<p class="container"> &nbsp;山頂可遠眺蜿蜒群山的大安溪、大霸尖山及雪山之間的聖稜線。
+	</p>
+				<img src="images/附近景點/泰安/馬拉邦國家森林步道-2.jfif" width="800"   alt=""/>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/馬拉邦國家森林步道-3.jpg" width="800"   alt=""/><br><br>
+					
+				<h4 id="橫龍古道" class="container">
+				7.橫龍古道
+				</h4>
+				&nbsp;
+				<p class="container">這條由鹿場越嶺加里山，沿著橫龍山稜線至龍山部落的山間小徑。
+				</p>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.041518338034!2d120.96221551326147!3d24.484018266275125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346855cc3434c14d%3A0xf2661bb2b09e86f!2z5qmr6b6N5Y-k6YGT!5e0!3m2!1szh-TW!2stw!4v1600339457344!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/橫龍古道-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/橫龍古道-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;原是泰雅族人走出來的獵徑， 後來也成為龍山部落的泰雅人與鹿場族人之間往來的探親道路，稱為「斯瓦細格古道」，現在則以「橫龍古道」而聞名。
+	</p>
+				<img src="images/附近景點/泰安/橫龍古道-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/泰安/橫龍古道-4.jpg" width="800"   alt=""/><br><br>
+				
+		</div>		
+		</div>		
+	</div>	
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer> 
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>

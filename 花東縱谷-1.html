@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>台灣溫泉旅遊介紹網</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <script src="js/js/jquery-3.3.1.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+
+    <style>
+        
+		.bg-green{
+			background-color:  #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000;
+		}
+		.bg-green li a:hover{
+			background-color:  #c8c8c8;
+		}
+		.map {
+          height: 7%;
+          width: 50%;
+	      margin-right: 10%;
+	      margin-left: 10%;
+	      border: 5px solid rgba(0,95,164,1.00);
+	      border-radius: 30px;
+	      padding: 20px;
+	      box-shadow: 0px 10px 10px rgba(62,113,150,1.00);
+        }
+		.social {
+			text-align: right;
+			margin: 0px;
+			padding: 0px;
+			}
+		.social li {
+			list-style-type: none;
+			margin-right: 5px;
+			display: inline-block;
+		}
+		.social li a {
+			color:  #10cfc9;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color:  #10cfc9;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+
+		.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+        .site-footer {
+			margin-top: 50px;
+			color:  #10cfc9;
+			padding: 25px 0;
+			border-top: 1px solid rgba(182,182,182,1.00);
+			background-color:  #10cfc9
+		}	
+        .site-footer span {
+			margin-top: 12px;
+			display: block;
+			text-align: left;
+		}
+		@media (max-width:768px){
+		.site-footer span{
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			}
+		.social{
+			text-align: center;
+			}
+		}
+
+
+    </style>
+</head>
+<body style="padding-top: 70px" id="page-top">
+    <!--頁首-->
+    <header>
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" >
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="color: #fff;">🏘首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="color: #fff;">📚台灣溫泉歷史</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color: #fff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="intro.html">♨各地溫泉推薦</a>
+                            <a class="dropdown-item" href="food.html">🍴各地美食</a>
+                            <a class="dropdown-item" href="hot spring.html">📃泡湯須知</a>
+							<a class="dropdown-item" href="attraction.html">🏖附近景點</a>
+                        </div>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color: #fff;">✉聯絡我們</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="color: #fff;">📝留言板</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="color: #fff;">👤會員登入</a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="color: #fff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+		<div class="container marketing">
+        <hr>
+        <div class="row featurette">
+          <div class="col-md-12">
+                <h2 class="title2">附近景點</h2>
+				
+				
+			
+                <h3 id="beitou" class="container"> 花東縱谷 </h3>
+				<h4 id="六十石山"class="container"><b>
+				六十石山</b>
+				</h4>
+				&nbsp;
+			  <p class="container"> &nbsp;六十石山、赤科山、太麻里山為花東縱谷三大金針栽植區，也是每年8月至9月賞金針花海的好去處。
+</p>
+				
+			  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29332.3048987201!2d121.28767042051824!3d23.223497630490908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f72bfffffffff%3A0xdd4928cdd1ad82a7!2z5YWt5Y2B55-z5bGx!5e0!3m2!1szh-TW!2stw!4v1600314027668!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+	<p class="container"> &nbsp;六十石山位在富里鄉竹田村東側海拔約800公尺的海岸山脈上，經過一段蜿蜒的山路後，眼前出現無邊無際的田野景致，幾座農舍、涼亭散落在金黃色的金針花田間，形成一幅樸質的田園畫作。
+	</p>
+			    <img alt="" src="images/附近景點/花東溫泉/六十石山-1.jpg" width="800"></br></br>
+				<p class="container"> &nbsp;但為什麼會被叫做六十石山呢？
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/六十石山-2.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;據當地人說，早在日治時期，一般水田每甲地的穀子收成大約只有四、五十石，而這一帶的稻田每一甲卻可生產六十石縠子，因此被稱做六十石（ㄉㄢˋ）山。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/六十石山-3.jfif" width="800" ></br><br>
+				<p class="container"> &nbsp;另一種說法則是：在日治時期，這片山區本是一片繁茂的樟樹林，為了煉製樟腦而被砍伐一空。結果發現在空曠的山坡上，散佈著60塊巨大的石頭，所以這裡被命名為六十石（ㄕˊ）山。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/六十石山-4.jpg" width="800"></br><br>
+				
+				
+				<h4 id="吉利潭" class="container"><b>
+				吉利潭</b>
+				</h4>
+				&nbsp;
+				<p class="container"> &nbsp;四周青山環繞，一汪清潭宛若山間明月，帶點中國風的拱橋倒映在水面上，走在環潭步道上欣賞眼前美景、認識水中生物，為旅人帶走都市的喧囂，這就是隱藏在光復馬錫山下的山中秘境──吉利潭
+</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.8962300131357!2d121.39485671481384!3d23.679668684624282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468b320e1e03c13%3A0x418dc71bf46f9189!2z5ZCJ5Yip5r2t!5e0!3m2!1szh-TW!2stw!4v1600331333065!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>			  
+	<p class="container"> &nbsp;同時是花蓮近期新興景點，擁有戲水道、生態浮島等設施，為炎炎夏日親子戲水、踏青與認識自然生態的好去處。
+			    <img alt="" src="images/附近景點/花東溫泉/吉利潭-3.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;吉利潭原本是日治時期遺留下來的儲木池，上游源自一處有三層的瀑布，大小潭蓄滿了清徹的山泉水，是雙色澤蟹、拉氏清溪蟹、菊池氏細鯽等原生動物的棲地，也是光復鄉阿美族的戲水秘境與祈雨聖地。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/吉利潭-2.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;隨著伐木業沒落而荒蕪的吉利潭，經過整治、美化後，成為認識自然生態的親水公園。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/吉利潭-1.jpg" width="800"></br><br>
+				<p class="container"> &nbsp;站在橋上聽著潺潺流水聲，或是在涼亭遠眺馬錫山、與親朋好友話家常，清幽的環境是來光復必訪的景點之一。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/吉利潭-4.jpg" width="800"></br><br>
+				
+				<h4 id="伯朗大道" class="container"><b>
+				伯朗大道</b>
+				</h4>
+				&nbsp;
+				<p class="container"> &nbsp;在臺東池上鄉的田間道路上，兩旁是隨風搖曳的稻浪，因拍攝伯朗咖啡的廣告而大受歡迎，被稱為「伯朗大道」。
+</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939508.2435641711!2d120.65229986562498!3d23.0987769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f09ee2a72ab65%3A0xda93a34a2927bc8!2z5rGg5LiK5Lyv5pyX5aSn6YGT!5e0!3m2!1szh-TW!2stw!4v1600332047156!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>		  
+	<p class="container"> &nbsp;而在伯朗大道的中間，有一條蜿蜒曲折的小路，是金城武曾來這兒騎單車拍攝廣告的地方，兩邊一望無際的綠色稻田隨風搖曳，被譽為是一條「翠綠的天堂之路」。
+	<p></p>
+			    <img alt="" src="images/附近景點/花東溫泉/伯朗大道-1.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;伯朗大道的正式名稱為錦新三號道路，筆直的道路上兩旁都是遼闊翠綠的稻田，隨著時間轉為金黃、阡陌的黃色稻浪，再加上遠方高低起伏的山巒，宛如明信片上的美麗照片。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/伯朗大道-3.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;在這片無邊無際的稻田中騎單車、散步，讓人遠離城市的喧囂，放鬆身心，沉浸在這番美景中。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/伯朗大道-4.jpg" width="800" ></br><br>
+				<p class="container"> &nbsp;在伯朗大道旁的一棵茄冬樹，高聳茂密的樹冠，搭配遠方的稻田風景，成為金城武拍攝廣告其中奉茶片段的場景，而被稱為「金城武樹」，吸引許多追星族或遊客前來拜訪。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/伯朗大道-2.jpg" width="800" ></br><br>
+				
+					
+				<h4 id="秀姑巒溪泛舟" class="container"><b>
+				秀姑巒溪泛舟</b>
+				</h4>
+				&nbsp;
+				<p class="container">秀姑巒溪發源於秀姑巒山，全長103公里，全年河水豐沛，為臺灣東部最大的河川。河道迂迴，流經瑞穗切穿海岸山脈，形成峽谷與曲流。
+
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234479.29977547962!2d121.20251364048991!3d23.325224533745363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f6a6d5f66b3cd%3A0xadc5174cf9ed1c5b!2z56eA5aeR5beS5rqq!5e0!3m2!1szh-TW!2stw!4v1600332664593!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;每年五月到十月豐水期，可讓遊客體驗泛舟活動的刺激與快感。秀姑巒溪泛舟以奇美為中心，大致可分成二段，前段的航程水流平穩，是培養默契及訓練技術最佳航段。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/秀姑巒溪泛舟-1.jpg" width="800"></br></br>
+				<p class="container"> &nbsp;後段水流非常湍急，漩渦、險灘不斷，不必划槳就能前行，但要小心控制方向，否則容易翻船。
+	</p>
+
+				<img alt="" src="images/附近景點/花東溫泉/秀姑巒溪泛舟-2.jpg" width="800" ></br></br>
+				<p class="container"> &nbsp;出長虹橋後溪面豁然開闊，皓白的石塊羅列水面，有「秀姑漱玉」之稱。每年6-7月所舉行的秀姑巒溪泛舟觀光季，已成為最重要的泛舟活動。 
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/秀姑巒溪泛舟-3.jpg" width="800"></br><br>
+				
+				<h4 id="武陵綠色隧道" class="container"><b>
+				武陵綠色隧道</b>
+				</h4>
+				&nbsp;
+				<p class="container">武陵綠色隧道位於台九線武陵段，今稱「永嶺路」，入口在台九線357K處附近，全長約4.5公里。此段公路樟樹與木麻黃密林成蔭，兩旁小葉欖仁樹林立，景色宜人的綠色隧道，保持自然風味且極具生態意義。 
+				</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.815369541498!2d121.12502051479964!3d22.95702578498628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fa67db23a2d89%3A0x5c0e5f0c48343bf5!2z5q2m6Zm157ag6Imy6Zqn6YGT!5e0!3m2!1szh-TW!2stw!4v1600333265899!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>			
+				<p class="container"> &nbsp;沿途旅客可以在此徘徊流連或乘騎自行車，優遊於迷人的綠色公路並享受森林芬多精最多的樟樹，夾雜一些木麻黃與小葉欖仁。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/武陵綠色隧道-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;平日人與車輛很少，所以在這裡最特別的活動是躺在滿佈林蔭的馬路上，看著陽光穿透樹葉，看著小葉欖仁樹的樹形，體驗與都市不同的步調，盡情放鬆身心與大自然結合
+	</p>
+
+				<img alt="" src="images/附近景點/花東溫泉/武陵綠色隧道-3.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;或是騎著鐵馬悠遊林蔭間，欣賞藍天青山的美景，汲取道路旁碧綠茶園的芬芳，偶爾還可見到繽紛的飛行傘翱翔天空，別具恬適田園之樂。 
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/武陵綠色隧道-2.jpg" width="800"  ></br><br>
+				
+					
+				<h4 id="花蓮觀光糖廠" class="container"><b>
+					花蓮觀光糖廠</b>
+				</h4>
+				&nbsp;
+				<p class="container">在日治時期所成立的花蓮觀光糖廠，也稱為光復糖廠，是許多單車族休息的據點。
+</p>
+				
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.4826864522047!2d121.41841801481343!3d23.658690484634562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468b2caef8bc4a5%3A0xba144f44d3f995a4!2z6Iqx6JOu6KeA5YWJ57OW5bug!5e0!3m2!1szh-TW!2stw!4v1600333564280!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;1913年，「東臺製糖株式會社」在花蓮縣壽豐鄉設立「花蓮港製糖所」。
+			    <img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-1.jpg" width="800"  ></br></br>
+				<p class="container"> &nbsp;1921年在光復成立大和工廠（現今的光復糖廠），來擴大製糖產量，以供當時的軍資需求。然而在二次世界大戰時，這兩處糖廠被美軍轟炸而損毀，之後由臺糖接手，逐漸修復並轉型為現在的觀光糖廠。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-2.jpg" width="800"  ></br></br>
+				<p class="container">&nbsp; 
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-3.jpg" width="800"  ></br><br>
+				<p class="container"> &nbsp;糖廠內販售各式各樣口味的冰品，香甜綿密的冰淇淋、沁涼微甜的冰棒，讓人吃下一口後大呼滿足。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-4.jpg" width="800"  ></br><br>
+				<p class="container"> &nbsp;除了吃冰之外，還能體驗DIY手作課程、騎鐵馬遊園區，並且提供日式宿舍給遊客住宿，是來花蓮不可錯過的觀光糖廠。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-5.png" width="800"  ></br><br>
+				<p class="container"> &nbsp;榨甘蔗所需要的材料及機器
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-6.png" width="800"  ></br><br>
+				<p class="container"> &nbsp;可以讓小孩子體驗榨出甘蔗的過程，感受到平時甘蔗農的辛苦。
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-7.png" width="800"  ></br><br>
+				<p class="container"> &nbsp;逐漸流出甘蔗渣~
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-8.png" width="800"  ></br><br>
+				<p class="container"> &nbsp;經過一番的DIY過程終於成功榨出甘蔗汁了!!
+	</p>
+				<img alt="" src="images/附近景點/花東溫泉/花蓮觀光糖廠-9.png" width="800"  ></br><br>
+				
+				<h4 id="馬太鞍部落" class="container"><b>
+				馬太鞍部落</b>
+				</h4>
+				&nbsp;
+				<p class="container">馬太鞍部落位於花蓮縣光復鄉馬錫山山腳下，是阿美族的大部落，範圍含括今日大馬、大平、大同等三個村落。
+				</p>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14617.353867562848!2d121.40924892767693!3d23.663851004111837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468b2bee076febf%3A0xc788f0e3760c0a31!2z6aas5aSq6Z6N5Y-k5bGL!5e0!3m2!1szh-TW!2stw!4v1600334867686!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;「馬太鞍」源自阿美族語Vata’an，是「樹豆」的意思，因為早期此地遍植樹豆，所以先民便以「樹豆」命名。
+	</p>
+				<img src="images/附近景點/花東溫泉/馬太鞍部落-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;在馬太鞍部落中曾流傳著因不敬而遭亡靈懲罰的故事，所以平時少有人隻身前往走動，此地也就成為部落的禁忌之地。
+	</p>
+				<img src="images/附近景點/花東溫泉/馬太鞍部落-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;民國91年，登錄為花蓮縣歷史建築保存。
+	</p>
+				<img src="images/附近景點/花東溫泉/馬太鞍部落-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;當地的阿美族人的豐年祭活動以及祭典儀式
+	</p>
+				<img src="images/附近景點/花東溫泉/馬太鞍部落-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/花東溫泉/馬太鞍部落-5.jpg" width="800"   alt=""/><br><br>
+
+
+				
+				<h4 id="掃叭石柱公園" class="container"><b>
+				掃叭石柱公園</b>
+				</h4>
+				&nbsp;
+				<p class="container">英國的巨石陣、復活島的摩艾巨石像都屬於神秘的巨石文化，而在瑞穗舞鶴台地上，也有一處巨石文化，重達好幾公噸的石柱矗立在地面，那就是Satokoay （舞鶴）遺址，也被稱做掃叭石柱。
+				</p>
+				
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7134954989483!2d121.35723551480973!3d23.4707968847279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f45d9824c88b7%3A0xf0e1e78f80302550!2z5o6D5Y-t55-z5p-x!5e0!3m2!1szh-TW!2stw!4v1600335435259!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;舞鶴遺址至今已有3千多年的歷史，屬於史前文化的遺跡，有著許多當地阿美族與撒奇萊雅族的傳說與謎團，讓這兩根高聳的石柱充滿許多的想像空間。
+	</p>
+				<img src="images/附近景點/花東溫泉/掃叭石柱公園-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/花東溫泉/掃叭石柱公園-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;*Satokoay的由來
+Satokoay為阿美語，Satoko傳說原為木質的家屋主柱，後來才變成石頭的大石柱；ay（發音:愛）則為所在之處；因此Satokoay為當地阿美人相傳的「家屋主柱的所在之處」，也是祖靈所在的神聖之地。
+
+	</p>
+				<img src="images/附近景點/花東溫泉/掃叭石柱公園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/花東溫泉/掃叭石柱公園-1.png" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="鹿野高台" class="container"><b>
+				鹿野高台</b>
+				</h4>
+				&nbsp;
+				<p class="container">
+				</p>鹿野高台擁有絕佳視野，能夠一覽整個高台地區與卑南溪谷底的田野景色，也是臺灣東部一處優良的天然空域活動場地。
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.9165407906708!2d121.11940621479867!3d22.91644898500688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fa43400000001%3A0x9a50b189ca574ed8!2z6bm_6YeO6auY5Y-w!5e0!3m2!1szh-TW!2stw!4v1600335950883!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;每當6月至8月時，正是鹿野高台進行熱氣球活動的好時機，搭乘緩緩升空起飛的熱氣球，徜徉在花東縱谷的美景之中，親身體驗熱氣球起飛的這一份躍動。
+	</p>
+				<img src="images/附近景點/花東溫泉/鹿野高台-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;從龍田村沿著指標一路往高台走，只見地勢逐漸升高，經過高台茶葉展示中心後不遠，好大一片綠草如茵的寬廣草坡隨即映入眼簾，登上草坡最高處的高眺亭，整個高台地區與縱谷的景色，盡在眼前，一覽無遺。
+	</p>
+				<img src="images/附近景點/花東溫泉/鹿野高台-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;除此之外，還可以在這邊讓小孩體驗玩滑草板的樂趣
+
+	</p>
+				<p class="container"> &nbsp;
+				
+				<img src="images/附近景點/花東溫泉/鹿野高台-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;每逢暑假期間，盛大舉辦的臺灣國際熱氣球嘉年華以及光雕音樂會，都吸引來自世界各地的旅人前來參加，熱氣球繫留體驗、熱氣球自由飛行表演、絢麗燦爛的光雕音樂會，或是曙光光雕音樂會等活動，讓人永生難忘。
+	</p>
+				<img src="images/附近景點/花東溫泉/鹿野高台-5.jpg" width="800"   alt=""/><br><br>
+	
+				
+			<h4 id="瑞穗牧場" class="container"><b>			
+			瑞穗牧場</b>
+				</h4>
+				&nbsp;
+				<p class="container">瑞穗牧場為花蓮縣瑞穗鄉酪農區，位於瑞穗噴灌區與紅葉溪畔，風光明媚，水源潔淨，空氣新鮮，草原豐富，具發展畜牧業潛力，為花蓮縣最大的乳牛養殖區，曾經連續三年拿下全省酪農評比第一名的榮耀，說明其鮮奶品質的濃郁香醇。
+
+				</p>
+				
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.480142135538!2d121.34376781480984!3d23.47920928472374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f4672fc907d47%3A0xb5cd184ff4bf44!2z55Ge56mX54mn5aC0!5e0!3m2!1szh-TW!2stw!4v1600337229539!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;早期由10戶酪農所共同組成的瑞穗牧場，選定在地勢平淡、道路、排水電力等公共設施完善的地方，種植牧草，興建牛舍，自美國進口高登錄荷蘭種乳牛飼養，瑞穗牧場在經過酪農朋友們的經營下，已經成為全省知名酪農區
+	</p>
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;並在之後成功孕育「統一瑞穗鮮奶」，而統一瑞穗鮮奶的初乳來源，就是來自紅葉溪畔的瑞穗牧場，也由於統一公司在各大媒體的宣傳，已成為高品質鮮乳的代名詞。
+	</p>
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;瑞穗牧場漸漸為觀光走向，因此設有遊客中心、露天咖啡座、自行車道等設施.......
+
+	</p>
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;園區還可以讓小孩體驗餵園區動物的新鮮感~
+				
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-5.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;瑞穗牧場中的販賣部，除了可以品嚐每天現擠、現煮的濃、純、香的鮮奶外，還可吃到香噴噴、熱呼呼的鮮奶饅頭，及軟硬適中、充滿奶香的原味牛軋糖，還有乳酪蛋糕、鮮奶酪、乳製冰品等甜點，都深受大朋友小朋友的喜愛~~
+	</p>
+				
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-6.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;販賣部也有各是乳牛造型的馬克杯、餐具、飾品等。除此之外還規劃親子遊憩區、賞鴕鳥區等設施，讓全家大小都能輕鬆悠遊！
+	</p>
+				<img src="images/附近景點/花東溫泉/瑞穗牧場-7.jpg" width="800"   alt=""/><br><br>
+				
+				
+				<h4 id="舞鶴觀光茶園" class="container"><b>
+				舞鶴觀光茶園</b>
+				</h4>
+				&nbsp;
+				<p class="container">海拔100至300公尺的舞鶴台地，依傍高聳的中央山脈，隨風拂來秀姑巒溪與紅葉溪的濕潤水氣，宜人的氣候適合茶樹生長，是天鶴茶的產地，也是小葉綠蟬生長的天堂，經由小葉綠蟬吸吮而製成的蜜香紅茶，微帶淡淡的果香與蜜香，口感溫潤生津，獨特的風味聞名全臺，成為旅人來訪瑞穗必帶的伴手禮之一。
+				</p>
+				
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58551.68401699281!2d121.31093690361683!3d23.47920535858105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346f45dbd59352d7%3A0x5dcaba875afc4aeb!2z6Iie6ba06KeA5YWJ6Iy25Y2A!5e0!3m2!1szh-TW!2stw!4v1600337754155!5m2!1szh-TW!2stw" width="800" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></br></br>
+				<p class="container"> &nbsp;行走花東縱谷山線，開車經過舞鶴台地，放眼望去盡是一片綿延起伏的茶園。
+	</p>
+				<img src="images/附近景點/花東溫泉/舞鶴觀光茶園-1.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;遼闊的舞鶴台地散落著三、四十家自產自銷的茶行，每一家都有獨門的製茶秘法，生產的茶葉以烏龍茶系為主。包含：青心烏龍茶、金萱茶、翠玉包種茶等....
+	</p>
+				<img src="images/附近景點/花東溫泉/舞鶴觀光茶園-2.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+
+	</p>
+				<img src="images/附近景點/花東溫泉/舞鶴觀光茶園-3.jpg" width="800"   alt=""/><br><br>
+				<p class="container"> &nbsp;風味絕佳的茶香、有趣的採茶及製茶體驗，深深吸引前訪的旅人駐足停歇，品嘗來自舞鶴臺地的清香好茶。
+				
+				<img src="images/附近景點/花東溫泉/舞鶴觀光茶園-4.jpg" width="800"   alt=""/><br><br>
+				<p class="container">&nbsp; 
+	</p>
+				<img src="images/附近景點/花東溫泉/舞鶴觀光茶園-5.jpg" width="800"   alt=""/><br><br>
+		</div>
+</div>
+</div>
+		
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h5"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h5">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h5"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h5><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h5>
+			  </div>
+	    </div>
+</footer>  
+
+<a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+
+		
+		
+</body>
+</html>
