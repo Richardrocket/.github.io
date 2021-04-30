@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>台灣溫泉旅遊介紹網</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+	<link href="plugins/style.css" rel="stylesheet" type="text/css">
+	<style>
+
+.fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 100px;
+				}
+.bg-green li a:hover{
+			background-color: #c8c8c8;
+		}
+
+.services {
+  background: #10cfc9;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.service-item {
+  margin-bottom: 15px;
+}
+
+span.service-icon {
+  border: 3px solid #ffffff;
+  border-radius: 10%;
+  display: inline-block;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+ .horizontal {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+  width: 400px;
+  height: 120px;
+  margin: 20px;
+  border: 10px ridge #ffffff;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.horizontal > .text {
+  position: relative;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transition: background-position 300ms;
+  transition: background-position 300ms;
+}
+.horizontal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+.horizontal:hover .text {
+  background-position: 0 0;
+}
+.horizontal:hover::before {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+        
+        
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color: #402d2d;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #402d2d;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}        
+.ml16 {
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+	</style>
+  </head>
+  <body style="padding-top: 50px;" >
+  	<!-- body code goes here -->
+    <!-- header================================================== -->
+
+        
+       <header >
+        <!--巡覽列-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-green" style="font-size: 17px;background-color: #10cfc9;
+			box-shadow: 0px 3px 8px 0px #000; ">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo1.png" style="width:60px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#springnav" aria-controls="springnav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="springnav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active" >
+                        <a class="nav-link" href="index.html" style="padding: 10px;color: #ffffff;">🏘首頁</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html" style="padding: 10px;color: #ffffff;">📚台灣溫泉歷史</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown" >
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 10px;color: #ffffff;">
+                            🏖旅遊資訊
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="height:155px;font-size: 16px;width: 170px;text-align: center;" >
+                            <a class="dropdown-item" href="intro.html" style="padding: 10px">♨各地溫泉推薦</a>
+							
+                            <a class="dropdown-item" href="food.html" style="padding: 10px">🍴各地美食</a>
+							
+                            <a class="dropdown-item" href="hot spring.html" style="padding: 10px">📃泡湯須知</a>
+							
+							<a class="dropdown-item" href="attraction.html" style="padding: 10px">🏖附近景點</a>
+							
+                        </div>
+                    </li>
+                    
+					<li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="padding: 10px;color: #ffffff;">✉聯絡我們</a>
+                    </li>
+                    
+					<li class="nav-item">
+                        <a class="nav-link" href="comment.php" style="padding: 10px;color: #ffffff;">📝留言板</a>
+                    </li>
+                    
+					<li class="nav-item">
+                        <a class="nav-link" href="member.html" style="padding: 10px;color: #ffffff;">👤會員登入</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="likeform.php" style="padding: 10px;color: #ffffff;">❤我的收藏</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search" style="width:200px;height:35px;font-size: 17px;">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="location.href='search.html'" style="width:70px;height:35px;font-size: 17px;color:#Eb5c01;">搜尋</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- featured ================================================== -->
+    <section class="s-featured">
+        <div class="row">
+            <div class="col-full">
+                <div class="featured-slider featured" data-aos="zoom-in">
+                    <div class="featured__slide">
+                        <div class="entry">
+                            <div class="entry__background" style="background-image:url('images/01.jpg');"></div>
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="#0">泡湯</a></span>
+                                <h1><a href="intro.html" title=""><b>放鬆泡湯趣~~</b></a></h1>
+                                
+                            </div> <!-- end entry__content -->
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+                    <div class="featured__slide">
+                        <div class="entry">
+                            <div class="entry__background" style="background-image:url('images/1.jpg');"></div>
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="#0">知識</a></span>
+                                <h1><a href="hot spring.html" title=""><b>了解溫泉小常識~~</b></a></h1>
+                                
+                            </div> <!-- end entry__content -->
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+                    <div class="featured__slide">
+                        <div class="entry">
+                            <div class="entry__background" style="background-image:url('images/2.jpg');"></div>
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="#0">泡湯美食</a></span>
+                                <h1><a href="food.html" title=""><b>溫泉蛋、啤酒、老街美食</b></a></h1>
+                                
+                            </div> <!-- end entry__content -->
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+					<div class="featured__slide">
+                        <div class="entry">
+                            <div class="entry__background" style="background-image:url('images/3.jpg');"></div>
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="#0">按讚點閱</a></span>
+                                <h1><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" title=""><b>求關注</b></a></h1>
+                                
+                            </div> <!-- end entry__content -->
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+                </div> <!-- end featured -->
+            </div> <!-- end col-full -->
+        </div>
+    </section> <!-- end s-featured -->
+  
+  <div id="services" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <h1 class="ml5">
+                     <span class="text-wrapper">
+                     <span class="line line1"></span>                   
+                     <span class="letters letters-right"><b>本站簡介</b></span>
+                     <span class="line line2"></span>
+                     </span>
+                    </h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-3 text-center">
+                    <div class="service-item">
+                        <span class="btn" ><a href="intro.html"><img src="images/intro.png" style="max-width:50%"></a></span>
+                        
+                        <h1 class="h1"><br><b>溫泉介紹</b></h1>
+                        <br>
+                        <p class="h4" style="line-height:35px;">我們調查了全台各縣市著名的鹼、中、酸性水質溫泉，讓民眾藉由觀看本網的資訊，享受泡湯的美好。</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-item">
+                        <span class="btn"><a href="history.html"><img src="images/history.png" style="max-width:50%"></a></span>
+                        <br>
+                        <h1 class="h1"><br><b>溫泉歷史</b></h1>
+                        <br>
+                        <p class="h4" style="line-height:35px;">將傳統的泡湯轉為溫泉水療，更加享受傳統泡湯的樂趣，更透過先進設備促進功效。</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-item">
+                        <span class="btn"><a href="food.html"><img src="images/view.png" style="max-width:50%"></a></span>
+                        <br>
+                        <h6 class="h1"><br><b>附近景點/美食</b></h6>
+                        <br>
+                        <p class="h4" style="line-height:35px;">統整出你所在位置的附近景點及美食，更加享受泡完溫泉的樂趣，增添假日的美好回憶。</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="service-item">
+                        <span class="btn"><a href="hot spring.html"><img src="images/notice.png" style="max-width:50%"></a></span>
+                        <br>
+                        <h2 class="h1"><br><b>泡湯須知</b></h2>
+                        <br>
+                        <p class="h4" style="line-height:35px;">泡湯對人們來講是一個假放鬆身體的一個活動</p><p class="h4" style="line-height:35px;">藉由我們這邊的資訊，讓您有個健康又正確享受泡湯樂趣~</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+  <br></br>
+
+  
+  <br></br>
+  <h1 class="display-4" style="color:#c8c8c8 ;text-align:center" ><b>熱門溫泉景點推薦</b></h1>
+	<br></br>
+	<div class="row">
+            <div class="col-12 col-sm-4" style="margin-bottom: 50px;">
+                
+                    <button type="button" class="btn " data-container="body" data-toggle="good" data-placement="left" data-content="大樹下溫泉魚咖啡~~就真的位於大樹下XDDD溫泉魚一個人50元，有附紙巾，讓你享受完跟魚肌膚之廂親後，可以擦腳~~溫泉魚是不限時間，價格超親民的，深受許多大人小孩的喜愛在溫泉魚池裡，有不一樣的魚群，看是要被大魚親或是小魚親~~~任君挑選" style="box-shadow: 10px 10px 10px 0px #c8c8c8;margin:0px;padding:0px;border:0px;">
+                    <h2></h2>
+                    <img class="rounded" src="images/大樹下溫泉魚-2.jpg" style="height: 225px;width: 500px;">
+                    <a class="btn btn-block" href="礁溪.html#大樹下溫泉魚" style="background: #c8c8c8;text-align:center;height:30px;line-height:30px;"><b>大樹下的魚 &raquo;</b></a></button>
+                
+            </div>
+            <div class="col-12 col-sm-4">
+                
+                   <button type="button" class="btn " data-container="body" data-toggle="good" data-placement="top" data-content="還記得曾經看過的伯朗咖啡廣告嗎？還記得金城武騎著自行車、迎風而來的畫面嗎？
+                   池上伯朗大道不僅有著拍照的好景色，更能帶著心靈遠離喧囂擾嚷，踏著輕鬆的單車，享受到最原始單純的農村田園景色，感受心靈的純靜。" style="box-shadow: 10px 10px 10px 0px #c8c8c8;margin:0px;padding:0px;border:0px;">
+                    <h2></h2>
+                    <img class="rounded" src="images/伯朗大道-2.jpg" style="height: 225px;width: 500px;">
+                    <a class="btn btn-block" href="花東縱谷.html#伯朗大道" style="background: #c8c8c8;text-align:center;height:30px;line-height:30px;"><b>伯朗大道 &raquo;</b></a></button>
+                
+            </div>
+            <div class="col-12 col-sm-4">
+                                
+                    <button type="button" class="btn" data-container="body" data-toggle="good" data-placement="right" data-content=" 緊鄰漁港的三和海濱公園位在臺東縣太麻里鄉的三和村，公園內有多種充滿藝術風味兼具遊戲和休息的設施，再往海岸方向走，便可看到一望無際的海，腳下踏的是舒服的沙灘，在這裡可以看見竹筏出海捕魚，或是搶灘上岸的典型漁村情景，是體驗在地討海人生活及休閒娛樂的好去處。" style="box-shadow: 10px 10px 10px 0px #c8c8c8;margin:0px;padding:0px;border:0px;">
+                    <h2></h2>
+                    <img class="rounded" src="images/三和海濱公園-5.jpg" style="height: 225px;width: 500px;">
+                    <a class="btn btn-block" href="知本.html#三和海濱公園" style="background: #c8c8c8;text-align:center;height:30px;line-height:30px;"><b>三和海濱公園 &raquo;</b></a></button>
+                
+            </div>
+			
+        </div>
+		<div class="row">
+            <div class="col-12 col-sm-4">
+                
+                    <button type="button" class="btn " data-container="body" data-toggle="good" data-placement="left" data-content="谷關遊客中心，同時也是溫泉文化館，經谷關風景特定區標示後約500公尺即可抵達。以溫泉為主題，介紹相關資訊、文學、形成過程、種類、泡湯禮儀……。" style="box-shadow: 10px 10px 10px 0px #c8c8c8;margin:0px;padding:0px;border:0px;">
+                    <h2></h2>
+                    <img class="rounded" src="images/台中谷關溫泉文化館-2.jpg" style="height: 225px;width: 500px;">
+                    <a class="btn btn-block" href="谷關.html#台中谷關溫泉文化館" style="background: #c8c8c8;text-align:center;height:30px;line-height:30px;"><b>谷關溫泉文化館 &raquo;</b></a></button>
+                
+            </div>
+            <div class="col-12 col-sm-4">
+                
+                    <button type="button" class="btn " data-container="body" data-toggle="good" data-placement="bottom" data-content="泰雅文物館展示內容有泰安鄉部落分布及遷移、當地泰雅族文化歲時祭儀介紹及照片，並有木雕、藤編器具、織品服飾、口簧琴等文物展示，設置夜間森林體驗區、傳統生活竹屋區等，使遊客共同參與歷身體驗，搭配生動活潑的解說導覽，將藉以提昇國人民族教育知識及拓展民族視野。" style="box-shadow: 10px 10px 10px 0px #c8c8c8;margin:0px;padding:0px;border:0px;">
+                    
+                    <img class="rounded" src="images/附近景點/泰安/泰雅文物館-1.jpg" style="height: 225px;width: 500px;">
+                    <a class="btn btn-block" href="泰安.html#泰雅文物館" style="background: #c8c8c8;text-align:center;height:30px;line-height:30px;"><b>泰雅文物館 &raquo;</b></a></button>
+                
+            </div>
+            <div class="col-12 col-sm-4" >
+                
+                    <button type="button" class="btn" data-container="body" data-toggle="good" data-placement="right" data-content="寶來地區(Baolai area)為高雄(Kaohsiung)著名之溫泉鄉， 2009年莫拉克風災導致溫泉源頭受創，在高雄市政府積極推動下，2017年1月於寶來國中後方台地成功開鑿溫泉井，並將取得之溫泉導入寶來花賞溫泉公園內。" style="box-shadow: 10px 10px 10px 0px #DBD9D6;margin:0px;padding:0px;border:0px;">
+                    
+                    <img class="rounded" src="images/花賞溫泉公園-4.jpg" style="height: 225px;width: 500px;border:none;">
+                    
+                    <a class="btn btn-block" href="寶來.html#花賞溫泉公園" style="background: #c8c8c8;margin:0px;padding:0px;text-align:center;height:30px;line-height:30px;"><b>花賞溫泉公園 &raquo;</b></a></button>
+                
+            </div>
+        </div>
+	
+		<div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <img src="images/logo1.png" style="width:100px;" />
+                </div>
+				<div class="col-md-5 col-sm-5 ">
+				    <ul >
+					<li><p class="text-black-50 h2"><img src="images/home icon.png" style="width:30px;" />&emsp;333桃園市龜山區德明路5號</p></li>
+					<li><p class="text-black-50 h2">&thinsp;<img src="images/contact icon.png" style="width:20px;" />&thinsp;&emsp;TEL:(03)1234-5678</p></li>
+					<li><p class="text-black-50 h2"><img src="images/mail.png" style="width:30px;" />&emsp;EMAIL:123456789@gmail.com</p></li>
+					</ul>
+				</div>
+                <div class="col-md-5 col-sm-5" >
+                    <ul class="social ">
+                        <li><a href="https://www.facebook.com/%E6%BA%AB%E6%B3%89%E6%97%85%E9%81%8A%E8%A3%BD%E4%BD%9C-116067420260448" role="button" style="background-color: #10cfc9">
+					<img src="images/icons/fb.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://lin.ee/G2Q1Tik" role="button" style="background-color: #10cfc9">
+					<img src="images/icons/line.png" width="60" height="60">
+				        </a></li>
+                        <li><a href="https://www.instagram.com/travel_hotspring/" role="button" style="background-color: #10cfc9">
+					<img src="images/icons/ig.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://twitter.com/iTripass" role="button" style="background-color: #10cfc9">
+					<img src="images/icons/twitter.png" width="60" height="60">
+				        </a></li>
+                        <li><a  href="https://sites.google.com/mail.mcu.edu.tw/cce" role="button" style="background-color: #10cfc9">
+					<img src="images/mail icon.png" width="60" height="60">
+				        </a></li>
+                    </ul>
+                </div> 
+            </div>
+			
+        </div> 
+		
+</div>
+<footer style="background-color: #ceeaee">
+		<div class="row" >
+		      <div class="col-md-12 col-sm-12 text-center" >
+			      <h1><strong>Copyright &copy;2020 Ming University 版權所有|powered by MCU CCE</strong></h1>
+			  </div>
+	    </div>
+</footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/js/popper.min.js"></script> 
+	<script src="js/js/bootstrap-4.0.0.js"></script>
+	  
+	<script src="plugins/plugins.js"></script>
+    <script src="plugins/main.js"></script> 
+	<script>
+          $(function(){
+              $('[data-toggle="good"]').popover()
+          })
+          $('.popover-dismiss').popover({
+              trigger: 'focus'
+          })
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+    <script>var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script>
+
+
+
+
+  <script>anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script>
+
+  
+  <a class="btn fixed" href="#top" role="button"> <img src="images/icons/top.png" width="50" height="50"> </a>
+  </body>
+</html>
